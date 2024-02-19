@@ -1,73 +1,23 @@
-# Welcome to Sample Project Official Documentation
+# Welcome to TabPFN Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+TabPFN is a cutting-edge neural network designed specifically for tabular data prediction, leveraging the power of transformers to provide state-of-the-art performance on a wide range of datasets. This documentation will guide you through the installation, basic usage, and advanced features of TabPFN, helping you to efficiently integrate this powerful tool into your data science workflow.
 
-## Commands
+## Features
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+- **High Performance**: TabPFN brings the power of transformers to tabular data, achieving top-tier results across various datasets.
+- **Easy Integration**: Designed with an sklearn-like interface, TabPFN can be seamlessly integrated into existing workflows.
+- **Versatility**: Whether you're working on classification, regression, or even survival analysis tasks, TabPFN has you covered.
+- **Efficiency**: Optimized for both CPU and GPU, TabPFN ensures fast training and inference times, making it suitable for projects of any scale.
 
-!!! info  
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.
+## Quick Links
 
-## Bash
+- [Installation](docs/installation.md): Get started by installing TabPFN in your environment.
+- [Getting Started](docs/getting_started.md): Learn how to quickly train and evaluate your first TabPFN model.
+- [Classification](docs/classification.md): Dive into using TabPFN for classification tasks, with examples and tips.
+- [Regression](docs/regression.md): Explore how to apply TabPFN to regression problems, including setup and evaluation.
 
-```bash
-# Minimal makefile for Sphinx documentation
-#
+## Getting Help
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+If you encounter any issues or have questions about using TabPFN, please refer to the [FAQs](#) or reach out to the community through [GitHub Issues](https://github.com/your-github-repo/issues).
 
-# Put it first so that "make" without argument is like "make help".
-help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-.PHONY: help Makefile
-
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-
-```
-
-## Syntax highlighting Example
-
-```python
-import flask
-import flask_saml
-
-app = flask.Flask(__name__)
-
-app.config.update({
-    'SECRET_KEY': 'soverysecret',
-    'SAML_METADATA_URL': 'https://mymetadata.xml',
-})
-flask_saml.FlaskSAML(app)
-```
-
-## Sample layout
-
-```bash
-├── docs
-│   ├── about.md
-│   └── index.md
-├── mkdocs.yml
-└── site
-    ├── 404.html
-    ├── about
-    │   └── search_index.json
-    ├── sitemap.xml
-    └── sitemap.xml.gz
-
-```
+Thank you for choosing TabPFN. We hope you find this tool valuable in your data science endeavors.
