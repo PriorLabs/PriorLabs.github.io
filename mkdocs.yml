@@ -6,6 +6,35 @@ theme:
 repo_url: https://github.com/automl/TabPFN
 plugins:
   - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          rendering:
+            show_source: true
+          options:
+            docstring_section_style: list
+            filters: ["!^_"]
+            heading_level: 1
+            inherited_members: true
+            merge_init_into_class: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+            summary: true
+            
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Classification: classification.md
+  - Regression: regression.md
+  - API Reference: api_reference.md
+  
 #extra:
 #  analytics:
 #    provider: google

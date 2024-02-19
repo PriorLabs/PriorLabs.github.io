@@ -11,10 +11,9 @@ TabPFN is a cutting-edge neural network designed specifically for tabular data p
 
 ## Quick Links
 
-- [Installation](docs/installation.md): Get started by installing TabPFN in your environment.
-- [Getting Started](docs/getting_started.md): Learn how to quickly train and evaluate your first TabPFN model.
-- [Classification](docs/classification.md): Dive into using TabPFN for classification tasks, with examples and tips.
-- [Regression](docs/regression.md): Explore how to apply TabPFN to regression problems, including setup and evaluation.
+- [Getting Started](getting_started.md): Learn how to quickly train and evaluate your first TabPFN model.
+- [Classification](classification.md): Dive into using TabPFN for classification tasks, with examples and tips.
+- [Regression](regression.md): Explore how to apply TabPFN to regression problems, including setup and evaluation.
 
 ## Getting Help
 
