@@ -9,8 +9,6 @@
       
       
       
-        <link rel="prev" href="../regression/">
-      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -294,66 +292,144 @@
       
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     API Reference
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/tabpfn_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    API Reference
+    TabPFNClassifier
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
-    
+  
+    <li class="md-nav__item">
+      <a href="../api/tabpfn_regressor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TabPFNRegressor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfnclassifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      TabPFNClassifier
-    </span>
-  </a>
   
-</li>
-      
-    </ul>
   
-</nav>
+    <li class="md-nav__item">
+      <a href="../api/model.transformer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/model.mlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/model.encoders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -379,23 +455,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfnclassifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      TabPFNClassifier
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -412,88 +471,267 @@
   
 
 
-<h1 id="api-reference">API Reference</h1>
-<h2 id="tabpfnclassifier">TabPFNClassifier</h2>
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<p>get_single_tabpfn
+</p>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h1 id="scripts.transformer_prediction_interface.get_single_tabpfn" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_single_tabpfn</span>
+
+
+<a href="#scripts.transformer_prediction_interface.get_single_tabpfn" class="headerlink" title="Permanent link">&para;</a></h1>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_single_tabpfn</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n"><span title="scripts.transformer_prediction_interface.configs.TabPFNConfig">TabPFNConfig</span></span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents first">
+  
+      <p>Get a single TabPFN model given the task type.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2995</span>
+<span class="normal">2996</span>
+<span class="normal">2997</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_single_tabpfn</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">TabPFNConfig</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get a single TabPFN model given the task type.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">tabpfn_task_type_models</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">task_type</span><span class="p">](</span><span class="o">**</span><span class="n">config</span><span class="o">.</span><span class="n">to_kwargs</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div><p>PreprocessorConfig
+</p>
 
 
 <div class="doc doc-object doc-class">
 
 
 
-<h1 id="tabpfn.scripts.transformer_prediction_interface.TabPFNClassifier" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>          <span class="doc doc-object-name doc-class-name">TabPFNClassifier</span>
+<h1 id="scripts.transformer_prediction_interface.PreprocessorConfig" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">PreprocessorConfig</span>
 
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
 
-</h1>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TabPFNClassifier</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">,</span> <span class="n">base_path</span><span class="o">=</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">(),</span> <span class="n">model_string</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">combine_preprocessing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">no_preprocess_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">multiclass_decoder</span><span class="o">=</span><span class="s1">&#39;permutation&#39;</span><span class="p">,</span> <span class="n">feature_shift_decoder</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
+<a href="#scripts.transformer_prediction_interface.PreprocessorConfig" class="headerlink" title="Permanent link">&para;</a></h1>
+
 
   <div class="doc doc-contents first">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.base.BaseEstimator">BaseEstimator</span></code>, <code><span title="sklearn.base.ClassifierMixin">ClassifierMixin</span></code></p>
+
+  
+      <p>Configuration for data preprocessors.</p>
 
 
-                <details class="quote">
-                  <summary>Source code in <code>src/tabpfn/scripts/transformer_prediction_interface.py</code></summary>
-                  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">,</span> <span class="n">base_path</span><span class="o">=</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">resolve</span><span class="p">(),</span> <span class="n">model_string</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="mi">3</span>
-             <span class="p">,</span> <span class="n">combine_preprocessing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">no_preprocess_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">multiclass_decoder</span><span class="o">=</span><span class="s1">&#39;permutation&#39;</span><span class="p">,</span> <span class="n">feature_shift_decoder</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="c1"># Model file specification (Model name, Epoch)</span>
-    <span class="n">i</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
 
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.name">name</span></code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the preprocessor.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.categorical_name">categorical_name</span></code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the categorical encoding method. Valid options are "none", "numeric",
+                    "onehot", "ordinal", "ordinal_shuffled". Default is "none".</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.append_original">append_original</span></code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to append the original features to the transformed features. Default is False.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.subsample_features">subsample_features</span></code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fraction of features to subsample. -1 means no subsampling. Default is -1.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.global_transformer_name">global_transformer_name</span></code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the global transformer to use. Default is None.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
-    <span class="n">model</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">results_file</span> <span class="o">=</span> <span class="n">load_model_workflow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">add_name</span><span class="o">=</span><span class="n">model_string</span><span class="p">,</span> <span class="n">base_path</span><span class="o">=</span><span class="n">base_path</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
-                                                 <span class="n">eval_addition</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="c1">#style, temperature = self.load_result_minimal(style_file, i, e)</span>
+            <details class="quote">
+              <summary>Source code in <code>scripts/transformer_prediction_interface/configs.py</code></summary>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">eq</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">PreprocessorConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Configuration for data preprocessors.</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">N_ensemble_configurations</span> <span class="o">=</span> <span class="n">N_ensemble_configurations</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">base__path</span> <span class="o">=</span> <span class="n">base_path</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">base_path</span> <span class="o">=</span> <span class="n">base_path</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">model_string</span> <span class="o">=</span> <span class="n">model_string</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        name (Literal): Name of the preprocessor.</span>
+<span class="sd">        categorical_name (Literal): Name of the categorical encoding method. Valid options are &quot;none&quot;, &quot;numeric&quot;,</span>
+<span class="sd">                                &quot;onehot&quot;, &quot;ordinal&quot;, &quot;ordinal_shuffled&quot;. Default is &quot;none&quot;.</span>
+<span class="sd">        append_original (bool): Whether to append the original features to the transformed features. Default is False.</span>
+<span class="sd">        subsample_features (float): Fraction of features to subsample. -1 means no subsampling. Default is -1.</span>
+<span class="sd">        global_transformer_name (str): Name of the global transformer to use. Default is None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">max_num_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;num_features&#39;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">max_num_classes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;max_num_classes&#39;</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">differentiable_hps_as_style</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;differentiable_hps_as_style&#39;</span><span class="p">]</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span>
+        <span class="s2">&quot;per_feature&quot;</span><span class="p">,</span>  <span class="c1"># a different transformation for each feature</span>
+        <span class="s2">&quot;power&quot;</span><span class="p">,</span>  <span class="c1"># a standard sklearn power transformer</span>
+        <span class="s2">&quot;safepower&quot;</span><span class="p">,</span>  <span class="c1"># a power transformer that prevents some numerical issues</span>
+        <span class="s2">&quot;power_box&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;safepower_box&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantile_uni_coarse&quot;</span><span class="p">,</span>  <span class="c1"># different quantile transformations with few quantiles up to a lot</span>
+        <span class="s2">&quot;quantile_norm_coarse&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantile_uni&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantile_norm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantile_uni_fine&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;quantile_norm_fine&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;robust&quot;</span><span class="p">,</span>  <span class="c1"># a standard sklearn robust scaler</span>
+        <span class="s2">&quot;kdi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1"># no transformation (inside the transformer we anyways do a standardization)</span>
+    <span class="p">]</span>
+    <span class="n">categorical_name</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span>
+        <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="s2">&quot;onehot&quot;</span><span class="p">,</span> <span class="s2">&quot;ordinal&quot;</span><span class="p">,</span> <span class="s2">&quot;ordinal_shuffled&quot;</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
+    <span class="c1"># categorical_name meanings:</span>
+    <span class="c1"># &quot;none&quot;: categorical features are pretty much treated as ordinal, just not resorted</span>
+    <span class="c1"># &quot;numeric&quot;: categorical features are treated as numeric, that means they are also power transformed for example</span>
+    <span class="c1"># &quot;onehot&quot;: categorical features are onehot encoded</span>
+    <span class="c1"># &quot;ordinal&quot;: categorical features are sorted and encoded as integers from 0 to n_categories - 1</span>
+    <span class="c1"># &quot;ordinal_shuffled&quot;: categorical features are encoded as integers from 0 to n_categories - 1 in a random order</span>
+    <span class="n">append_original</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">subsample_features</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">global_transformer_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="c1"># if True, the transformed features (e.g. power transformed) are appended to the original features</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">no_preprocess_mode</span> <span class="o">=</span> <span class="n">no_preprocess_mode</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">combine_preprocessing</span> <span class="o">=</span> <span class="n">combine_preprocessing</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">feature_shift_decoder</span> <span class="o">=</span> <span class="n">feature_shift_decoder</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">multiclass_decoder</span> <span class="o">=</span> <span class="n">multiclass_decoder</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_cat:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">categorical_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;_and_none&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">append_original</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="o">+</span> <span class="p">(</span>
+                <span class="s2">&quot;_subsample_feats_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subsample_features</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsample_features</span> <span class="o">&gt;</span> <span class="mi">0</span>
+                <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">)</span>
+            <span class="o">+</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;_global_transformer_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">global_transformer_name</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_transformer_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">can_be_cached</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsample_features</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 </code></pre></div></td></tr></table></div>
-                </details>
+            </details>
 
   
 
@@ -508,187 +746,57 @@
 
 
 
-<div class="doc doc-object doc-function">
+
+  </div>
+
+  </div>
+
+
+</div><p>ClassificationOptimizationMetricType
+</p>
+
+
+<div class="doc doc-object doc-attribute">
 
 
 
-<h2 id="tabpfn.scripts.transformer_prediction_interface.TabPFNClassifier.fit" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">fit</span>
+<h1 id="scripts.transformer_prediction_interface.ClassificationOptimizationMetricType" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">ClassificationOptimizationMetricType</span>
 
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">overwrite_warning</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a href="#scripts.transformer_prediction_interface.ClassificationOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">ClassificationOptimizationMetricType</span> <span class="o">=</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;auroc&#39;</span><span class="p">,</span> <span class="s1">&#39;roc&#39;</span><span class="p">,</span> <span class="s1">&#39;auroc_ovo&#39;</span><span class="p">,</span> <span class="s1">&#39;balanced_acc&#39;</span><span class="p">,</span> <span class="s1">&#39;acc&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-
-          <details class="quote">
-            <summary>Source code in <code>src/tabpfn/scripts/transformer_prediction_interface.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">overwrite_warning</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="c1"># Check that X and y have correct shape</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">force_all_finite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="c1"># Store the classes seen during fit</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_targets</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">X_</span> <span class="o">=</span> <span class="n">X</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">y_</span> <span class="o">=</span> <span class="n">y</span>
-
-    <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_features</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The number of features for this classifier is restricted to &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_features</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_classes</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The number of classes for this classifier is restricted to &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_classes</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1024</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">overwrite_warning</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;⚠️ WARNING: TabPFN is not made for datasets with a trainingsize &gt; 1024. Prediction might take a while, be less reliable. We advise not to run datasets &gt; 10k samples, which might lead to your machine crashing (due to quadratic memory scaling of TabPFN). Please confirm you want to run by passing overwrite_warning=True to the fit function.&quot;</span><span class="p">)</span>
-
-
-    <span class="c1"># Return the classifier</span>
-    <span class="k">return</span> <span class="bp">self</span>
-</code></pre></div></td></tr></table></div>
-          </details>
+  <div class="doc doc-contents first">
   </div>
 
-</div>
+</div><p>RegressionOptimizationMetricType
+</p>
 
 
-<div class="doc doc-object doc-function">
+<div class="doc doc-object doc-attribute">
 
 
 
-<h2 id="tabpfn.scripts.transformer_prediction_interface.TabPFNClassifier.predict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">predict</span>
+<h1 id="scripts.transformer_prediction_interface.RegressionOptimizationMetricType" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">RegressionOptimizationMetricType</span>
 
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a href="#scripts.transformer_prediction_interface.RegressionOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">RegressionOptimizationMetricType</span> <span class="o">=</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="s1">&#39;rmse&#39;</span><span class="p">,</span> <span class="s1">&#39;mae&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">,</span> <span class="s1">&#39;exact_match&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
-  <div class="doc doc-contents ">
-
-          <details class="quote">
-            <summary>Source code in <code>src/tabpfn/scripts/transformer_prediction_interface.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="o">=</span><span class="n">normalize_with_test</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">return_winning_probability</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">y</span>
-</code></pre></div></td></tr></table></div>
-          </details>
+  <div class="doc doc-contents first">
   </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="tabpfn.scripts.transformer_prediction_interface.TabPFNClassifier.predict_proba" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <span class="doc doc-object-name doc-function-name">predict_proba</span>
-
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-
-          <details class="quote">
-            <summary>Source code in <code>src/tabpfn/scripts/transformer_prediction_interface.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="c1"># Check is fit had been called</span>
-    <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-
-    <span class="c1"># Input validation</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">check_array</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">force_all_finite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">X_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">X_full</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">X_full</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">y_full</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">y_</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">y_full</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">y_full</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">eval_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="n">prediction</span> <span class="o">=</span> <span class="n">transformer_predict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">X_full</span><span class="p">,</span> <span class="n">y_full</span><span class="p">,</span> <span class="n">eval_pos</span><span class="p">,</span>
-                                     <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
-                                     <span class="n">style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">style</span><span class="p">,</span>
-                                     <span class="n">inference_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                     <span class="n">preprocess_transform</span><span class="o">=</span><span class="s1">&#39;none&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">no_preprocess_mode</span> <span class="k">else</span> <span class="s1">&#39;mix&#39;</span><span class="p">,</span>
-                                     <span class="n">normalize_with_test</span><span class="o">=</span><span class="n">normalize_with_test</span><span class="p">,</span>
-                                     <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">N_ensemble_configurations</span><span class="p">,</span>
-                                     <span class="n">softmax_temperature</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span>
-                                     <span class="n">combine_preprocessing</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">combine_preprocessing</span><span class="p">,</span>
-                                     <span class="n">multiclass_decoder</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">multiclass_decoder</span><span class="p">,</span>
-                                     <span class="n">feature_shift_decoder</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">feature_shift_decoder</span><span class="p">,</span>
-                                     <span class="n">differentiable_hps_as_style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">differentiable_hps_as_style</span>
-                                     <span class="p">,</span> <span class="o">**</span><span class="n">get_params_from_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">))</span>
-    <span class="n">prediction_</span><span class="p">,</span> <span class="n">y_</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">y_full</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">long</span><span class="p">()[</span><span class="n">eval_pos</span><span class="p">:]</span>
-
-    <span class="k">return</span> <span class="n">prediction_</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
 
 </div>
 
@@ -719,10 +827,29 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 PriorLabs
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/PriorLabs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
     </a>
   
 </div>

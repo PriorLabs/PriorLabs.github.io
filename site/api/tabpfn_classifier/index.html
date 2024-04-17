@@ -1,0 +1,3645 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../regression/">
+      
+      
+        <link rel="next" href="../tabpfn_regressor/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>TabPFNClassifier - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scripts.transformer_prediction_interface.TabPFNClassifier" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TabPFNClassifier
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/automl/TabPFN" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/automl/TabPFN" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TabPFNClassifier
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TabPFNClassifier
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_proba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_y_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_y_proba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.score" class="md-nav__link">
+    <span class="md-ellipsis">
+      score
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.plot_shap" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_shap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_shap_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_shap_values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_embeddings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_memory_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      estimate_memory_usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_computation_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      estimate_computation_usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tabpfn_regressor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TabPFNRegressor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model.transformer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model.mlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model.encoders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_proba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_y_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_y_proba
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.score" class="md-nav__link">
+    <span class="md-ellipsis">
+      score
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.plot_shap" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_shap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_shap_values" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_shap_values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_embeddings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_memory_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      estimate_memory_usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_computation_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      estimate_computation_usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h1 id="scripts.transformer_prediction_interface.TabPFNClassifier" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">TabPFNClassifier</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier" class="headerlink" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="scripts.transformer_prediction_interface.base.TabPFNBaseModel">TabPFNBaseModel</span></code>, <code><span title="sklearn.base.ClassifierMixin">ClassifierMixin</span></code></p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2649</span>
+<span class="normal">2650</span>
+<span class="normal">2651</span>
+<span class="normal">2652</span>
+<span class="normal">2653</span>
+<span class="normal">2654</span>
+<span class="normal">2655</span>
+<span class="normal">2656</span>
+<span class="normal">2657</span>
+<span class="normal">2658</span>
+<span class="normal">2659</span>
+<span class="normal">2660</span>
+<span class="normal">2661</span>
+<span class="normal">2662</span>
+<span class="normal">2663</span>
+<span class="normal">2664</span>
+<span class="normal">2665</span>
+<span class="normal">2666</span>
+<span class="normal">2667</span>
+<span class="normal">2668</span>
+<span class="normal">2669</span>
+<span class="normal">2670</span>
+<span class="normal">2671</span>
+<span class="normal">2672</span>
+<span class="normal">2673</span>
+<span class="normal">2674</span>
+<span class="normal">2675</span>
+<span class="normal">2676</span>
+<span class="normal">2677</span>
+<span class="normal">2678</span>
+<span class="normal">2679</span>
+<span class="normal">2680</span>
+<span class="normal">2681</span>
+<span class="normal">2682</span>
+<span class="normal">2683</span>
+<span class="normal">2684</span>
+<span class="normal">2685</span>
+<span class="normal">2686</span>
+<span class="normal">2687</span>
+<span class="normal">2688</span>
+<span class="normal">2689</span>
+<span class="normal">2690</span>
+<span class="normal">2691</span>
+<span class="normal">2692</span>
+<span class="normal">2693</span>
+<span class="normal">2694</span>
+<span class="normal">2695</span>
+<span class="normal">2696</span>
+<span class="normal">2697</span>
+<span class="normal">2698</span>
+<span class="normal">2699</span>
+<span class="normal">2700</span>
+<span class="normal">2701</span>
+<span class="normal">2702</span>
+<span class="normal">2703</span>
+<span class="normal">2704</span>
+<span class="normal">2705</span>
+<span class="normal">2706</span>
+<span class="normal">2707</span>
+<span class="normal">2708</span>
+<span class="normal">2709</span>
+<span class="normal">2710</span>
+<span class="normal">2711</span>
+<span class="normal">2712</span>
+<span class="normal">2713</span>
+<span class="normal">2714</span>
+<span class="normal">2715</span>
+<span class="normal">2716</span>
+<span class="normal">2717</span>
+<span class="normal">2718</span>
+<span class="normal">2719</span>
+<span class="normal">2720</span>
+<span class="normal">2721</span>
+<span class="normal">2722</span>
+<span class="normal">2723</span>
+<span class="normal">2724</span>
+<span class="normal">2725</span>
+<span class="normal">2726</span>
+<span class="normal">2727</span>
+<span class="normal">2728</span>
+<span class="normal">2729</span>
+<span class="normal">2730</span>
+<span class="normal">2731</span>
+<span class="normal">2732</span>
+<span class="normal">2733</span>
+<span class="normal">2734</span>
+<span class="normal">2735</span>
+<span class="normal">2736</span>
+<span class="normal">2737</span>
+<span class="normal">2738</span>
+<span class="normal">2739</span>
+<span class="normal">2740</span>
+<span class="normal">2741</span>
+<span class="normal">2742</span>
+<span class="normal">2743</span>
+<span class="normal">2744</span>
+<span class="normal">2745</span>
+<span class="normal">2746</span>
+<span class="normal">2747</span>
+<span class="normal">2748</span>
+<span class="normal">2749</span>
+<span class="normal">2750</span>
+<span class="normal">2751</span>
+<span class="normal">2752</span>
+<span class="normal">2753</span>
+<span class="normal">2754</span>
+<span class="normal">2755</span>
+<span class="normal">2756</span>
+<span class="normal">2757</span>
+<span class="normal">2758</span>
+<span class="normal">2759</span>
+<span class="normal">2760</span>
+<span class="normal">2761</span>
+<span class="normal">2762</span>
+<span class="normal">2763</span>
+<span class="normal">2764</span>
+<span class="normal">2765</span>
+<span class="normal">2766</span>
+<span class="normal">2767</span>
+<span class="normal">2768</span>
+<span class="normal">2769</span>
+<span class="normal">2770</span>
+<span class="normal">2771</span>
+<span class="normal">2772</span>
+<span class="normal">2773</span>
+<span class="normal">2774</span>
+<span class="normal">2775</span>
+<span class="normal">2776</span>
+<span class="normal">2777</span>
+<span class="normal">2778</span>
+<span class="normal">2779</span>
+<span class="normal">2780</span>
+<span class="normal">2781</span>
+<span class="normal">2782</span>
+<span class="normal">2783</span>
+<span class="normal">2784</span>
+<span class="normal">2785</span>
+<span class="normal">2786</span>
+<span class="normal">2787</span>
+<span class="normal">2788</span>
+<span class="normal">2789</span>
+<span class="normal">2790</span>
+<span class="normal">2791</span>
+<span class="normal">2792</span>
+<span class="normal">2793</span>
+<span class="normal">2794</span>
+<span class="normal">2795</span>
+<span class="normal">2796</span>
+<span class="normal">2797</span>
+<span class="normal">2798</span>
+<span class="normal">2799</span>
+<span class="normal">2800</span>
+<span class="normal">2801</span>
+<span class="normal">2802</span>
+<span class="normal">2803</span>
+<span class="normal">2804</span>
+<span class="normal">2805</span>
+<span class="normal">2806</span>
+<span class="normal">2807</span>
+<span class="normal">2808</span>
+<span class="normal">2809</span>
+<span class="normal">2810</span>
+<span class="normal">2811</span>
+<span class="normal">2812</span>
+<span class="normal">2813</span>
+<span class="normal">2814</span>
+<span class="normal">2815</span>
+<span class="normal">2816</span>
+<span class="normal">2817</span>
+<span class="normal">2818</span>
+<span class="normal">2819</span>
+<span class="normal">2820</span>
+<span class="normal">2821</span>
+<span class="normal">2822</span>
+<span class="normal">2823</span>
+<span class="normal">2824</span>
+<span class="normal">2825</span>
+<span class="normal">2826</span>
+<span class="normal">2827</span>
+<span class="normal">2828</span>
+<span class="normal">2829</span>
+<span class="normal">2830</span>
+<span class="normal">2831</span>
+<span class="normal">2832</span>
+<span class="normal">2833</span>
+<span class="normal">2834</span>
+<span class="normal">2835</span>
+<span class="normal">2836</span>
+<span class="normal">2837</span>
+<span class="normal">2838</span>
+<span class="normal">2839</span>
+<span class="normal">2840</span>
+<span class="normal">2841</span>
+<span class="normal">2842</span>
+<span class="normal">2843</span>
+<span class="normal">2844</span>
+<span class="normal">2845</span>
+<span class="normal">2846</span>
+<span class="normal">2847</span>
+<span class="normal">2848</span>
+<span class="normal">2849</span>
+<span class="normal">2850</span>
+<span class="normal">2851</span>
+<span class="normal">2852</span>
+<span class="normal">2853</span>
+<span class="normal">2854</span>
+<span class="normal">2855</span>
+<span class="normal">2856</span>
+<span class="normal">2857</span>
+<span class="normal">2858</span>
+<span class="normal">2859</span>
+<span class="normal">2860</span>
+<span class="normal">2861</span>
+<span class="normal">2862</span>
+<span class="normal">2863</span>
+<span class="normal">2864</span>
+<span class="normal">2865</span>
+<span class="normal">2866</span>
+<span class="normal">2867</span>
+<span class="normal">2868</span>
+<span class="normal">2869</span>
+<span class="normal">2870</span>
+<span class="normal">2871</span>
+<span class="normal">2872</span>
+<span class="normal">2873</span>
+<span class="normal">2874</span>
+<span class="normal">2875</span>
+<span class="normal">2876</span>
+<span class="normal">2877</span>
+<span class="normal">2878</span>
+<span class="normal">2879</span>
+<span class="normal">2880</span>
+<span class="normal">2881</span>
+<span class="normal">2882</span>
+<span class="normal">2883</span>
+<span class="normal">2884</span>
+<span class="normal">2885</span>
+<span class="normal">2886</span>
+<span class="normal">2887</span>
+<span class="normal">2888</span>
+<span class="normal">2889</span>
+<span class="normal">2890</span>
+<span class="normal">2891</span>
+<span class="normal">2892</span>
+<span class="normal">2893</span>
+<span class="normal">2894</span>
+<span class="normal">2895</span>
+<span class="normal">2896</span>
+<span class="normal">2897</span>
+<span class="normal">2898</span>
+<span class="normal">2899</span>
+<span class="normal">2900</span>
+<span class="normal">2901</span>
+<span class="normal">2902</span>
+<span class="normal">2903</span>
+<span class="normal">2904</span>
+<span class="normal">2905</span>
+<span class="normal">2906</span>
+<span class="normal">2907</span>
+<span class="normal">2908</span>
+<span class="normal">2909</span>
+<span class="normal">2910</span>
+<span class="normal">2911</span>
+<span class="normal">2912</span>
+<span class="normal">2913</span>
+<span class="normal">2914</span>
+<span class="normal">2915</span>
+<span class="normal">2916</span>
+<span class="normal">2917</span>
+<span class="normal">2918</span>
+<span class="normal">2919</span>
+<span class="normal">2920</span>
+<span class="normal">2921</span>
+<span class="normal">2922</span>
+<span class="normal">2923</span>
+<span class="normal">2924</span>
+<span class="normal">2925</span>
+<span class="normal">2926</span>
+<span class="normal">2927</span>
+<span class="normal">2928</span>
+<span class="normal">2929</span>
+<span class="normal">2930</span>
+<span class="normal">2931</span>
+<span class="normal">2932</span>
+<span class="normal">2933</span>
+<span class="normal">2934</span>
+<span class="normal">2935</span>
+<span class="normal">2936</span>
+<span class="normal">2937</span>
+<span class="normal">2938</span>
+<span class="normal">2939</span>
+<span class="normal">2940</span>
+<span class="normal">2941</span>
+<span class="normal">2942</span>
+<span class="normal">2943</span>
+<span class="normal">2944</span>
+<span class="normal">2945</span>
+<span class="normal">2946</span>
+<span class="normal">2947</span>
+<span class="normal">2948</span>
+<span class="normal">2949</span>
+<span class="normal">2950</span>
+<span class="normal">2951</span>
+<span class="normal">2952</span>
+<span class="normal">2953</span>
+<span class="normal">2954</span>
+<span class="normal">2955</span>
+<span class="normal">2956</span>
+<span class="normal">2957</span>
+<span class="normal">2958</span>
+<span class="normal">2959</span>
+<span class="normal">2960</span>
+<span class="normal">2961</span>
+<span class="normal">2962</span>
+<span class="normal">2963</span>
+<span class="normal">2964</span>
+<span class="normal">2965</span>
+<span class="normal">2966</span>
+<span class="normal">2967</span>
+<span class="normal">2968</span>
+<span class="normal">2969</span>
+<span class="normal">2970</span>
+<span class="normal">2971</span>
+<span class="normal">2972</span>
+<span class="normal">2973</span>
+<span class="normal">2974</span>
+<span class="normal">2975</span>
+<span class="normal">2976</span>
+<span class="normal">2977</span>
+<span class="normal">2978</span>
+<span class="normal">2979</span>
+<span class="normal">2980</span>
+<span class="normal">2981</span>
+<span class="normal">2982</span>
+<span class="normal">2983</span>
+<span class="normal">2984</span>
+<span class="normal">2985</span>
+<span class="normal">2986</span>
+<span class="normal">2987</span>
+<span class="normal">2988</span>
+<span class="normal">2989</span>
+<span class="normal">2990</span>
+<span class="normal">2991</span>
+<span class="normal">2992</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TabPFNClassifier</span><span class="p">(</span><span class="n">TabPFNBaseModel</span><span class="p">,</span> <span class="n">ClassifierMixin</span><span class="p">):</span>
+    <span class="n">semisupervised_indicator</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
+    <span class="n">metric_type</span> <span class="o">=</span> <span class="n">ClassificationOptimizationMetricType</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">device</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
+        <span class="n">model_string</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">batch_size_inference</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fp16_inference</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">inference_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">c</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">N_ensemble_configurations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="n">preprocess_transforms</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PreprocessorConfig</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s2">&quot;none&quot;</span><span class="p">),</span>
+            <span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="n">categorical_name</span><span class="o">=</span><span class="s2">&quot;numeric&quot;</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="n">feature_shift_decoder</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;shuffle&quot;</span><span class="p">,</span>
+        <span class="n">normalize_with_test</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">average_logits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">categorical_features</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(),</span>
+        <span class="n">optimize_metric</span><span class="p">:</span> <span class="n">ClassificationOptimizationMetricType</span> <span class="o">=</span> <span class="s2">&quot;roc&quot;</span><span class="p">,</span>
+        <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">transformer_predict_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_progress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">multiclass_decoder</span><span class="o">=</span><span class="s2">&quot;shuffle&quot;</span><span class="p">,</span>
+        <span class="n">sklearn_compatible_precision</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">softmax_temperature</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.8</span><span class="p">),</span>
+        <span class="n">save_peak_memory</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;True&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+        <span class="n">maximum_free_memory_in_gb</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">processor_speed</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">computational_budget</span><span class="o">=</span><span class="mf">4.5e12</span><span class="p">,</span>
+        <span class="n">use_poly_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">max_poly_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">transductive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">remove_outliers</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">auxiliary_clf</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">regression_y_preprocess_transforms</span><span class="p">:</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">add_fingerprint_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">subsample_samples</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        You need to specify a model either by setting the `model_string` or by setting `model` and `c`,</span>
+<span class="sd">        where the latter is the config.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            model (Optional[Any]): The model, if you want to specify it directly, this is used in combination with c.</span>
+<span class="sd">            device: The device to use for inference, &quot;auto&quot; means that it will use cuda if available, otherwise cpu</span>
+<span class="sd">            model_string (str): The model string is the path to the model.</span>
+<span class="sd">            batch_size_inference (int): The batch size to use for inference, this does not affect the results, just the</span>
+<span class="sd">                memory usage and speed. A higher batch size is faster but uses more memory. Setting the batch size to None</span>
+<span class="sd">                means that the batch size is automatically determined based on the memory usage and the maximum free memory</span>
+<span class="sd">                specified with `maximum_free_memory_in_gb`.</span>
+<span class="sd">            fp16_inference (bool): Whether to use fp16 for inference on GPU, does not affect CPU inference.</span>
+<span class="sd">            inference_mode (bool): Whether to use inference mode, which does not allow to backpropagate through the model.</span>
+<span class="sd">            c (Optional[Dict]): The config, if you want to specify it directly, this is used in combination with model.</span>
+<span class="sd">            N_ensemble_configurations (int): The number of ensemble configurations to use, the most important setting.</span>
+<span class="sd">            preprocess_transforms (Tuple[PreprocessorConfig, ...]): A tuple of strings, specifying the preprocessing steps to use.</span>
+<span class="sd">                You can use the following strings as elements &#39;(none|power|quantile|robust)[_all][_and_none]&#39;, where the first</span>
+<span class="sd">                part specifies the preprocessing step and the second part specifies the features to apply it to and</span>
+<span class="sd">                finally &#39;_and_none&#39; specifies that the original features should be added back to the features in plain.</span>
+<span class="sd">                Finally, you can combine all strings without `_all` with `_onehot` to apply one-hot encoding to the categorical</span>
+<span class="sd">                features specified with `self.fit(..., categorical_features=...)`.</span>
+<span class="sd">            feature_shift_decoder (str): [&quot;False&quot;, &quot;True&quot;, &quot;auto&quot;] Whether to shift features for each ensemble configuration.</span>
+<span class="sd">            normalize_with_test (bool): If True, the test set is used to normalize the data, otherwise the training set is used only.</span>
+<span class="sd">            average_logits (bool): Whether to average logits or probabilities for ensemble members.</span>
+<span class="sd">            categorical_features (Tuple[str, ...]): The categorical features to use for one-hot encoding.</span>
+<span class="sd">            optimize_metric (ClassificationOptimizationMetricType): The optimization metric to use.</span>
+<span class="sd">            seed (Optional[int]): The default seed to use for the order of the ensemble configurations, a seed of None will not.</span>
+<span class="sd">            transformer_predict_kwargs (Optional[Dict]): Additional keyword arguments to pass to the transformer predict method.</span>
+<span class="sd">            show_progress (bool): Whether to show progress bars during training and inference.</span>
+<span class="sd">            multiclass_decoder (str): The multiclass decoder to use.</span>
+<span class="sd">            sklearn_compatible_precision (bool): This rounds predictions to 8 decimals, so that they are deterministic (numeric instability in torch)</span>
+<span class="sd">                check_methods_sample_order_invariance does not pass, because numerically the order of samples  has an effect of the order of 1e-8.</span>
+<span class="sd">            save_peak_memory (Literal[&quot;True&quot;, &quot;False&quot;, &quot;auto&quot;]): Whether to save the peak memory usage of the model, can enable up to 8 times larger datasets to fit into memory.</span>
+<span class="sd">                &quot;True&quot;, means always enabled, &quot;False&quot;, means always disabled, &quot;auto&quot; means that it will be set based on the memory usage.</span>
+<span class="sd">            maximum_free_memory_in_gb (Optional[float]): How much memory to use at most in GB, if None, the memory usage will be calculated based on</span>
+<span class="sd">               an estimation of the systems free memory. For CUDA will use the free memory of the GPU. For CPU will default to 32GB.</span>
+<span class="sd">            processor_speed (float): The processor speed in GHz.</span>
+<span class="sd">            computational_budget (float): The computational budget in FLOPs.</span>
+<span class="sd">            use_poly_features (bool): Whether to use polynomial features as the last preprocessing step.</span>
+<span class="sd">            max_poly_features (int): Maximum number of polynomial features to use, None means unlimited.</span>
+<span class="sd">            transductive (bool): Whether to use transductive learning.</span>
+<span class="sd">            remove_outliers (float): If not 0.0, will remove outliers from the input features, where values with a standard deviation</span>
+<span class="sd">                larger than remove_outliers will be removed.</span>
+<span class="sd">            auxiliary_clf (tuple(str, str) | None): An auxiliary classifier to use for feature selection.</span>
+<span class="sd">            regression_y_preprocess_transforms (None): Preprocessing transforms for the target variable. Not used in classification.</span>
+<span class="sd">            add_fingerprint_features (bool): If True, will add one feature of random values, that will be added to</span>
+<span class="sd">                the input features. This helps discern duplicated samples in the transformer model.</span>
+<span class="sd">            subsample_samples (float): If not None, will use a random subset of the samples for training in each ensemble configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">optimize_metric</span> <span class="ow">in</span> <span class="n">tp</span><span class="o">.</span><span class="n">get_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric_type</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">multiclass_decoder</span> <span class="o">=</span> <span class="n">multiclass_decoder</span>
+
+        <span class="c1"># Pass all parameters to super class constructor</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+            <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+            <span class="n">model_string</span><span class="o">=</span><span class="n">model_string</span><span class="p">,</span>
+            <span class="n">batch_size_inference</span><span class="o">=</span><span class="n">batch_size_inference</span><span class="p">,</span>
+            <span class="n">fp16_inference</span><span class="o">=</span><span class="n">fp16_inference</span><span class="p">,</span>
+            <span class="n">inference_mode</span><span class="o">=</span><span class="n">inference_mode</span><span class="p">,</span>
+            <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+            <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="n">N_ensemble_configurations</span><span class="p">,</span>
+            <span class="n">preprocess_transforms</span><span class="o">=</span><span class="n">preprocess_transforms</span><span class="p">,</span>
+            <span class="n">feature_shift_decoder</span><span class="o">=</span><span class="n">feature_shift_decoder</span><span class="p">,</span>
+            <span class="n">normalize_with_test</span><span class="o">=</span><span class="n">normalize_with_test</span><span class="p">,</span>
+            <span class="n">average_logits</span><span class="o">=</span><span class="n">average_logits</span><span class="p">,</span>
+            <span class="n">categorical_features</span><span class="o">=</span><span class="n">categorical_features</span><span class="p">,</span>
+            <span class="n">optimize_metric</span><span class="o">=</span><span class="n">optimize_metric</span><span class="p">,</span>
+            <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+            <span class="n">transformer_predict_kwargs</span><span class="o">=</span><span class="n">transformer_predict_kwargs</span><span class="p">,</span>
+            <span class="n">show_progress</span><span class="o">=</span><span class="n">show_progress</span><span class="p">,</span>
+            <span class="n">sklearn_compatible_precision</span><span class="o">=</span><span class="n">sklearn_compatible_precision</span><span class="p">,</span>
+            <span class="n">softmax_temperature</span><span class="o">=</span><span class="n">softmax_temperature</span><span class="p">,</span>
+            <span class="n">save_peak_memory</span><span class="o">=</span><span class="n">save_peak_memory</span><span class="p">,</span>
+            <span class="n">maximum_free_memory_in_gb</span><span class="o">=</span><span class="n">maximum_free_memory_in_gb</span><span class="p">,</span>
+            <span class="n">processor_speed</span><span class="o">=</span><span class="n">processor_speed</span><span class="p">,</span>
+            <span class="n">computational_budget</span><span class="o">=</span><span class="n">computational_budget</span><span class="p">,</span>
+            <span class="n">use_poly_features</span><span class="o">=</span><span class="n">use_poly_features</span><span class="p">,</span>
+            <span class="n">max_poly_features</span><span class="o">=</span><span class="n">max_poly_features</span><span class="p">,</span>
+            <span class="n">transductive</span><span class="o">=</span><span class="n">transductive</span><span class="p">,</span>
+            <span class="n">remove_outliers</span><span class="o">=</span><span class="n">remove_outliers</span><span class="p">,</span>
+            <span class="n">auxiliary_clf</span><span class="o">=</span><span class="n">auxiliary_clf</span><span class="p">,</span>
+            <span class="n">regression_y_preprocess_transforms</span><span class="o">=</span><span class="n">regression_y_preprocess_transforms</span><span class="p">,</span>
+            <span class="n">add_fingerprint_features</span><span class="o">=</span><span class="n">add_fingerprint_features</span><span class="p">,</span>
+            <span class="n">subsample_samples</span><span class="o">=</span><span class="n">subsample_samples</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">predict_function_for_shap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span>
+
+    <span class="k">def</span> <span class="nf">_validate_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">y_</span> <span class="o">=</span> <span class="n">column_or_1d</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">check_classification_targets</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="c1"># Get classes and encode before type conversion to guarantee correct class labels.</span>
+        <span class="n">not_nan_mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">y_</span><span class="p">[</span><span class="n">not_nan_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_</span><span class="p">[</span><span class="n">not_nan_mask</span><span class="p">],</span> <span class="n">return_inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The number of classes has to be greater than one; got </span><span class="si">%d</span><span class="s2"> class&quot;</span>
+                <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span> <span class="o">=</span> <span class="bp">cls</span>
+
+        <span class="c1"># convert type to align with the negative value of the indicator (e.g., avoid uint8)</span>
+        <span class="n">y_</span> <span class="o">=</span> <span class="n">y_</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">y_</span><span class="p">[</span><span class="o">~</span><span class="n">not_nan_mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabPFNClassifier</span><span class="o">.</span><span class="n">semisupervised_indicator</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y_</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">check_training_data</span><span class="p">(</span>
+        <span class="n">clf</span><span class="p">:</span> <span class="n">TabPFNClassifier</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">:</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">semisupervised_indicator</span>
+
+        <span class="n">unique_labels_</span> <span class="o">=</span> <span class="n">unique_labels</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="n">has_nan_class_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">clf</span><span class="o">.</span><span class="n">semisupervised_indicator</span> <span class="ow">in</span> <span class="n">unique_labels_</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">clf</span><span class="o">.</span><span class="n">c_processed_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;semisupervised_enabled&quot;</span><span class="p">,</span> <span class="kc">False</span>
+            <span class="p">),</span> <span class="s2">&quot;Semisupervised not enabled for this model&quot;</span>
+            <span class="n">has_nan_class_count</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">print_once</span><span class="p">(</span>
+                <span class="s2">&quot;Found nan class in training data, will be used as semisupervsied&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels_</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">clf</span><span class="o">.</span><span class="n">max_num_classes_</span> <span class="o">+</span> <span class="n">has_nan_class_count</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The number of classes for this classifier is restricted to &quot;</span><span class="p">,</span>
+                <span class="n">clf</span><span class="o">.</span><span class="n">max_num_classes_</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="n">clf</span><span class="o">.</span><span class="n">num_classes_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_labels_</span><span class="p">)</span> <span class="o">-</span> <span class="n">has_nan_class_count</span>
+
+        <span class="c1"># Check that X and y have correct shape</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">check_X_y</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">force_all_finite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Store the classes seen during fit</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">_validate_targets</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">label_encoder_</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+        <span class="n">y</span><span class="p">[</span>
+            <span class="n">y</span> <span class="o">!=</span> <span class="n">TabPFNClassifier</span><span class="o">.</span><span class="n">semisupervised_indicator</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">label_encoder_</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span>
+            <span class="n">y</span><span class="p">[</span><span class="n">y</span> <span class="o">!=</span> <span class="n">TabPFNClassifier</span><span class="o">.</span><span class="n">semisupervised_indicator</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">TabPFNBaseModel</span><span class="o">.</span><span class="n">check_training_data</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="nf">init_model_and_get_model_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">init_model_and_get_model_config</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_classification_</span><span class="p">,</span> <span class="s2">&quot;This should be a classification model&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_num_classes_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c_processed_</span><span class="p">[</span><span class="s2">&quot;max_num_classes&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_post_process_predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prediction</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sklearn_compatible_precision</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SKLEARN COMPATIBLE PREDICTION FOR DEBUG PURPOSE&quot;</span><span class="p">)</span>
+            <span class="n">prediction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span>
+                <span class="n">prediction</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">16</span>
+            <span class="p">)</span>  <span class="c1"># TODO: Do we want this, its just for sklearn</span>
+            <span class="n">prediction</span><span class="p">[</span><span class="n">prediction</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span> <span class="o">/</span> <span class="n">prediction</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">prediction</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TabPFNClassifier</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fits the TabPFNClassifier model to the input data `X` and `y`.</span>
+
+<span class="sd">        The actual training logic is delegated to the `_fit` method, which should be implemented by subclasses.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X (Union[ndarray, torch.Tensor]): The input feature matrix of shape (n_samples, n_features).</span>
+<span class="sd">            y (Union[ndarray, torch.Tensor]): The target labels of shape (n_samples,).</span>
+<span class="sd">            additional_y (Optional[Dict[str, torch.Tensor]]): Additional labels to use during training.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            TabPFNClassifier: The fitted model object (self).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">float</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">y_</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">float</span><span class="p">(),</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">),</span>
+            <span class="n">additional_ys</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">additional_y_</span><span class="p">,</span>
+            <span class="n">cache_trainset_representations</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span><span class="p">,</span>  <span class="c1"># this will always be true here</span>
+            <span class="o">**</span><span class="n">get_params_from_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_processed_</span><span class="p">),</span>
+            <span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">predict_full</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">get_additional_outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">timing_start</span><span class="p">(</span><span class="s2">&quot;predict&quot;</span><span class="p">)</span>
+        <span class="n">X_full</span><span class="p">,</span> <span class="n">y_full</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">,</span> <span class="n">eval_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_common_setup</span><span class="p">(</span>
+            <span class="n">X</span><span class="p">,</span> <span class="n">additional_y_eval</span><span class="o">=</span><span class="n">additional_y</span>
+        <span class="p">)</span>
+
+        <span class="n">prediction</span><span class="p">,</span> <span class="n">additional_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict</span><span class="p">(</span>
+            <span class="n">X_full</span><span class="p">,</span>
+            <span class="n">y_full</span><span class="p">,</span>
+            <span class="n">eval_pos</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="n">additional_ys</span><span class="o">=</span><span class="n">additional_y</span><span class="p">,</span>
+            <span class="n">cache_trainset_representations</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span><span class="p">,</span>
+            <span class="n">reweight_probs_based_on_train</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">optimizes_balanced_metric</span><span class="p">(),</span>
+            <span class="n">get_additional_outputs</span><span class="o">=</span><span class="n">get_additional_outputs</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">get_params_from_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_processed_</span><span class="p">),</span>
+            <span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+        <span class="p">)</span>
+
+        <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post_process_predict_proba</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+        <span class="n">timing_end</span><span class="p">(</span><span class="s2">&quot;predict&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">LOG_COMPUTE_TIME_PATH</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_log_compute_time</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;proba&quot;</span><span class="p">:</span> <span class="n">prediction</span><span class="p">,</span> <span class="o">**</span><span class="n">additional_outputs</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calls the transformer to predict the probabilities of the classes of the X test inputs given the previous set</span>
+<span class="sd">        training dataset</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X: test datapoints</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_full</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="n">additional_y</span><span class="p">)[</span><span class="s2">&quot;proba&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predict the class labels for the input samples.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X (array-like): The input samples.</span>
+<span class="sd">            return_winning_probability (bool): Whether to return the winning probability.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            array: The predicted class labels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">return_winning_probability</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="nf">predict_y_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predict the probability of the target labels `y` given the input samples `X`.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X (array-like): The input samples.</span>
+<span class="sd">            y (array-like): The target labels.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            array: The predicted probabilities of the target labels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">prediction</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Compute the score of the model on the given test data and labels.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X (array-like): The input samples.</span>
+<span class="sd">            y (array-like): The true labels for `X`.</span>
+<span class="sd">            sample_weight (array-like, optional): Sample weights.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: The computed score.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimize_metric</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;roc&quot;</span><span class="p">,</span> <span class="s2">&quot;auroc&quot;</span><span class="p">,</span> <span class="s2">&quot;log_loss&quot;</span><span class="p">]:</span>
+            <span class="n">pred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">pred</span> <span class="o">=</span> <span class="n">pred</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">score_classification</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">optimize_metric</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_aux_clf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auxiliary_clf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;xgb&quot;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+
+            <span class="n">auxiliary_clf_</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">auxiliary_clf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;rf&quot;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+            <span class="n">auxiliary_clf_</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown auxiliary classifier </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">auxiliary_clf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">auxiliary_clf_</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.__init__" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">__init__</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;cpu&#39;</span><span class="p">,</span> <span class="n">model_string</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">batch_size_inference</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fp16_inference</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">inference_mode</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">N_ensemble_configurations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">preprocess_transforms</span><span class="p">:</span> <span class="n"><span title="typing.Tuple">Tuple</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.configs.PreprocessorConfig" href="../../api_reference/#scripts.transformer_prediction_interface.PreprocessorConfig">PreprocessorConfig</a></span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">),</span> <span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s1">&#39;power&#39;</span><span class="p">,</span> <span class="n">categorical_name</span><span class="o">=</span><span class="s1">&#39;numeric&#39;</span><span class="p">)),</span> <span class="n">feature_shift_decoder</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span> <span class="n">normalize_with_test</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">average_logits</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">:</span> <span class="n"><span title="typing.Tuple">Tuple</span></span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(),</span> <span class="n">optimize_metric</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.base.ClassificationOptimizationMetricType" href="../../api_reference/#scripts.transformer_prediction_interface.ClassificationOptimizationMetricType">ClassificationOptimizationMetricType</a></span> <span class="o">=</span> <span class="s1">&#39;roc&#39;</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">transformer_predict_kwargs</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">show_progress</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">multiclass_decoder</span><span class="o">=</span><span class="s1">&#39;shuffle&#39;</span><span class="p">,</span> <span class="n">sklearn_compatible_precision</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">softmax_temperature</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.8</span><span class="p">),</span> <span class="n">save_peak_memory</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="n">maximum_free_memory_in_gb</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">processor_speed</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">computational_budget</span><span class="o">=</span><span class="mf">4500000000000.0</span><span class="p">,</span> <span class="n">use_poly_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_poly_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">transductive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">remove_outliers</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">auxiliary_clf</span><span class="p">:</span> <span class="n">tuple</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">str</span><span class="p">)</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">regression_y_preprocess_transforms</span><span class="p">:</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">add_fingerprint_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">subsample_samples</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>You need to specify a model either by setting the <code>model_string</code> or by setting <code>model</code> and <code>c</code>,
+where the latter is the config.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The model, if you want to specify it directly, this is used in combination with c.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>device</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The device to use for inference, "auto" means that it will use cuda if available, otherwise cpu</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;cpu&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>model_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The model string is the path to the model.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>batch_size_inference</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The batch size to use for inference, this does not affect the results, just the
+memory usage and speed. A higher batch size is faster but uses more memory. Setting the batch size to None
+means that the batch size is automatically determined based on the memory usage and the maximum free memory
+specified with <code>maximum_free_memory_in_gb</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>fp16_inference</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use fp16 for inference on GPU, does not affect CPU inference.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>inference_mode</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use inference mode, which does not allow to backpropagate through the model.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>c</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The config, if you want to specify it directly, this is used in combination with model.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>N_ensemble_configurations</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The number of ensemble configurations to use, the most important setting.</p>
+            </div>
+          </td>
+          <td>
+                <code>10</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>preprocess_transforms</code></td>
+          <td>
+                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.configs.PreprocessorConfig" href="../../api_reference/#scripts.transformer_prediction_interface.PreprocessorConfig">PreprocessorConfig</a>, ...]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A tuple of strings, specifying the preprocessing steps to use.
+You can use the following strings as elements '(none|power|quantile|robust)[_all][_and_none]', where the first
+part specifies the preprocessing step and the second part specifies the features to apply it to and
+finally '_and_none' specifies that the original features should be added back to the features in plain.
+Finally, you can combine all strings without <code>_all</code> with <code>_onehot</code> to apply one-hot encoding to the categorical
+features specified with <code>self.fit(..., categorical_features=...)</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>(<a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.configs.PreprocessorConfig" href="../../api_reference/#scripts.transformer_prediction_interface.PreprocessorConfig">PreprocessorConfig</a>(&#39;none&#39;), <a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.configs.PreprocessorConfig" href="../../api_reference/#scripts.transformer_prediction_interface.PreprocessorConfig">PreprocessorConfig</a>(&#39;power&#39;, categorical_name=&#39;numeric&#39;))</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>feature_shift_decoder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>["False", "True", "auto"] Whether to shift features for each ensemble configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;shuffle&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>normalize_with_test</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If True, the test set is used to normalize the data, otherwise the training set is used only.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>average_logits</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to average logits or probabilities for ensemble members.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>categorical_features</code></td>
+          <td>
+                <code><span title="typing.Tuple">Tuple</span>[str, ...]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The categorical features to use for one-hot encoding.</p>
+            </div>
+          </td>
+          <td>
+                <code>tuple()</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>optimize_metric</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.base.ClassificationOptimizationMetricType" href="../../api_reference/#scripts.transformer_prediction_interface.ClassificationOptimizationMetricType">ClassificationOptimizationMetricType</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The optimization metric to use.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;roc&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>seed</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The default seed to use for the order of the ensemble configurations, a seed of None will not.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>transformer_predict_kwargs</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments to pass to the transformer predict method.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>show_progress</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to show progress bars during training and inference.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>multiclass_decoder</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The multiclass decoder to use.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;shuffle&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sklearn_compatible_precision</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>This rounds predictions to 8 decimals, so that they are deterministic (numeric instability in torch)
+check_methods_sample_order_invariance does not pass, because numerically the order of samples  has an effect of the order of 1e-8.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>save_peak_memory</code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span>[&#39;True&#39;, &#39;False&#39;, &#39;auto&#39;]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to save the peak memory usage of the model, can enable up to 8 times larger datasets to fit into memory.
+"True", means always enabled, "False", means always disabled, "auto" means that it will be set based on the memory usage.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;True&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>maximum_free_memory_in_gb</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[float]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>How much memory to use at most in GB, if None, the memory usage will be calculated based on
+an estimation of the systems free memory. For CUDA will use the free memory of the GPU. For CPU will default to 32GB.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>processor_speed</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The processor speed in GHz.</p>
+            </div>
+          </td>
+          <td>
+                <code>1.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>computational_budget</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The computational budget in FLOPs.</p>
+            </div>
+          </td>
+          <td>
+                <code>4500000000000.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>use_poly_features</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use polynomial features as the last preprocessing step.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_poly_features</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Maximum number of polynomial features to use, None means unlimited.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>transductive</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to use transductive learning.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>remove_outliers</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If not 0.0, will remove outliers from the input features, where values with a standard deviation
+larger than remove_outliers will be removed.</p>
+            </div>
+          </td>
+          <td>
+                <code>0.0</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>auxiliary_clf</code></td>
+          <td>
+                <code>tuple(str, str) | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An auxiliary classifier to use for feature selection.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>regression_y_preprocess_transforms</code></td>
+          <td>
+                <code>None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Preprocessing transforms for the target variable. Not used in classification.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>add_fingerprint_features</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If True, will add one feature of random values, that will be added to
+the input features. This helps discern duplicated samples in the transformer model.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>subsample_samples</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If not None, will use a random subset of the samples for training in each ensemble configuration.</p>
+            </div>
+          </td>
+          <td>
+                <code>-1</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2653</span>
+<span class="normal">2654</span>
+<span class="normal">2655</span>
+<span class="normal">2656</span>
+<span class="normal">2657</span>
+<span class="normal">2658</span>
+<span class="normal">2659</span>
+<span class="normal">2660</span>
+<span class="normal">2661</span>
+<span class="normal">2662</span>
+<span class="normal">2663</span>
+<span class="normal">2664</span>
+<span class="normal">2665</span>
+<span class="normal">2666</span>
+<span class="normal">2667</span>
+<span class="normal">2668</span>
+<span class="normal">2669</span>
+<span class="normal">2670</span>
+<span class="normal">2671</span>
+<span class="normal">2672</span>
+<span class="normal">2673</span>
+<span class="normal">2674</span>
+<span class="normal">2675</span>
+<span class="normal">2676</span>
+<span class="normal">2677</span>
+<span class="normal">2678</span>
+<span class="normal">2679</span>
+<span class="normal">2680</span>
+<span class="normal">2681</span>
+<span class="normal">2682</span>
+<span class="normal">2683</span>
+<span class="normal">2684</span>
+<span class="normal">2685</span>
+<span class="normal">2686</span>
+<span class="normal">2687</span>
+<span class="normal">2688</span>
+<span class="normal">2689</span>
+<span class="normal">2690</span>
+<span class="normal">2691</span>
+<span class="normal">2692</span>
+<span class="normal">2693</span>
+<span class="normal">2694</span>
+<span class="normal">2695</span>
+<span class="normal">2696</span>
+<span class="normal">2697</span>
+<span class="normal">2698</span>
+<span class="normal">2699</span>
+<span class="normal">2700</span>
+<span class="normal">2701</span>
+<span class="normal">2702</span>
+<span class="normal">2703</span>
+<span class="normal">2704</span>
+<span class="normal">2705</span>
+<span class="normal">2706</span>
+<span class="normal">2707</span>
+<span class="normal">2708</span>
+<span class="normal">2709</span>
+<span class="normal">2710</span>
+<span class="normal">2711</span>
+<span class="normal">2712</span>
+<span class="normal">2713</span>
+<span class="normal">2714</span>
+<span class="normal">2715</span>
+<span class="normal">2716</span>
+<span class="normal">2717</span>
+<span class="normal">2718</span>
+<span class="normal">2719</span>
+<span class="normal">2720</span>
+<span class="normal">2721</span>
+<span class="normal">2722</span>
+<span class="normal">2723</span>
+<span class="normal">2724</span>
+<span class="normal">2725</span>
+<span class="normal">2726</span>
+<span class="normal">2727</span>
+<span class="normal">2728</span>
+<span class="normal">2729</span>
+<span class="normal">2730</span>
+<span class="normal">2731</span>
+<span class="normal">2732</span>
+<span class="normal">2733</span>
+<span class="normal">2734</span>
+<span class="normal">2735</span>
+<span class="normal">2736</span>
+<span class="normal">2737</span>
+<span class="normal">2738</span>
+<span class="normal">2739</span>
+<span class="normal">2740</span>
+<span class="normal">2741</span>
+<span class="normal">2742</span>
+<span class="normal">2743</span>
+<span class="normal">2744</span>
+<span class="normal">2745</span>
+<span class="normal">2746</span>
+<span class="normal">2747</span>
+<span class="normal">2748</span>
+<span class="normal">2749</span>
+<span class="normal">2750</span>
+<span class="normal">2751</span>
+<span class="normal">2752</span>
+<span class="normal">2753</span>
+<span class="normal">2754</span>
+<span class="normal">2755</span>
+<span class="normal">2756</span>
+<span class="normal">2757</span>
+<span class="normal">2758</span>
+<span class="normal">2759</span>
+<span class="normal">2760</span>
+<span class="normal">2761</span>
+<span class="normal">2762</span>
+<span class="normal">2763</span>
+<span class="normal">2764</span>
+<span class="normal">2765</span>
+<span class="normal">2766</span>
+<span class="normal">2767</span>
+<span class="normal">2768</span>
+<span class="normal">2769</span>
+<span class="normal">2770</span>
+<span class="normal">2771</span>
+<span class="normal">2772</span>
+<span class="normal">2773</span>
+<span class="normal">2774</span>
+<span class="normal">2775</span>
+<span class="normal">2776</span>
+<span class="normal">2777</span>
+<span class="normal">2778</span>
+<span class="normal">2779</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">device</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
+    <span class="n">model_string</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">batch_size_inference</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">fp16_inference</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">inference_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">N_ensemble_configurations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">preprocess_transforms</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PreprocessorConfig</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s2">&quot;none&quot;</span><span class="p">),</span>
+        <span class="n">PreprocessorConfig</span><span class="p">(</span><span class="s2">&quot;power&quot;</span><span class="p">,</span> <span class="n">categorical_name</span><span class="o">=</span><span class="s2">&quot;numeric&quot;</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">feature_shift_decoder</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;shuffle&quot;</span><span class="p">,</span>
+    <span class="n">normalize_with_test</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">average_logits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">categorical_features</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(),</span>
+    <span class="n">optimize_metric</span><span class="p">:</span> <span class="n">ClassificationOptimizationMetricType</span> <span class="o">=</span> <span class="s2">&quot;roc&quot;</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">transformer_predict_kwargs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">show_progress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">multiclass_decoder</span><span class="o">=</span><span class="s2">&quot;shuffle&quot;</span><span class="p">,</span>
+    <span class="n">sklearn_compatible_precision</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">softmax_temperature</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.8</span><span class="p">),</span>
+    <span class="n">save_peak_memory</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;True&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="n">maximum_free_memory_in_gb</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">processor_speed</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">computational_budget</span><span class="o">=</span><span class="mf">4.5e12</span><span class="p">,</span>
+    <span class="n">use_poly_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">max_poly_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">transductive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">remove_outliers</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">auxiliary_clf</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">regression_y_preprocess_transforms</span><span class="p">:</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">add_fingerprint_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">subsample_samples</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    You need to specify a model either by setting the `model_string` or by setting `model` and `c`,</span>
+<span class="sd">    where the latter is the config.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        model (Optional[Any]): The model, if you want to specify it directly, this is used in combination with c.</span>
+<span class="sd">        device: The device to use for inference, &quot;auto&quot; means that it will use cuda if available, otherwise cpu</span>
+<span class="sd">        model_string (str): The model string is the path to the model.</span>
+<span class="sd">        batch_size_inference (int): The batch size to use for inference, this does not affect the results, just the</span>
+<span class="sd">            memory usage and speed. A higher batch size is faster but uses more memory. Setting the batch size to None</span>
+<span class="sd">            means that the batch size is automatically determined based on the memory usage and the maximum free memory</span>
+<span class="sd">            specified with `maximum_free_memory_in_gb`.</span>
+<span class="sd">        fp16_inference (bool): Whether to use fp16 for inference on GPU, does not affect CPU inference.</span>
+<span class="sd">        inference_mode (bool): Whether to use inference mode, which does not allow to backpropagate through the model.</span>
+<span class="sd">        c (Optional[Dict]): The config, if you want to specify it directly, this is used in combination with model.</span>
+<span class="sd">        N_ensemble_configurations (int): The number of ensemble configurations to use, the most important setting.</span>
+<span class="sd">        preprocess_transforms (Tuple[PreprocessorConfig, ...]): A tuple of strings, specifying the preprocessing steps to use.</span>
+<span class="sd">            You can use the following strings as elements &#39;(none|power|quantile|robust)[_all][_and_none]&#39;, where the first</span>
+<span class="sd">            part specifies the preprocessing step and the second part specifies the features to apply it to and</span>
+<span class="sd">            finally &#39;_and_none&#39; specifies that the original features should be added back to the features in plain.</span>
+<span class="sd">            Finally, you can combine all strings without `_all` with `_onehot` to apply one-hot encoding to the categorical</span>
+<span class="sd">            features specified with `self.fit(..., categorical_features=...)`.</span>
+<span class="sd">        feature_shift_decoder (str): [&quot;False&quot;, &quot;True&quot;, &quot;auto&quot;] Whether to shift features for each ensemble configuration.</span>
+<span class="sd">        normalize_with_test (bool): If True, the test set is used to normalize the data, otherwise the training set is used only.</span>
+<span class="sd">        average_logits (bool): Whether to average logits or probabilities for ensemble members.</span>
+<span class="sd">        categorical_features (Tuple[str, ...]): The categorical features to use for one-hot encoding.</span>
+<span class="sd">        optimize_metric (ClassificationOptimizationMetricType): The optimization metric to use.</span>
+<span class="sd">        seed (Optional[int]): The default seed to use for the order of the ensemble configurations, a seed of None will not.</span>
+<span class="sd">        transformer_predict_kwargs (Optional[Dict]): Additional keyword arguments to pass to the transformer predict method.</span>
+<span class="sd">        show_progress (bool): Whether to show progress bars during training and inference.</span>
+<span class="sd">        multiclass_decoder (str): The multiclass decoder to use.</span>
+<span class="sd">        sklearn_compatible_precision (bool): This rounds predictions to 8 decimals, so that they are deterministic (numeric instability in torch)</span>
+<span class="sd">            check_methods_sample_order_invariance does not pass, because numerically the order of samples  has an effect of the order of 1e-8.</span>
+<span class="sd">        save_peak_memory (Literal[&quot;True&quot;, &quot;False&quot;, &quot;auto&quot;]): Whether to save the peak memory usage of the model, can enable up to 8 times larger datasets to fit into memory.</span>
+<span class="sd">            &quot;True&quot;, means always enabled, &quot;False&quot;, means always disabled, &quot;auto&quot; means that it will be set based on the memory usage.</span>
+<span class="sd">        maximum_free_memory_in_gb (Optional[float]): How much memory to use at most in GB, if None, the memory usage will be calculated based on</span>
+<span class="sd">           an estimation of the systems free memory. For CUDA will use the free memory of the GPU. For CPU will default to 32GB.</span>
+<span class="sd">        processor_speed (float): The processor speed in GHz.</span>
+<span class="sd">        computational_budget (float): The computational budget in FLOPs.</span>
+<span class="sd">        use_poly_features (bool): Whether to use polynomial features as the last preprocessing step.</span>
+<span class="sd">        max_poly_features (int): Maximum number of polynomial features to use, None means unlimited.</span>
+<span class="sd">        transductive (bool): Whether to use transductive learning.</span>
+<span class="sd">        remove_outliers (float): If not 0.0, will remove outliers from the input features, where values with a standard deviation</span>
+<span class="sd">            larger than remove_outliers will be removed.</span>
+<span class="sd">        auxiliary_clf (tuple(str, str) | None): An auxiliary classifier to use for feature selection.</span>
+<span class="sd">        regression_y_preprocess_transforms (None): Preprocessing transforms for the target variable. Not used in classification.</span>
+<span class="sd">        add_fingerprint_features (bool): If True, will add one feature of random values, that will be added to</span>
+<span class="sd">            the input features. This helps discern duplicated samples in the transformer model.</span>
+<span class="sd">        subsample_samples (float): If not None, will use a random subset of the samples for training in each ensemble configuration.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">optimize_metric</span> <span class="ow">in</span> <span class="n">tp</span><span class="o">.</span><span class="n">get_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metric_type</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">multiclass_decoder</span> <span class="o">=</span> <span class="n">multiclass_decoder</span>
+
+    <span class="c1"># Pass all parameters to super class constructor</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+        <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+        <span class="n">model_string</span><span class="o">=</span><span class="n">model_string</span><span class="p">,</span>
+        <span class="n">batch_size_inference</span><span class="o">=</span><span class="n">batch_size_inference</span><span class="p">,</span>
+        <span class="n">fp16_inference</span><span class="o">=</span><span class="n">fp16_inference</span><span class="p">,</span>
+        <span class="n">inference_mode</span><span class="o">=</span><span class="n">inference_mode</span><span class="p">,</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+        <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="n">N_ensemble_configurations</span><span class="p">,</span>
+        <span class="n">preprocess_transforms</span><span class="o">=</span><span class="n">preprocess_transforms</span><span class="p">,</span>
+        <span class="n">feature_shift_decoder</span><span class="o">=</span><span class="n">feature_shift_decoder</span><span class="p">,</span>
+        <span class="n">normalize_with_test</span><span class="o">=</span><span class="n">normalize_with_test</span><span class="p">,</span>
+        <span class="n">average_logits</span><span class="o">=</span><span class="n">average_logits</span><span class="p">,</span>
+        <span class="n">categorical_features</span><span class="o">=</span><span class="n">categorical_features</span><span class="p">,</span>
+        <span class="n">optimize_metric</span><span class="o">=</span><span class="n">optimize_metric</span><span class="p">,</span>
+        <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+        <span class="n">transformer_predict_kwargs</span><span class="o">=</span><span class="n">transformer_predict_kwargs</span><span class="p">,</span>
+        <span class="n">show_progress</span><span class="o">=</span><span class="n">show_progress</span><span class="p">,</span>
+        <span class="n">sklearn_compatible_precision</span><span class="o">=</span><span class="n">sklearn_compatible_precision</span><span class="p">,</span>
+        <span class="n">softmax_temperature</span><span class="o">=</span><span class="n">softmax_temperature</span><span class="p">,</span>
+        <span class="n">save_peak_memory</span><span class="o">=</span><span class="n">save_peak_memory</span><span class="p">,</span>
+        <span class="n">maximum_free_memory_in_gb</span><span class="o">=</span><span class="n">maximum_free_memory_in_gb</span><span class="p">,</span>
+        <span class="n">processor_speed</span><span class="o">=</span><span class="n">processor_speed</span><span class="p">,</span>
+        <span class="n">computational_budget</span><span class="o">=</span><span class="n">computational_budget</span><span class="p">,</span>
+        <span class="n">use_poly_features</span><span class="o">=</span><span class="n">use_poly_features</span><span class="p">,</span>
+        <span class="n">max_poly_features</span><span class="o">=</span><span class="n">max_poly_features</span><span class="p">,</span>
+        <span class="n">transductive</span><span class="o">=</span><span class="n">transductive</span><span class="p">,</span>
+        <span class="n">remove_outliers</span><span class="o">=</span><span class="n">remove_outliers</span><span class="p">,</span>
+        <span class="n">auxiliary_clf</span><span class="o">=</span><span class="n">auxiliary_clf</span><span class="p">,</span>
+        <span class="n">regression_y_preprocess_transforms</span><span class="o">=</span><span class="n">regression_y_preprocess_transforms</span><span class="p">,</span>
+        <span class="n">add_fingerprint_features</span><span class="o">=</span><span class="n">add_fingerprint_features</span><span class="p">,</span>
+        <span class="n">subsample_samples</span><span class="o">=</span><span class="n">subsample_samples</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">predict_function_for_shap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.base.TabPFNClassifier" href="#scripts.transformer_prediction_interface.TabPFNClassifier">TabPFNClassifier</a></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fits the TabPFNClassifier model to the input data <code>X</code> and <code>y</code>.</p>
+<p>The actual training logic is delegated to the <code>_fit</code> method, which should be implemented by subclasses.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>Union[ndarray, <span title="torch.Tensor">Tensor</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input feature matrix of shape (n_samples, n_features).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code>Union[ndarray, <span title="torch.Tensor">Tensor</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The target labels of shape (n_samples,).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>additional_y</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="torch.Tensor">Tensor</span>]]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional labels to use during training.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>TabPFNClassifier</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="scripts.transformer_prediction_interface.base.TabPFNClassifier" href="#scripts.transformer_prediction_interface.TabPFNClassifier">TabPFNClassifier</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The fitted model object (self).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2863</span>
+<span class="normal">2864</span>
+<span class="normal">2865</span>
+<span class="normal">2866</span>
+<span class="normal">2867</span>
+<span class="normal">2868</span>
+<span class="normal">2869</span>
+<span class="normal">2870</span>
+<span class="normal">2871</span>
+<span class="normal">2872</span>
+<span class="normal">2873</span>
+<span class="normal">2874</span>
+<span class="normal">2875</span>
+<span class="normal">2876</span>
+<span class="normal">2877</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TabPFNClassifier</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fits the TabPFNClassifier model to the input data `X` and `y`.</span>
+
+<span class="sd">    The actual training logic is delegated to the `_fit` method, which should be implemented by subclasses.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (Union[ndarray, torch.Tensor]): The input feature matrix of shape (n_samples, n_features).</span>
+<span class="sd">        y (Union[ndarray, torch.Tensor]): The target labels of shape (n_samples,).</span>
+<span class="sd">        additional_y (Optional[Dict[str, torch.Tensor]]): Additional labels to use during training.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        TabPFNClassifier: The fitted model object (self).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.predict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict the class labels for the input samples.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input samples.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>return_winning_probability</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to return the winning probability.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>array</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted class labels.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2925</span>
+<span class="normal">2926</span>
+<span class="normal">2927</span>
+<span class="normal">2928</span>
+<span class="normal">2929</span>
+<span class="normal">2930</span>
+<span class="normal">2931</span>
+<span class="normal">2932</span>
+<span class="normal">2933</span>
+<span class="normal">2934</span>
+<span class="normal">2935</span>
+<span class="normal">2936</span>
+<span class="normal">2937</span>
+<span class="normal">2938</span>
+<span class="normal">2939</span>
+<span class="normal">2940</span>
+<span class="normal">2941</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Predict the class labels for the input samples.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (array-like): The input samples.</span>
+<span class="sd">        return_winning_probability (bool): Whether to return the winning probability.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        array: The predicted class labels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">return_winning_probability</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.predict_proba" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_proba</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_proba" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Calls the transformer to predict the probabilities of the classes of the X test inputs given the previous set
+training dataset</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>test datapoints</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2915</span>
+<span class="normal">2916</span>
+<span class="normal">2917</span>
+<span class="normal">2918</span>
+<span class="normal">2919</span>
+<span class="normal">2920</span>
+<span class="normal">2921</span>
+<span class="normal">2922</span>
+<span class="normal">2923</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calls the transformer to predict the probabilities of the classes of the X test inputs given the previous set</span>
+<span class="sd">    training dataset</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X: test datapoints</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_full</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="n">additional_y</span><span class="p">)[</span><span class="s2">&quot;proba&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.predict_y_proba" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_y_proba</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.predict_y_proba" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict_y_proba</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict the probability of the target labels <code>y</code> given the input samples <code>X</code>.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input samples.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The target labels.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>array</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The predicted probabilities of the target labels.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2943</span>
+<span class="normal">2944</span>
+<span class="normal">2945</span>
+<span class="normal">2946</span>
+<span class="normal">2947</span>
+<span class="normal">2948</span>
+<span class="normal">2949</span>
+<span class="normal">2950</span>
+<span class="normal">2951</span>
+<span class="normal">2952</span>
+<span class="normal">2953</span>
+<span class="normal">2954</span>
+<span class="normal">2955</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_y_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Predict the probability of the target labels `y` given the input samples `X`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (array-like): The input samples.</span>
+<span class="sd">        y (array-like): The target labels.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        array: The predicted probabilities of the target labels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">prediction</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.score" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">score</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.score" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Compute the score of the model on the given test data and labels.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input samples.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The true labels for <code>X</code>.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sample_weight</code></td>
+          <td>
+                <code>array - like</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Sample weights.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>float</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The computed score.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2957</span>
+<span class="normal">2958</span>
+<span class="normal">2959</span>
+<span class="normal">2960</span>
+<span class="normal">2961</span>
+<span class="normal">2962</span>
+<span class="normal">2963</span>
+<span class="normal">2964</span>
+<span class="normal">2965</span>
+<span class="normal">2966</span>
+<span class="normal">2967</span>
+<span class="normal">2968</span>
+<span class="normal">2969</span>
+<span class="normal">2970</span>
+<span class="normal">2971</span>
+<span class="normal">2972</span>
+<span class="normal">2973</span>
+<span class="normal">2974</span>
+<span class="normal">2975</span>
+<span class="normal">2976</span>
+<span class="normal">2977</span>
+<span class="normal">2978</span>
+<span class="normal">2979</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the score of the model on the given test data and labels.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (array-like): The input samples.</span>
+<span class="sd">        y (array-like): The true labels for `X`.</span>
+<span class="sd">        sample_weight (array-like, optional): Sample weights.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The computed score.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimize_metric</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;roc&quot;</span><span class="p">,</span> <span class="s2">&quot;auroc&quot;</span><span class="p">,</span> <span class="s2">&quot;log_loss&quot;</span><span class="p">]:</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">pred</span> <span class="o">=</span> <span class="n">pred</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">score_classification</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">optimize_metric</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.plot_shap" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">plot_shap</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.plot_shap" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">plot_shap</span><span class="p">(</span><span class="n">test_x</span><span class="p">:</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span> <span class="o">|</span> <span class="n"><span title="numpy.array">array</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">shap_values</span><span class="p">:</span> <span class="n"><span title="numpy.array">array</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Plots the shap values for the given test data. It will plot aggregated shap values for each feature, as well
+as per sample shap values. Additionally, if multiple samples are provided, it will plot the 3 most important
+interactions with the most important feature.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>test_x</code></td>
+          <td>
+                <code><span title="pandas.DataFrame">DataFrame</span> | <span title="numpy.array">array</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The test data to compute the shap values for, shape (num_samples, num_features), ideally a pandas</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>shap_values</code></td>
+          <td>
+                <code><span title="numpy.array">array</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If you already have the shap values, you can provide them here. If not, they will be</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>shap_values for the given test data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2280</span>
+<span class="normal">2281</span>
+<span class="normal">2282</span>
+<span class="normal">2283</span>
+<span class="normal">2284</span>
+<span class="normal">2285</span>
+<span class="normal">2286</span>
+<span class="normal">2287</span>
+<span class="normal">2288</span>
+<span class="normal">2289</span>
+<span class="normal">2290</span>
+<span class="normal">2291</span>
+<span class="normal">2292</span>
+<span class="normal">2293</span>
+<span class="normal">2294</span>
+<span class="normal">2295</span>
+<span class="normal">2296</span>
+<span class="normal">2297</span>
+<span class="normal">2298</span>
+<span class="normal">2299</span>
+<span class="normal">2300</span>
+<span class="normal">2301</span>
+<span class="normal">2302</span>
+<span class="normal">2303</span>
+<span class="normal">2304</span>
+<span class="normal">2305</span>
+<span class="normal">2306</span>
+<span class="normal">2307</span>
+<span class="normal">2308</span>
+<span class="normal">2309</span>
+<span class="normal">2310</span>
+<span class="normal">2311</span>
+<span class="normal">2312</span>
+<span class="normal">2313</span>
+<span class="normal">2314</span>
+<span class="normal">2315</span>
+<span class="normal">2316</span>
+<span class="normal">2317</span>
+<span class="normal">2318</span>
+<span class="normal">2319</span>
+<span class="normal">2320</span>
+<span class="normal">2321</span>
+<span class="normal">2322</span>
+<span class="normal">2323</span>
+<span class="normal">2324</span>
+<span class="normal">2325</span>
+<span class="normal">2326</span>
+<span class="normal">2327</span>
+<span class="normal">2328</span>
+<span class="normal">2329</span>
+<span class="normal">2330</span>
+<span class="normal">2331</span>
+<span class="normal">2332</span>
+<span class="normal">2333</span>
+<span class="normal">2334</span>
+<span class="normal">2335</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plot_shap</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">test_x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">shap_values</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Plots the shap values for the given test data. It will plot aggregated shap values for each feature, as well</span>
+<span class="sd">    as per sample shap values. Additionally, if multiple samples are provided, it will plot the 3 most important</span>
+<span class="sd">    interactions with the most important feature.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        test_x: The test data to compute the shap values for, shape (num_samples, num_features), ideally a pandas</span>
+<span class="sd">        dataframe with column names.</span>
+
+<span class="sd">        shap_values: If you already have the shap values, you can provide them here. If not, they will be</span>
+<span class="sd">        computed from the test data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">         shap_values for the given test data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">shap</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">test_x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="n">test_x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
+        <span class="n">test_x</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">test_x</span><span class="o">.</span><span class="n">columns</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">test_x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">shap_values</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="p">),</span> <span class="s2">&quot;Either test_x or shap_values must be provided&quot;</span>
+
+    <span class="k">if</span> <span class="n">shap_values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">shap_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_shap_values</span><span class="p">(</span><span class="n">test_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shap_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computing shap values for the first class (index 0).&quot;</span><span class="p">)</span>
+        <span class="n">shap_values</span> <span class="o">=</span> <span class="n">shap_values</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">shap</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">shap_values</span><span class="o">=</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aggregate feature importances across the test examples&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="o">=</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># plot the distribution of importances for each feature over all samples</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+        <span class="s2">&quot;Feature importances for each feature for each test example (a dot is one feature for one example)&quot;</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">most_important</span> <span class="o">=</span> <span class="n">shap_values</span><span class="o">.</span><span class="n">abs</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s1">&#39;Now we analyze the strongest feature interactions of the most important feature, namely the feature &quot;</span><span class="si">{</span><span class="n">most_important</span><span class="si">}</span><span class="s1">&quot;.&#39;</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shap_values</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_shap_feature</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">most_important</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">shap_values</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.get_shap_values" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_shap_values</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_shap_values" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_shap_values</span><span class="p">(</span><span class="n">test_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Computes SHAP (SHapley Additive exPlanations) values for the model's predictions on the given input features.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>test_x</code></td>
+          <td>
+                <code>Union[<span title="pandas.DataFrame">DataFrame</span>, <span title="numpy.ndarray">ndarray</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input features to compute SHAP values for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kwargs</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments to pass to the SHAP explainer.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: The computed SHAP values.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2357</span>
+<span class="normal">2358</span>
+<span class="normal">2359</span>
+<span class="normal">2360</span>
+<span class="normal">2361</span>
+<span class="normal">2362</span>
+<span class="normal">2363</span>
+<span class="normal">2364</span>
+<span class="normal">2365</span>
+<span class="normal">2366</span>
+<span class="normal">2367</span>
+<span class="normal">2368</span>
+<span class="normal">2369</span>
+<span class="normal">2370</span>
+<span class="normal">2371</span>
+<span class="normal">2372</span>
+<span class="normal">2373</span>
+<span class="normal">2374</span>
+<span class="normal">2375</span>
+<span class="normal">2376</span>
+<span class="normal">2377</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_shap_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes SHAP (SHapley Additive exPlanations) values for the model&#39;s predictions on the given input features.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        test_x (Union[pd.DataFrame, np.ndarray]): The input features to compute SHAP values for.</span>
+<span class="sd">        kwargs (dict): Additional keyword arguments to pass to the SHAP explainer.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: The computed SHAP values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">shap</span>
+
+    <span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">Explainer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">predict_function_for_shap</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">test_x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">),</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">shap_values</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.get_embeddings" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_embeddings</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.get_embeddings" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_embeddings</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="torch.Tensor">Tensor</span></span><span class="p">,</span> <span class="n">additional_y</span><span class="p">:</span> <span class="n">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.Tensor">Tensor</span></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the embeddings for the input data <code>X</code>.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="torch.Tensor">Tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The input data tensor.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>additional_y</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional labels as a dictionary. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="torch.Tensor">Tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>torch.Tensor: The computed embeddings.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
+<span class="normal">623</span>
+<span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_embeddings</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the embeddings for the input data `X`.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (torch.Tensor): The input data tensor.</span>
+<span class="sd">        additional_y (dict, optional): Additional labels as a dictionary. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor: The computed embeddings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_full</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="n">additional_y</span><span class="p">,</span> <span class="n">get_additional_outputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;test_embeddings&quot;</span><span class="p">]</span>
+    <span class="p">)[</span><span class="s2">&quot;test_embeddings&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.estimate_memory_usage" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">estimate_memory_usage</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_memory_usage" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">estimate_memory_usage</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span> <span class="o">|</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;mb&#39;</span><span class="p">,</span> <span class="s1">&#39;gb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gb&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">overwrite_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Estimates the memory usage of the model.</p>
+<p>Peak memory usage is accurate for ´save_peak_mem_factor´ in O(n_feats, n_samples) on average but with
+significant outliers (2x). Also this calculation does not include baseline usage and constant offsets.
+Baseline memory usage can be ignored if we set the maximum memory usage to the default None which uses
+the free memory of the system. The constant offsets are not significant for large datasets.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>ndarray</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The feature matrix. X should represent the concat of train and test in if
+<code>self.fit_at_predict_time</code> and train only otherwise. If you add a batch dimension at position 1 to the
+table this is used as the batch size used during inference, otherwise this depends on the
+<code>batch_size_inference</code> and <code>N_ensemble_configurations</code>.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>unit</code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span>[&#39;b&#39;, &#39;mb&#39;, &#39;gb&#39;]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The unit to return the memory usage in (bytes, megabytes, or gigabytes).</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;gb&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>float | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The estimated memory usage in bytes.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1946</span>
+<span class="normal">1947</span>
+<span class="normal">1948</span>
+<span class="normal">1949</span>
+<span class="normal">1950</span>
+<span class="normal">1951</span>
+<span class="normal">1952</span>
+<span class="normal">1953</span>
+<span class="normal">1954</span>
+<span class="normal">1955</span>
+<span class="normal">1956</span>
+<span class="normal">1957</span>
+<span class="normal">1958</span>
+<span class="normal">1959</span>
+<span class="normal">1960</span>
+<span class="normal">1961</span>
+<span class="normal">1962</span>
+<span class="normal">1963</span>
+<span class="normal">1964</span>
+<span class="normal">1965</span>
+<span class="normal">1966</span>
+<span class="normal">1967</span>
+<span class="normal">1968</span>
+<span class="normal">1969</span>
+<span class="normal">1970</span>
+<span class="normal">1971</span>
+<span class="normal">1972</span>
+<span class="normal">1973</span>
+<span class="normal">1974</span>
+<span class="normal">1975</span>
+<span class="normal">1976</span>
+<span class="normal">1977</span>
+<span class="normal">1978</span>
+<span class="normal">1979</span>
+<span class="normal">1980</span>
+<span class="normal">1981</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_memory_usage</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">,</span>
+    <span class="n">unit</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;mb&quot;</span><span class="p">,</span> <span class="s2">&quot;gb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;gb&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">overwrite_params</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estimates the memory usage of the model.</span>
+
+<span class="sd">    Peak memory usage is accurate for ´save_peak_mem_factor´ in O(n_feats, n_samples) on average but with</span>
+<span class="sd">    significant outliers (2x). Also this calculation does not include baseline usage and constant offsets.</span>
+<span class="sd">    Baseline memory usage can be ignored if we set the maximum memory usage to the default None which uses</span>
+<span class="sd">    the free memory of the system. The constant offsets are not significant for large datasets.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (ndarray): The feature matrix. X should represent the concat of train and test in if</span>
+<span class="sd">            `self.fit_at_predict_time` and train only otherwise. If you add a batch dimension at position 1 to the</span>
+<span class="sd">            table this is used as the batch size used during inference, otherwise this depends on the</span>
+<span class="sd">            `batch_size_inference` and `N_ensemble_configurations`.</span>
+<span class="sd">        unit (Literal[&quot;b&quot;, &quot;mb&quot;, &quot;gb&quot;]): The unit to return the memory usage in (bytes, megabytes, or gigabytes).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The estimated memory usage in bytes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">byte_usage</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_model_usage</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;memory&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">overwrite_params</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">byte_usage</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;mb&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">byte_usage</span> <span class="o">/</span> <span class="mf">1e6</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;gb&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">byte_usage</span> <span class="o">/</span> <span class="mf">1e9</span>
+    <span class="k">elif</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">byte_usage</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown unit </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.transformer_prediction_interface.TabPFNClassifier.estimate_computation_usage" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">estimate_computation_usage</span>
+
+
+<a href="#scripts.transformer_prediction_interface.TabPFNClassifier.estimate_computation_usage" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">estimate_computation_usage</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">unit</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;sequential_flops&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sequential_flops&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">overwrite_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Estimates the sequential computation usage of the model. Those are the operations that are not parallelizable
+and are the main bottleneck for the computation time.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code>ndarray</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The feature matrix. X should represent the concat of train and test in if</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>unit</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The unit to return the computation usage in.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;sequential_flops&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>float | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The estimated computation usage in unit of choice.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1983</span>
+<span class="normal">1984</span>
+<span class="normal">1985</span>
+<span class="normal">1986</span>
+<span class="normal">1987</span>
+<span class="normal">1988</span>
+<span class="normal">1989</span>
+<span class="normal">1990</span>
+<span class="normal">1991</span>
+<span class="normal">1992</span>
+<span class="normal">1993</span>
+<span class="normal">1994</span>
+<span class="normal">1995</span>
+<span class="normal">1996</span>
+<span class="normal">1997</span>
+<span class="normal">1998</span>
+<span class="normal">1999</span>
+<span class="normal">2000</span>
+<span class="normal">2001</span>
+<span class="normal">2002</span>
+<span class="normal">2003</span>
+<span class="normal">2004</span>
+<span class="normal">2005</span>
+<span class="normal">2006</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_computation_usage</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">unit</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">overwrite_params</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estimates the sequential computation usage of the model. Those are the operations that are not parallelizable</span>
+<span class="sd">    and are the main bottleneck for the computation time.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X (ndarray): The feature matrix. X should represent the concat of train and test in if</span>
+<span class="sd">        ` self.fit_at_predict_time` and train only otherwise. If you add a batch dimension at position 1 to the</span>
+<span class="sd">          table this is used as the batch size used during inference, otherwise this depends on the</span>
+<span class="sd">         `batch_size_inference` and `N_ensemble_configurations`.</span>
+<span class="sd">        unit (str): The unit to return the computation usage in.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The estimated computation usage in unit of choice.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">computation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_model_usage</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s2">&quot;computation&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">overwrite_params</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">computation</span> <span class="o">=</span> <span class="n">computation</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">processor_speed</span> <span class="o">/</span> <span class="mf">2e11</span>
+    <span class="k">return</span> <span class="n">computation</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 PriorLabs
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/PriorLabs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>

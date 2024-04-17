@@ -1,12 +1,20 @@
 # API Reference
 
-## TabPFNClassifier
+get_single_tabpfn
+::: scripts.transformer_prediction_interface.get_single_tabpfn
+    handler: python
 
-::: tabpfn.scripts.transformer_prediction_interface.TabPFNClassifier
+PreprocessorConfig
+::: scripts.transformer_prediction_interface.PreprocessorConfig
     handler: python
     options:
       members:
-        - __init__
-        - fit
-        - predict
-        - predict_proba
+        - init
+
+ClassificationOptimizationMetricType
+::: scripts.transformer_prediction_interface.ClassificationOptimizationMetricType
+    handler: python
+
+RegressionOptimizationMetricType
+::: scripts.transformer_prediction_interface.RegressionOptimizationMetricType
+    handler: python
