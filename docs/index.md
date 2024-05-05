@@ -1,6 +1,7 @@
-# Welcome to TabPFN Documentation
+# This is a beta for review
 
-TabPFN is a cutting-edge neural network designed specifically for tabular data prediction, leveraging the power of transformers to provide state-of-the-art performance on a wide range of datasets. This documentation will guide you through the installation, basic usage, and advanced features of TabPFN, helping you to efficiently integrate this powerful tool into your data science workflow.
+To install TabPFN, please use the notebooks provided in this review. After review we are going to release our models as a python package on the python repository pypi.
+This documentation will guide you through the installation, basic usage, and advanced features of TabPFN, helping you to efficiently integrate this powerful tool into your data science workflow.
 
 ## Features
 
@@ -15,8 +16,8 @@ TabPFN is a cutting-edge neural network designed specifically for tabular data p
 - [Classification](classification.md): Dive into using TabPFN for classification tasks, with examples and tips.
 - [Regression](regression.md): Explore how to apply TabPFN to regression problems, including setup and evaluation.
 
-## Getting Help
+[//]: ## Getting Help
 
-If you encounter any issues or have questions about using TabPFN, please refer to the [FAQs](#) or reach out to the community through [GitHub Issues](https://github.com/your-github-repo/issues).
+[//]: If you encounter any issues or have questions about using TabPFN, please refer to the [FAQs](#) or reach out to the community through [GitHub Issues](https://github.com/your-github-repo/issues).
 
-Thank you for choosing TabPFN. We hope you find this tool valuable in your data science endeavors.
+[//]: Thank you for choosing TabPFN. We hope you find this tool valuable in your data science endeavors.
