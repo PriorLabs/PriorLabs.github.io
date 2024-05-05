@@ -1,7 +1,6 @@
 # This is a beta for review
 
-To install TabPFN, please use the notebooks provided in this review. After review we are going to release our models as a python package on the python repository pypi.
-This documentation will guide you through the installation, basic usage, and advanced features of TabPFN, helping you to efficiently integrate this powerful tool into your data science workflow.
+Please do not share. This documentation provides examples and in detail API documentation for TabPFN. 
 
 ## Features
 
