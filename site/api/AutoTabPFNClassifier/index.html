@@ -400,15 +400,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier.__init__" class="md-nav__link">
     <span class="md-ellipsis">
       __init__
@@ -571,15 +562,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier.__init__" class="md-nav__link">
     <span class="md-ellipsis">
       __init__
@@ -647,29 +629,161 @@
 
   
       <p>Automatic Post Hoc Ensemble Classifier for TabPFN models.</p>
-<h3 id="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier--parameters">Parameters<a class="headerlink" href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier--parameters" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>max_time : int | None, default=None
-    The maximum time to spend on fitting the post hoc ensemble.
-preset: {&quot;default&quot;, &quot;custom_hps&quot;, &quot;avoid_overfitting&quot;}, default=&quot;default&quot;
-    The preset to use for the post hoc ensemble.
-ges_scoring_string : str, default=&quot;roc&quot;
-    The scoring string to use for the greedy ensemble search.
-    Allowed values are: {&quot;accuracy&quot;, &quot;roc&quot; / &quot;auroc&quot;, &quot;f1&quot;, &quot;log_loss&quot;}.
-device : {&quot;cpu&quot;, &quot;cuda&quot;}, default=&quot;cuda&quot;
-    The device to use for training and prediction.
-random_state : int, RandomState instance or None, default=None
-    Controls both the randomness base models and the post hoc ensembling method.
-categorical_feature_indices: list[int] or None, default=None
-    The indices of the categorical features in the input data. Can also be passed to `fit()`.
-phe_init_args : dict | None, default=None
-    The initialization arguments for the post hoc ensemble predictor.
-    See post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more options and all details.
-</code></pre></div>
-      <div class="codehilite"><pre><span></span><code>predictor_ : AutoPostHocEnsemblePredictor
-    The predictor interface used to make predictions, see post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more.
-phe_init_args_ : dict
-    The optional initialization arguments used for the post hoc ensemble predictor.
-</code></pre></div>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>max_time</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>int | None, default=None
+The maximum time to spend on fitting the post hoc ensemble.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>preset</code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span>[&#39;default&#39;, &#39;custom_hps&#39;, &#39;avoid_overfitting&#39;]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>{"default", "custom_hps", "avoid_overfitting"}, default="default"
+The preset to use for the post hoc ensemble.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;default&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ges_scoring_string</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>str, default="roc"
+The scoring string to use for the greedy ensemble search.
+Allowed values are: {"accuracy", "roc" / "auroc", "f1", "log_loss"}.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;roc&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>device</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>{"cpu", "cuda"}, default="cuda"
+The device to use for training and prediction.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;cpu&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>random_state</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>int, RandomState instance or None, default=None
+Controls both the randomness base models and the post hoc ensembling method.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>categorical_feature_indices</code></td>
+          <td>
+                <code>list[int] | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list[int] or None, default=None
+The indices of the categorical features in the input data. Can also be passed to <code>fit()</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>phe_init_args</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>dict | None, default=None
+The initialization arguments for the post hoc ensemble predictor.
+See post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more options and all details.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier.predictor_">predictor_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>AutoPostHocEnsemblePredictor
+The predictor interface used to make predictions, see post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNClassifier.phe_init_args_">phe_init_args_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>dict
+The optional initialization arguments used for the post hoc ensemble predictor.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
             <details class="quote">
               <summary>Source code in <code>scripts/estimator/post_hoc_ensembles/sklearn_interface.py</code></summary>
@@ -770,13 +884,10 @@ phe_init_args_ : dict
 <span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AutoTabPFNClassifier</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">ClassifierMixin</span><span class="p">):</span>
+<span class="normal">116</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AutoTabPFNClassifier</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">ClassifierMixin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Automatic Post Hoc Ensemble Classifier for TabPFN models.</span>
 
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
+<span class="sd">    Parameters:</span>
 <span class="sd">        max_time : int | None, default=None</span>
 <span class="sd">            The maximum time to spend on fitting the post hoc ensemble.</span>
 <span class="sd">        preset: {&quot;default&quot;, &quot;custom_hps&quot;, &quot;avoid_overfitting&quot;}, default=&quot;default&quot;</span>
@@ -795,7 +906,6 @@ phe_init_args_ : dict
 <span class="sd">            See post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more options and all details.</span>
 
 <span class="sd">    Attributes:</span>
-<span class="sd">    ----------</span>
 <span class="sd">        predictor_ : AutoPostHocEnsemblePredictor</span>
 <span class="sd">            The predictor interface used to make predictions, see post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more.</span>
 <span class="sd">        phe_init_args_ : dict</span>
@@ -904,7 +1014,9 @@ phe_init_args_ : dict
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/post_hoc_ensembles/sklearn_interface.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
@@ -918,9 +1030,7 @@ phe_init_args_ : dict
 <span class="normal">64</span>
 <span class="normal">65</span>
 <span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">max_time</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">preset</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="s2">&quot;custom_hps&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_overfitting&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
@@ -960,7 +1070,9 @@ phe_init_args_ : dict
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/post_hoc_ensembles/sklearn_interface.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 71</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
 <span class="normal"> 72</span>
 <span class="normal"> 73</span>
 <span class="normal"> 74</span>
@@ -994,9 +1106,7 @@ phe_init_args_ : dict
 <span class="normal">102</span>
 <span class="normal">103</span>
 <span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">categorical_feature_indices</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">categorical_feature_indices</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">categorical_feature_indices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">categorical_feature_indices</span> <span class="o">=</span> <span class="n">categorical_feature_indices</span>
 
@@ -1056,9 +1166,9 @@ phe_init_args_ : dict
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/post_hoc_ensembles/sklearn_interface.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
     <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predictor_</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1084,9 +1194,9 @@ phe_init_args_ : dict
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/post_hoc_ensembles/sklearn_interface.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
     <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predictor_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
