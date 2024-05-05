@@ -35,6 +35,8 @@ nav:
   - API Reference:
     - TabPFNClassifier: api/tabpfn_classifier.md
     - TabPFNRegressor: api/tabpfn_regressor.md
+    - AutoTabPFNClassifier: api/AutoTabPFNClassifier.md
+    - AutoTabPFNRegressor: api/AutoTabPFNRegressor.md
     - Transformer: api/model.transformer.md
     - MLP: api/model.mlp.md
     - Encoders: api/model.encoders.md

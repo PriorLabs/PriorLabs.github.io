@@ -348,6 +348,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../AutoTabPFNClassifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoTabPFNClassifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AutoTabPFNRegressor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoTabPFNRegressor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../model.transformer/" class="md-nav__link">
         
   
@@ -1085,7 +1127,7 @@ List of indices of categorical features in the input data.</p>
                 <span class="p">)</span>
 
                 <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">bool</span><span class="p">()</span>
-                <span class="n">mask</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">:]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">mask</span><span class="p">[:,</span> <span class="p">:</span><span class="n">column_idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="n">X_pred</span><span class="p">,</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="p">(</span>
                     <span class="n">imputed_X</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">imputed_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
                     <span class="n">imputed_X</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">],</span>
@@ -1186,10 +1228,12 @@ List of indices of categorical features in the input data.</p>
 <span class="sd">        :param X:</span>
 <span class="sd">        :return:</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-            <span class="k">else</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])))</span>
-        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_reg</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_clf</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_reg</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span>
+            <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_clf</span>
+        <span class="p">)</span>
         <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">,</span>
             <span class="n">y</span><span class="p">,</span>  <span class="c1"># Must contain more than one class</span>
@@ -1236,8 +1280,6 @@ List of indices of categorical features in the input data.</p>
 <span class="sd">        :param X: Samples to calculate the sample probability for, shape (n_samples, n_features)</span>
 <span class="sd">        :return: Sample probability for each sample in X, shape (n_samples,)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NEW&#39;</span><span class="p">)</span>
-
         <span class="bp">self</span><span class="o">.</span><span class="n">init_model_and_get_model_config</span><span class="p">()</span>
 
         <span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Start with a probability of 1</span>
@@ -1246,7 +1288,7 @@ List of indices of categorical features in the input data.</p>
             <span class="k">if</span> <span class="n">column_idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="c1"># If not the first feature, use all previous features</span>
                 <span class="n">mask</span><span class="p">[:,</span> <span class="p">:</span><span class="n">column_idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[(</span><span class="n">mask</span><span class="p">)],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">]</span>
+                <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">]</span>
                 <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># If the first feature, use a zero feature as input</span>
@@ -1637,17 +1679,21 @@ Fitted model.</p>
 <span class="normal">231</span>
 <span class="normal">232</span>
 <span class="normal">233</span>
-<span class="normal">234</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">:</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the transformer embeddings for the test data X.</span>
 
 <span class="sd">    :param X:</span>
 <span class="sd">    :return:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-        <span class="k">else</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])))</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_reg</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_clf</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_reg</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span>
+        <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabpfn_clf</span>
+    <span class="p">)</span>
     <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X_</span><span class="p">,</span>
         <span class="n">y</span><span class="p">,</span>  <span class="c1"># Must contain more than one class</span>
@@ -1683,9 +1729,7 @@ estimated by using a zero feature as input.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/unsupervised.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">268</span>
 <span class="normal">269</span>
 <span class="normal">270</span>
 <span class="normal">271</span>
@@ -1732,8 +1776,6 @@ estimated by using a zero feature as input.</p>
 <span class="sd">    :param X: Samples to calculate the sample probability for, shape (n_samples, n_features)</span>
 <span class="sd">    :return: Sample probability for each sample in X, shape (n_samples,)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NEW&#39;</span><span class="p">)</span>
-
     <span class="bp">self</span><span class="o">.</span><span class="n">init_model_and_get_model_config</span><span class="p">()</span>
 
     <span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Start with a probability of 1</span>
@@ -1742,7 +1784,7 @@ estimated by using a zero feature as input.</p>
         <span class="k">if</span> <span class="n">column_idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># If not the first feature, use all previous features</span>
             <span class="n">mask</span><span class="p">[:,</span> <span class="p">:</span><span class="n">column_idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[(</span><span class="n">mask</span><span class="p">)],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">]</span>
+            <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">column_idx</span><span class="p">]</span>
             <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># If the first feature, use a zero feature as input</span>

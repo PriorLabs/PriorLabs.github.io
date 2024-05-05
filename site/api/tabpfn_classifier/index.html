@@ -475,6 +475,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../AutoTabPFNClassifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoTabPFNClassifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AutoTabPFNRegressor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoTabPFNRegressor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../model.transformer/" class="md-nav__link">
         
   
@@ -678,26 +720,7 @@
 
             <details class="quote">
               <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2735</span>
-<span class="normal">2736</span>
-<span class="normal">2737</span>
-<span class="normal">2738</span>
-<span class="normal">2739</span>
-<span class="normal">2740</span>
-<span class="normal">2741</span>
-<span class="normal">2742</span>
-<span class="normal">2743</span>
-<span class="normal">2744</span>
-<span class="normal">2745</span>
-<span class="normal">2746</span>
-<span class="normal">2747</span>
-<span class="normal">2748</span>
-<span class="normal">2749</span>
-<span class="normal">2750</span>
-<span class="normal">2751</span>
-<span class="normal">2752</span>
-<span class="normal">2753</span>
-<span class="normal">2754</span>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2754</span>
 <span class="normal">2755</span>
 <span class="normal">2756</span>
 <span class="normal">2757</span>
@@ -998,7 +1021,84 @@
 <span class="normal">3052</span>
 <span class="normal">3053</span>
 <span class="normal">3054</span>
-<span class="normal">3055</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TabPFNClassifier</span><span class="p">(</span><span class="n">TabPFNBaseModel</span><span class="p">,</span> <span class="n">ClassifierMixin</span><span class="p">):</span>
+<span class="normal">3055</span>
+<span class="normal">3056</span>
+<span class="normal">3057</span>
+<span class="normal">3058</span>
+<span class="normal">3059</span>
+<span class="normal">3060</span>
+<span class="normal">3061</span>
+<span class="normal">3062</span>
+<span class="normal">3063</span>
+<span class="normal">3064</span>
+<span class="normal">3065</span>
+<span class="normal">3066</span>
+<span class="normal">3067</span>
+<span class="normal">3068</span>
+<span class="normal">3069</span>
+<span class="normal">3070</span>
+<span class="normal">3071</span>
+<span class="normal">3072</span>
+<span class="normal">3073</span>
+<span class="normal">3074</span>
+<span class="normal">3075</span>
+<span class="normal">3076</span>
+<span class="normal">3077</span>
+<span class="normal">3078</span>
+<span class="normal">3079</span>
+<span class="normal">3080</span>
+<span class="normal">3081</span>
+<span class="normal">3082</span>
+<span class="normal">3083</span>
+<span class="normal">3084</span>
+<span class="normal">3085</span>
+<span class="normal">3086</span>
+<span class="normal">3087</span>
+<span class="normal">3088</span>
+<span class="normal">3089</span>
+<span class="normal">3090</span>
+<span class="normal">3091</span>
+<span class="normal">3092</span>
+<span class="normal">3093</span>
+<span class="normal">3094</span>
+<span class="normal">3095</span>
+<span class="normal">3096</span>
+<span class="normal">3097</span>
+<span class="normal">3098</span>
+<span class="normal">3099</span>
+<span class="normal">3100</span>
+<span class="normal">3101</span>
+<span class="normal">3102</span>
+<span class="normal">3103</span>
+<span class="normal">3104</span>
+<span class="normal">3105</span>
+<span class="normal">3106</span>
+<span class="normal">3107</span>
+<span class="normal">3108</span>
+<span class="normal">3109</span>
+<span class="normal">3110</span>
+<span class="normal">3111</span>
+<span class="normal">3112</span>
+<span class="normal">3113</span>
+<span class="normal">3114</span>
+<span class="normal">3115</span>
+<span class="normal">3116</span>
+<span class="normal">3117</span>
+<span class="normal">3118</span>
+<span class="normal">3119</span>
+<span class="normal">3120</span>
+<span class="normal">3121</span>
+<span class="normal">3122</span>
+<span class="normal">3123</span>
+<span class="normal">3124</span>
+<span class="normal">3125</span>
+<span class="normal">3126</span>
+<span class="normal">3127</span>
+<span class="normal">3128</span>
+<span class="normal">3129</span>
+<span class="normal">3130</span>
+<span class="normal">3131</span>
+<span class="normal">3132</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">TabPFNClassifier</span><span class="p">(</span><span class="n">TabPFNBaseModel</span><span class="p">,</span> <span class="n">ClassifierMixin</span><span class="p">):</span>
     <span class="n">semisupervised_indicator</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
     <span class="n">metric_type</span> <span class="o">=</span> <span class="n">ClassificationOptimizationMetricType</span>
 
@@ -1189,8 +1289,7 @@
 
     <span class="k">def</span> <span class="nf">_post_process_predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prediction</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
         <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inference_mode</span><span class="p">:</span>
-            <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+        <span class="n">prediction</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sklearn_compatible_precision</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SKLEARN COMPATIBLE PREDICTION FOR DEBUG PURPOSE&quot;</span><span class="p">)</span>
@@ -1230,23 +1329,82 @@
 
     <span class="k">def</span> <span class="nf">predict_full</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">get_additional_outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="n">timing_start</span><span class="p">(</span><span class="s2">&quot;predict&quot;</span><span class="p">)</span>
-        <span class="n">X_full</span><span class="p">,</span> <span class="n">y_full</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">,</span> <span class="n">eval_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_common_setup</span><span class="p">(</span>
-            <span class="n">X</span><span class="p">,</span> <span class="n">additional_y_eval</span><span class="o">=</span><span class="n">additional_y</span>
-        <span class="p">)</span>
 
-        <span class="n">prediction</span><span class="p">,</span> <span class="n">additional_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict</span><span class="p">(</span>
-            <span class="n">X_full</span><span class="p">,</span>
-            <span class="n">y_full</span><span class="p">,</span>
-            <span class="n">eval_pos</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="n">additional_ys</span><span class="o">=</span><span class="n">additional_y</span><span class="p">,</span>
-            <span class="n">cache_trainset_representations</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span><span class="p">,</span>
-            <span class="n">reweight_probs_based_on_train</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">optimizes_balanced_metric</span><span class="p">(),</span>
-            <span class="n">get_additional_outputs</span><span class="o">=</span><span class="n">get_additional_outputs</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">get_params_from_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_processed_</span><span class="p">),</span>
-            <span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
-        <span class="p">)</span>
+        <span class="n">input_batches</span> <span class="o">=</span> <span class="p">[(</span><span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="p">)]</span>
+        <span class="n">output_per_batch</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_post_process_predict_proba</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+        <span class="c1"># Check if test data should be split into batches.</span>
+        <span class="n">dynamic_test_batch_threshold</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DYNAMIC_TEST_BATCH_THRESHOLD&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">batch_predict_call</span> <span class="o">=</span> <span class="p">(</span><span class="n">dynamic_test_batch_threshold</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dynamic_test_batch_threshold</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">batch_predict_call</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Using batch_predict_call! This is a workaround to avoid VRAM memory issues that splits predictions &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;with more than </span><span class="si">{</span><span class="n">dynamic_test_batch_threshold</span><span class="si">}</span><span class="s2"> test instances into three predict-wise batches. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Disable this by not setting &#39;DYNAMIC_TEST_BATCH_THRESHOLD&#39; or &#39;DYNAMIC_TEST_BATCH_THRESHOLD=-1&#39;.&quot;</span><span class="p">,</span>
+                <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">split_point_a</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span>
+            <span class="n">split_point_b</span> <span class="o">=</span> <span class="n">split_point_a</span> <span class="o">*</span> <span class="mi">2</span>
+            <span class="n">input_batches</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">(</span>
+                    <span class="n">X</span><span class="p">[:</span><span class="n">split_point_a</span><span class="p">],</span>
+                    <span class="kc">None</span> <span class="k">if</span> <span class="n">additional_y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">additional_y</span><span class="p">[:</span><span class="n">split_point_a</span><span class="p">],</span>
+                <span class="p">),</span>
+                <span class="p">(</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">split_point_a</span><span class="p">:</span><span class="n">split_point_b</span><span class="p">],</span>
+                    <span class="kc">None</span>
+                    <span class="k">if</span> <span class="n">additional_y</span> <span class="ow">is</span> <span class="kc">None</span>
+                    <span class="k">else</span> <span class="n">additional_y</span><span class="p">[</span><span class="n">split_point_a</span><span class="p">:</span><span class="n">split_point_b</span><span class="p">],</span>
+                <span class="p">),</span>
+                <span class="p">(</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">split_point_b</span><span class="p">:],</span>
+                    <span class="kc">None</span> <span class="k">if</span> <span class="n">additional_y</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">additional_y</span><span class="p">[</span><span class="n">split_point_b</span><span class="p">:],</span>
+                <span class="p">),</span>
+            <span class="p">]</span>
+
+        <span class="c1"># Handle predictions per batch</span>
+        <span class="k">for</span> <span class="n">batch_X</span><span class="p">,</span> <span class="n">batch_additional_y</span> <span class="ow">in</span> <span class="n">input_batches</span><span class="p">:</span>
+            <span class="n">X_full</span><span class="p">,</span> <span class="n">y_full</span><span class="p">,</span> <span class="n">additional_y_full</span><span class="p">,</span> <span class="n">eval_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_common_setup</span><span class="p">(</span>
+                <span class="n">batch_X</span><span class="p">,</span> <span class="n">additional_y_eval</span><span class="o">=</span><span class="n">batch_additional_y</span>
+            <span class="p">)</span>
+
+            <span class="n">batch_prediction</span><span class="p">,</span> <span class="n">batch_additional_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict</span><span class="p">(</span>
+                <span class="n">X_full</span><span class="p">,</span>
+                <span class="n">y_full</span><span class="p">,</span>
+                <span class="n">eval_pos</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="n">additional_ys</span><span class="o">=</span><span class="n">additional_y_full</span><span class="p">,</span>
+                <span class="n">cache_trainset_representations</span><span class="o">=</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_at_predict_time</span><span class="p">,</span>
+                <span class="n">reweight_probs_based_on_train</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">optimizes_balanced_metric</span><span class="p">(),</span>
+                <span class="n">get_additional_outputs</span><span class="o">=</span><span class="n">get_additional_outputs</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">get_params_from_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c_processed_</span><span class="p">),</span>
+                <span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">transformer_predict_kwargs</span> <span class="ow">or</span> <span class="p">{}),</span>
+            <span class="p">)</span>
+
+            <span class="n">output_per_batch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_post_process_predict_proba</span><span class="p">(</span><span class="n">batch_prediction</span><span class="p">),</span>
+                    <span class="n">batch_additional_outputs</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">batch_predict_call</span><span class="p">:</span>
+            <span class="n">prediction</span><span class="p">,</span> <span class="n">additional_outputs</span> <span class="o">=</span> <span class="n">output_per_batch</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prediction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">batch</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">output_per_batch</span><span class="p">])</span>
+            <span class="n">additional_outputs</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">_batch_additional_outputs</span> <span class="ow">in</span> <span class="n">output_per_batch</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_batch_additional_outputs</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">additional_outputs</span><span class="p">:</span>
+                        <span class="n">additional_outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">_batch_additional_outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">additional_outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">additional_outputs</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">_batch_additional_outputs</span><span class="p">[</span><span class="n">k</span><span class="p">]],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span>
+                        <span class="p">)</span>
+
         <span class="n">timing_end</span><span class="p">(</span><span class="s2">&quot;predict&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">LOG_COMPUTE_TIME_PATH</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_log_compute_time</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -1724,26 +1882,7 @@ specified with <code>maximum_free_memory_in_gb</code>.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2741</span>
-<span class="normal">2742</span>
-<span class="normal">2743</span>
-<span class="normal">2744</span>
-<span class="normal">2745</span>
-<span class="normal">2746</span>
-<span class="normal">2747</span>
-<span class="normal">2748</span>
-<span class="normal">2749</span>
-<span class="normal">2750</span>
-<span class="normal">2751</span>
-<span class="normal">2752</span>
-<span class="normal">2753</span>
-<span class="normal">2754</span>
-<span class="normal">2755</span>
-<span class="normal">2756</span>
-<span class="normal">2757</span>
-<span class="normal">2758</span>
-<span class="normal">2759</span>
-<span class="normal">2760</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2760</span>
 <span class="normal">2761</span>
 <span class="normal">2762</span>
 <span class="normal">2763</span>
@@ -1835,7 +1974,26 @@ specified with <code>maximum_free_memory_in_gb</code>.</p>
 <span class="normal">2849</span>
 <span class="normal">2850</span>
 <span class="normal">2851</span>
-<span class="normal">2852</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">2852</span>
+<span class="normal">2853</span>
+<span class="normal">2854</span>
+<span class="normal">2855</span>
+<span class="normal">2856</span>
+<span class="normal">2857</span>
+<span class="normal">2858</span>
+<span class="normal">2859</span>
+<span class="normal">2860</span>
+<span class="normal">2861</span>
+<span class="normal">2862</span>
+<span class="normal">2863</span>
+<span class="normal">2864</span>
+<span class="normal">2865</span>
+<span class="normal">2866</span>
+<span class="normal">2867</span>
+<span class="normal">2868</span>
+<span class="normal">2869</span>
+<span class="normal">2870</span>
+<span class="normal">2871</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">model_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">local_model_path</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;model_hans_classification.ckpt&quot;</span><span class="p">,</span>
     <span class="n">n_estimators</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
@@ -2055,21 +2213,21 @@ specified with <code>maximum_free_memory_in_gb</code>.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2938</span>
-<span class="normal">2939</span>
-<span class="normal">2940</span>
-<span class="normal">2941</span>
-<span class="normal">2942</span>
-<span class="normal">2943</span>
-<span class="normal">2944</span>
-<span class="normal">2945</span>
-<span class="normal">2946</span>
-<span class="normal">2947</span>
-<span class="normal">2948</span>
-<span class="normal">2949</span>
-<span class="normal">2950</span>
-<span class="normal">2951</span>
-<span class="normal">2952</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TabPFNClassifier</span><span class="p">:</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2956</span>
+<span class="normal">2957</span>
+<span class="normal">2958</span>
+<span class="normal">2959</span>
+<span class="normal">2960</span>
+<span class="normal">2961</span>
+<span class="normal">2962</span>
+<span class="normal">2963</span>
+<span class="normal">2964</span>
+<span class="normal">2965</span>
+<span class="normal">2966</span>
+<span class="normal">2967</span>
+<span class="normal">2968</span>
+<span class="normal">2969</span>
+<span class="normal">2970</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TabPFNClassifier</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Fits the TabPFNClassifier model to the input data `X` and `y`.</span>
 
@@ -2176,23 +2334,23 @@ specified with <code>maximum_free_memory_in_gb</code>.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3000</span>
-<span class="normal">3001</span>
-<span class="normal">3002</span>
-<span class="normal">3003</span>
-<span class="normal">3004</span>
-<span class="normal">3005</span>
-<span class="normal">3006</span>
-<span class="normal">3007</span>
-<span class="normal">3008</span>
-<span class="normal">3009</span>
-<span class="normal">3010</span>
-<span class="normal">3011</span>
-<span class="normal">3012</span>
-<span class="normal">3013</span>
-<span class="normal">3014</span>
-<span class="normal">3015</span>
-<span class="normal">3016</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3077</span>
+<span class="normal">3078</span>
+<span class="normal">3079</span>
+<span class="normal">3080</span>
+<span class="normal">3081</span>
+<span class="normal">3082</span>
+<span class="normal">3083</span>
+<span class="normal">3084</span>
+<span class="normal">3085</span>
+<span class="normal">3086</span>
+<span class="normal">3087</span>
+<span class="normal">3088</span>
+<span class="normal">3089</span>
+<span class="normal">3090</span>
+<span class="normal">3091</span>
+<span class="normal">3092</span>
+<span class="normal">3093</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">return_winning_probability</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Predict the class labels for the input samples.</span>
 
@@ -2264,15 +2422,15 @@ training dataset</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2990</span>
-<span class="normal">2991</span>
-<span class="normal">2992</span>
-<span class="normal">2993</span>
-<span class="normal">2994</span>
-<span class="normal">2995</span>
-<span class="normal">2996</span>
-<span class="normal">2997</span>
-<span class="normal">2998</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3067</span>
+<span class="normal">3068</span>
+<span class="normal">3069</span>
+<span class="normal">3070</span>
+<span class="normal">3071</span>
+<span class="normal">3072</span>
+<span class="normal">3073</span>
+<span class="normal">3074</span>
+<span class="normal">3075</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">additional_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calls the transformer to predict the probabilities of the classes of the X test inputs given the previous set</span>
 <span class="sd">    training dataset</span>
@@ -2373,20 +2531,20 @@ training dataset</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3018</span>
-<span class="normal">3019</span>
-<span class="normal">3020</span>
-<span class="normal">3021</span>
-<span class="normal">3022</span>
-<span class="normal">3023</span>
-<span class="normal">3024</span>
-<span class="normal">3025</span>
-<span class="normal">3026</span>
-<span class="normal">3027</span>
-<span class="normal">3028</span>
-<span class="normal">3029</span>
-<span class="normal">3030</span>
-<span class="normal">3031</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_y_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3095</span>
+<span class="normal">3096</span>
+<span class="normal">3097</span>
+<span class="normal">3098</span>
+<span class="normal">3099</span>
+<span class="normal">3100</span>
+<span class="normal">3101</span>
+<span class="normal">3102</span>
+<span class="normal">3103</span>
+<span class="normal">3104</span>
+<span class="normal">3105</span>
+<span class="normal">3106</span>
+<span class="normal">3107</span>
+<span class="normal">3108</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_y_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Predict the probability of the target labels `y` given the input samples `X`.</span>
 
@@ -2434,12 +2592,7 @@ are considered categorical features.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
 <span class="normal">222</span>
 <span class="normal">223</span>
 <span class="normal">224</span>
@@ -2449,7 +2602,12 @@ are considered categorical features.</p>
 <span class="normal">228</span>
 <span class="normal">229</span>
 <span class="normal">230</span>
-<span class="normal">231</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">set_categorical_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">set_categorical_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set the categorical features to use for the model.</span>
 
@@ -2571,29 +2729,29 @@ are considered categorical features.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3033</span>
-<span class="normal">3034</span>
-<span class="normal">3035</span>
-<span class="normal">3036</span>
-<span class="normal">3037</span>
-<span class="normal">3038</span>
-<span class="normal">3039</span>
-<span class="normal">3040</span>
-<span class="normal">3041</span>
-<span class="normal">3042</span>
-<span class="normal">3043</span>
-<span class="normal">3044</span>
-<span class="normal">3045</span>
-<span class="normal">3046</span>
-<span class="normal">3047</span>
-<span class="normal">3048</span>
-<span class="normal">3049</span>
-<span class="normal">3050</span>
-<span class="normal">3051</span>
-<span class="normal">3052</span>
-<span class="normal">3053</span>
-<span class="normal">3054</span>
-<span class="normal">3055</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3110</span>
+<span class="normal">3111</span>
+<span class="normal">3112</span>
+<span class="normal">3113</span>
+<span class="normal">3114</span>
+<span class="normal">3115</span>
+<span class="normal">3116</span>
+<span class="normal">3117</span>
+<span class="normal">3118</span>
+<span class="normal">3119</span>
+<span class="normal">3120</span>
+<span class="normal">3121</span>
+<span class="normal">3122</span>
+<span class="normal">3123</span>
+<span class="normal">3124</span>
+<span class="normal">3125</span>
+<span class="normal">3126</span>
+<span class="normal">3127</span>
+<span class="normal">3128</span>
+<span class="normal">3129</span>
+<span class="normal">3130</span>
+<span class="normal">3131</span>
+<span class="normal">3132</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Compute the score of the model on the given test data and labels.</span>
 
@@ -2716,25 +2874,7 @@ table this is used as the batch size used during inference, otherwise this depen
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1969</span>
-<span class="normal">1970</span>
-<span class="normal">1971</span>
-<span class="normal">1972</span>
-<span class="normal">1973</span>
-<span class="normal">1974</span>
-<span class="normal">1975</span>
-<span class="normal">1976</span>
-<span class="normal">1977</span>
-<span class="normal">1978</span>
-<span class="normal">1979</span>
-<span class="normal">1980</span>
-<span class="normal">1981</span>
-<span class="normal">1982</span>
-<span class="normal">1983</span>
-<span class="normal">1984</span>
-<span class="normal">1985</span>
-<span class="normal">1986</span>
-<span class="normal">1987</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1987</span>
 <span class="normal">1988</span>
 <span class="normal">1989</span>
 <span class="normal">1990</span>
@@ -2751,7 +2891,25 @@ table this is used as the batch size used during inference, otherwise this depen
 <span class="normal">2001</span>
 <span class="normal">2002</span>
 <span class="normal">2003</span>
-<span class="normal">2004</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_memory_usage</span><span class="p">(</span>
+<span class="normal">2004</span>
+<span class="normal">2005</span>
+<span class="normal">2006</span>
+<span class="normal">2007</span>
+<span class="normal">2008</span>
+<span class="normal">2009</span>
+<span class="normal">2010</span>
+<span class="normal">2011</span>
+<span class="normal">2012</span>
+<span class="normal">2013</span>
+<span class="normal">2014</span>
+<span class="normal">2015</span>
+<span class="normal">2016</span>
+<span class="normal">2017</span>
+<span class="normal">2018</span>
+<span class="normal">2019</span>
+<span class="normal">2020</span>
+<span class="normal">2021</span>
+<span class="normal">2022</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_memory_usage</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">,</span>
     <span class="n">unit</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;mb&quot;</span><span class="p">,</span> <span class="s2">&quot;gb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;gb&quot;</span><span class="p">,</span>
@@ -2881,30 +3039,30 @@ and are the main bottleneck for the computation time.</p>
 
           <details class="quote">
             <summary>Source code in <code>scripts/estimator/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2012</span>
-<span class="normal">2013</span>
-<span class="normal">2014</span>
-<span class="normal">2015</span>
-<span class="normal">2016</span>
-<span class="normal">2017</span>
-<span class="normal">2018</span>
-<span class="normal">2019</span>
-<span class="normal">2020</span>
-<span class="normal">2021</span>
-<span class="normal">2022</span>
-<span class="normal">2023</span>
-<span class="normal">2024</span>
-<span class="normal">2025</span>
-<span class="normal">2026</span>
-<span class="normal">2027</span>
-<span class="normal">2028</span>
-<span class="normal">2029</span>
-<span class="normal">2030</span>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2030</span>
 <span class="normal">2031</span>
 <span class="normal">2032</span>
 <span class="normal">2033</span>
 <span class="normal">2034</span>
-<span class="normal">2035</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_computation_usage</span><span class="p">(</span>
+<span class="normal">2035</span>
+<span class="normal">2036</span>
+<span class="normal">2037</span>
+<span class="normal">2038</span>
+<span class="normal">2039</span>
+<span class="normal">2040</span>
+<span class="normal">2041</span>
+<span class="normal">2042</span>
+<span class="normal">2043</span>
+<span class="normal">2044</span>
+<span class="normal">2045</span>
+<span class="normal">2046</span>
+<span class="normal">2047</span>
+<span class="normal">2048</span>
+<span class="normal">2049</span>
+<span class="normal">2050</span>
+<span class="normal">2051</span>
+<span class="normal">2052</span>
+<span class="normal">2053</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">estimate_computation_usage</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
     <span class="n">unit</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span>
