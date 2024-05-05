@@ -1,20 +1,35 @@
 # API Reference
 
-get_single_tabpfn
-::: scripts.transformer_prediction_interface.get_single_tabpfn
-    handler: python
-
 PreprocessorConfig
-::: scripts.transformer_prediction_interface.PreprocessorConfig
+::: scripts.estimator.PreprocessorConfig
     handler: python
     options:
       members:
         - init
 
 ClassificationOptimizationMetricType
-::: scripts.transformer_prediction_interface.ClassificationOptimizationMetricType
+::: scripts.estimator.ClassificationOptimizationMetricType
     handler: python
 
 RegressionOptimizationMetricType
-::: scripts.transformer_prediction_interface.RegressionOptimizationMetricType
+::: scripts.estimator.RegressionOptimizationMetricType
     handler: python
+    
+ManyClassClassifier
+::: scripts.estimator.ManyClassClassifier
+    handler: python
+    options:
+      members:
+        - init
+        - fit
+        - predict
+        - predict_proba
+        
+ClassifierAsRegressor
+::: scripts.estimator.ClassifierAsRegressor
+    handler: python
+    options:
+      members:
+        - init
+        - fit
+        - predict

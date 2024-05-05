@@ -472,39 +472,7 @@
 
 
 <h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
-<p>get_single_tabpfn
-</p>
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h1 id="scripts.transformer_prediction_interface.get_single_tabpfn" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_single_tabpfn</span>
-
-
-<a href="#scripts.transformer_prediction_interface.get_single_tabpfn" class="headerlink" title="Permanent link">&para;</a></h1>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_single_tabpfn</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n"><span title="scripts.transformer_prediction_interface.configs.TabPFNConfig">TabPFNConfig</span></span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</code></pre></div>
-
-  <div class="doc doc-contents first">
-  
-      <p>Get a single TabPFN model given the task type.</p>
-
-          <details class="quote">
-            <summary>Source code in <code>scripts/transformer_prediction_interface/base.py</code></summary>
-            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">2995</span>
-<span class="normal">2996</span>
-<span class="normal">2997</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_single_tabpfn</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">TabPFNConfig</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get a single TabPFN model given the task type.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">tabpfn_task_type_models</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">task_type</span><span class="p">](</span><span class="o">**</span><span class="n">config</span><span class="o">.</span><span class="n">to_kwargs</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div><p>PreprocessorConfig
+<p>PreprocessorConfig
 </p>
 
 
@@ -512,7 +480,7 @@
 
 
 
-<h1 id="scripts.transformer_prediction_interface.PreprocessorConfig" class="doc doc-heading">
+<h1 id="scripts.estimator.PreprocessorConfig" class="doc doc-heading">
           <span class="doc doc-object-name doc-class-name">PreprocessorConfig</span>
 
   
@@ -520,7 +488,7 @@
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
 
-<a href="#scripts.transformer_prediction_interface.PreprocessorConfig" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#scripts.estimator.PreprocessorConfig" class="headerlink" title="Permanent link">&para;</a></h1>
 
 
   <div class="doc doc-contents first">
@@ -541,7 +509,7 @@
     </thead>
     <tbody>
         <tr>
-          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.name">name</span></code></td>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.name">name</span></code></td>
           <td>
                 <code><span title="typing.Literal">Literal</span></code>
           </td>
@@ -552,7 +520,7 @@
           </td>
         </tr>
         <tr>
-          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.categorical_name">categorical_name</span></code></td>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.categorical_name">categorical_name</span></code></td>
           <td>
                 <code><span title="typing.Literal">Literal</span></code>
           </td>
@@ -564,7 +532,7 @@
           </td>
         </tr>
         <tr>
-          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.append_original">append_original</span></code></td>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.append_original">append_original</span></code></td>
           <td>
                 <code>bool</code>
           </td>
@@ -575,7 +543,7 @@
           </td>
         </tr>
         <tr>
-          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.subsample_features">subsample_features</span></code></td>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.subsample_features">subsample_features</span></code></td>
           <td>
                 <code>float</code>
           </td>
@@ -586,7 +554,7 @@
           </td>
         </tr>
         <tr>
-          <td><code><span title="scripts.transformer_prediction_interface.PreprocessorConfig.global_transformer_name">global_transformer_name</span></code></td>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.global_transformer_name">global_transformer_name</span></code></td>
           <td>
                 <code>str</code>
           </td>
@@ -600,7 +568,7 @@
   </table>
 
             <details class="quote">
-              <summary>Source code in <code>scripts/transformer_prediction_interface/configs.py</code></summary>
+              <summary>Source code in <code>scripts/estimator/configs.py</code></summary>
               <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -665,7 +633,12 @@
 <span class="normal">83</span>
 <span class="normal">84</span>
 <span class="normal">85</span>
-<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">eq</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">eq</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">PreprocessorConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Configuration for data preprocessors.</span>
@@ -696,7 +669,12 @@
         <span class="s2">&quot;none&quot;</span><span class="p">,</span>  <span class="c1"># no transformation (inside the transformer we anyways do a standardization)</span>
     <span class="p">]</span>
     <span class="n">categorical_name</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span>
-        <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;numeric&quot;</span><span class="p">,</span> <span class="s2">&quot;onehot&quot;</span><span class="p">,</span> <span class="s2">&quot;ordinal&quot;</span><span class="p">,</span> <span class="s2">&quot;ordinal_shuffled&quot;</span>
+        <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;numeric&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;onehot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ordinal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ordinal_shuffled&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ordinal_very_common_categories_shuffled&quot;</span><span class="p">,</span>
     <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
     <span class="c1"># categorical_name meanings:</span>
     <span class="c1"># &quot;none&quot;: categorical features are pretty much treated as ordinal, just not resorted</span>
@@ -760,7 +738,7 @@
 
 
 
-<h1 id="scripts.transformer_prediction_interface.ClassificationOptimizationMetricType" class="doc doc-heading">
+<h1 id="scripts.estimator.ClassificationOptimizationMetricType" class="doc doc-heading">
           <span class="doc doc-object-name doc-attribute-name">ClassificationOptimizationMetricType</span>
 
   
@@ -768,7 +746,7 @@
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#scripts.transformer_prediction_interface.ClassificationOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#scripts.estimator.ClassificationOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">ClassificationOptimizationMetricType</span> <span class="o">=</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;auroc&#39;</span><span class="p">,</span> <span class="s1">&#39;roc&#39;</span><span class="p">,</span> <span class="s1">&#39;auroc_ovo&#39;</span><span class="p">,</span> <span class="s1">&#39;balanced_acc&#39;</span><span class="p">,</span> <span class="s1">&#39;acc&#39;</span><span class="p">,</span> <span class="s1">&#39;log_loss&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
@@ -783,7 +761,7 @@
 
 
 
-<h1 id="scripts.transformer_prediction_interface.RegressionOptimizationMetricType" class="doc doc-heading">
+<h1 id="scripts.estimator.RegressionOptimizationMetricType" class="doc doc-heading">
           <span class="doc doc-object-name doc-attribute-name">RegressionOptimizationMetricType</span>
 
   
@@ -791,12 +769,1750 @@
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#scripts.transformer_prediction_interface.RegressionOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#scripts.estimator.RegressionOptimizationMetricType" class="headerlink" title="Permanent link">&para;</a></h1>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">RegressionOptimizationMetricType</span> <span class="o">=</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">,</span> <span class="s1">&#39;rmse&#39;</span><span class="p">,</span> <span class="s1">&#39;mae&#39;</span><span class="p">,</span> <span class="s1">&#39;r2&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;mode&#39;</span><span class="p">,</span> <span class="s1">&#39;exact_match&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 </code></pre></div>
 
   <div class="doc doc-contents first">
   </div>
+
+</div><p>ManyClassClassifier
+</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h1 id="scripts.estimator.ManyClassClassifier" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ManyClassClassifier</span>
+
+
+<a href="#scripts.estimator.ManyClassClassifier" class="headerlink" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="sklearn.multiclass.OutputCodeClassifier">OutputCodeClassifier</span></code></p>
+
+  
+      <p>Output-Code multiclass strategy with deciary codebook.</p>
+<p>This class extends the original OutputCodeClassifier to support n-ary codebooks (with n=alphabet_size),
+allowing for handling more classes.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>estimator</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>estimator object
+An estimator object implementing :term:<code>fit</code> and one of
+:term:<code>decision_function</code> or :term:<code>predict_proba</code>. The base classifier
+should be able to handle up to <code>alphabet_size</code> classes.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>random_state</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>int, RandomState instance, default=None
+The generator used to initialize the codebook.
+Pass an int for reproducible output across multiple function calls.
+See :term:<code>Glossary &lt;random_state&gt;</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.estimators_">estimators_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list of <code>int(n_classes * code_size)</code> estimators
+Estimators used for predictions.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.classes_">classes_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_classes,)
+Array containing labels.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.code_book_">code_book_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_classes, <code>len(estimators_)</code>)
+Deciary array containing the code of each class.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <blockquote>
+<blockquote>
+<blockquote>
+<p>from sklearn.datasets import load_iris
+from tabpfn.scripts.estimator import ManyClassClassifier, TabPFNClassifier
+from sklearn.model_selection import train_test_split
+x, y = load_iris(return_X_y=True)
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)
+clf = TabPFNClassifier()
+clf = ManyClassClassifier(clf, alphabet_size=clf.max_num_classes_)
+clf.fit(x_train, y_train)
+clf.predict(x_test)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+            <details class="quote">
+              <summary>Source code in <code>scripts/estimator/many_class_classifier.py</code></summary>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ManyClassClassifier</span><span class="p">(</span><span class="n">OutputCodeClassifier</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Output-Code multiclass strategy with deciary codebook.</span>
+
+<span class="sd">    This class extends the original OutputCodeClassifier to support n-ary codebooks (with n=alphabet_size),</span>
+<span class="sd">    allowing for handling more classes.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        estimator : estimator object</span>
+<span class="sd">            An estimator object implementing :term:`fit` and one of</span>
+<span class="sd">            :term:`decision_function` or :term:`predict_proba`. The base classifier</span>
+<span class="sd">            should be able to handle up to `alphabet_size` classes.</span>
+
+<span class="sd">        random_state : int, RandomState instance, default=None</span>
+<span class="sd">            The generator used to initialize the codebook.</span>
+<span class="sd">            Pass an int for reproducible output across multiple function calls.</span>
+<span class="sd">            See :term:`Glossary &lt;random_state&gt;`.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        estimators_ : list of `int(n_classes * code_size)` estimators</span>
+<span class="sd">            Estimators used for predictions.</span>
+
+<span class="sd">        classes_ : ndarray of shape (n_classes,)</span>
+<span class="sd">            Array containing labels.</span>
+
+<span class="sd">        code_book_ : ndarray of shape (n_classes, `len(estimators_)`)</span>
+<span class="sd">            Deciary array containing the code of each class.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import load_iris</span>
+<span class="sd">    &gt;&gt;&gt; from tabpfn.scripts.estimator import ManyClassClassifier, TabPFNClassifier</span>
+<span class="sd">    &gt;&gt;&gt; from sklearn.model_selection import train_test_split</span>
+<span class="sd">    &gt;&gt;&gt; x, y = load_iris(return_X_y=True)</span>
+<span class="sd">    &gt;&gt;&gt; x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)</span>
+<span class="sd">    &gt;&gt;&gt; clf = TabPFNClassifier()</span>
+<span class="sd">    &gt;&gt;&gt; clf = ManyClassClassifier(clf, alphabet_size=clf.max_num_classes_)</span>
+<span class="sd">    &gt;&gt;&gt; clf.fit(x_train, y_train)</span>
+<span class="sd">    &gt;&gt;&gt; clf.predict(x_test)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">estimator</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">alphabet_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">n_estimators</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">estimator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alphabet_size</span> <span class="o">=</span> <span class="n">alphabet_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="n">n_estimators</span>
+
+    <span class="k">def</span> <span class="nf">get_alphabet_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">alphabet_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">max_num_classes_</span>
+
+    <span class="k">def</span> <span class="nf">get_n_estimators</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_estimators</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_classes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_alphabet_size</span><span class="p">()))</span> <span class="o">*</span> <span class="mi">2</span>
+
+    <span class="k">def</span> <span class="nf">_generate_codebook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">,</span> <span class="n">n_estimators</span><span class="p">,</span> <span class="n">alphabet_size</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate an efficient codebook using the provided alphabet size.</span>
+
+<span class="sd">        This function generates a codebook where for each codeword at most `alphabet_size - 1` classes</span>
+<span class="sd">        are mapped to unique classes, and the remaining classes are mapped to the &quot;rest&quot; class. The codebook</span>
+<span class="sd">        is generated to provide for each class a unique codeword with maximum reduncancy between codewords.</span>
+<span class="sd">        Greedy optimization is used to find the optimal codewords.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            n_classes : int</span>
+<span class="sd">                Number of classes.</span>
+<span class="sd">            n_estimators : int</span>
+<span class="sd">                Number of estimators.</span>
+<span class="sd">            alphabet_size : int, default=10</span>
+<span class="sd">                Size of the alphabet for the codebook. The first `alphabet_size - 1` classes</span>
+<span class="sd">                will be mapped to unique classes, and the remaining classes will be mapped</span>
+<span class="sd">                to the &quot;rest&quot; class.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            codebook : ndarray of shape (n_estimators, n_classes)</span>
+<span class="sd">                Efficient n-ary codebook.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">n_classes_in_codebook</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_classes</span><span class="p">,</span> <span class="n">alphabet_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">n_classes_remaining</span> <span class="o">=</span> <span class="n">n_classes</span> <span class="o">-</span> <span class="n">n_classes_in_codebook</span>
+
+        <span class="c1"># Initialize the codebook with zeros</span>
+        <span class="n">codebook</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_estimators</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">generate_codeword</span><span class="p">():</span>
+            <span class="n">choices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_classes_in_codebook</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span>
+                <span class="n">n_classes_in_codebook</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes_remaining</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span>
+                <span class="n">choices</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Generate the first codeword randomly</span>
+        <span class="n">codebook</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">generate_codeword</span><span class="p">()</span>
+
+        <span class="c1"># Generate the remaining codewords</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_estimators</span><span class="p">):</span>
+            <span class="c1"># Initialize the current codeword with random values</span>
+            <span class="n">current_codeword</span> <span class="o">=</span> <span class="n">generate_codeword</span><span class="p">()</span>
+            <span class="n">max_distance</span><span class="p">,</span> <span class="n">n_min_distance_min</span><span class="p">,</span> <span class="n">max_distance_codeword</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="mi">1000</span><span class="p">,</span>
+                <span class="n">current_codeword</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Iteratively improve the current codeword</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>  <span class="c1"># Number of iterations can be adjusted</span>
+                <span class="c1"># Compute the Hamming distances between the current codeword and all previous codewords</span>
+                <span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">codebook</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n_classes_in_codebook</span><span class="p">)</span>
+                    <span class="o">!=</span> <span class="p">(</span><span class="n">current_codeword</span> <span class="o">==</span> <span class="n">n_classes_in_codebook</span><span class="p">),</span>
+                    <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="p">)</span>
+
+                <span class="c1"># Find the minimum Hamming distance</span>
+                <span class="n">min_distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">n_min_distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">distances</span> <span class="o">==</span> <span class="n">min_distance</span><span class="p">)</span>
+
+                <span class="c1"># print(min_distance, n_min_distance)</span>
+
+                <span class="k">if</span> <span class="n">min_distance</span> <span class="o">&gt;</span> <span class="n">max_distance</span> <span class="ow">or</span> <span class="p">(</span>
+                    <span class="n">min_distance</span> <span class="o">==</span> <span class="n">max_distance</span> <span class="ow">and</span> <span class="n">n_min_distance</span> <span class="o">&lt;</span> <span class="n">n_min_distance_min</span>
+                <span class="p">):</span>
+                    <span class="n">max_distance_codeword</span> <span class="o">=</span> <span class="n">current_codeword</span>
+                    <span class="n">max_distance</span> <span class="o">=</span> <span class="n">min_distance</span>
+                    <span class="n">n_min_distance_min</span> <span class="o">=</span> <span class="n">n_min_distance</span>
+
+                <span class="n">current_codeword</span> <span class="o">=</span> <span class="n">generate_codeword</span><span class="p">()</span>
+
+            <span class="c1"># Assign the optimized codeword to the codebook</span>
+            <span class="n">codebook</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_distance_codeword</span>
+
+        <span class="k">return</span> <span class="n">codebook</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fit underlying estimators.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X : {array-like, sparse matrix} of shape (n_samples, n_features)</span>
+<span class="sd">                Data.</span>
+
+<span class="sd">            y : array-like of shape (n_samples,)</span>
+<span class="sd">                Multi-class targets.</span>
+
+<span class="sd">            **fit_params : dict</span>
+<span class="sd">                Parameters passed to the ``estimator.fit`` method of each</span>
+<span class="sd">                sub-estimator.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            self : object</span>
+<span class="sd">                Returns a fitted instance of self.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">init_model_and_get_model_config</span><span class="p">()</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s2">&quot;no_validation&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="n">random_state</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">)</span>
+        <span class="n">check_classification_targets</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">n_classes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">n_classes</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;DeciaryOutputCodeClassifier can not be fit when no class is present.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">n_classes</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_alphabet_size</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span>
+
+        <span class="c1"># Generate efficient deciary codebook</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_codebook</span><span class="p">(</span>
+            <span class="n">n_classes</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_n_estimators</span><span class="p">(</span><span class="n">n_classes</span><span class="p">),</span>
+            <span class="n">alphabet_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_alphabet_size</span><span class="p">(),</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes_index_</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="p">)}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[:,</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">_num_samples</span><span class="p">(</span><span class="n">y</span><span class="p">))],</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span>
+
+        <span class="c1"># print(&#39;CLF DIST IN&#39;, list(zip(np.unique(y), (np.unique(y, return_counts=True)[1] / y.shape[0]).tolist())))</span>
+
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Predict probabilities using the underlying estimators.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X : {array-like, sparse matrix} of shape (n_samples, n_features)</span>
+<span class="sd">                Data.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            p : ndarray of shape (n_samples, n_classes)</span>
+<span class="sd">                Returns the probability of the samples for each class in the model,</span>
+<span class="sd">                where classes are ordered as they are in `self.classes_`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">_fit_and_predict_proba</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y_train</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">X</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="p">],</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Y shape is (n_estimators, n_samples, n_classes_per_code)</span>
+        <span class="n">n_estimators</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_classes_per_code</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">rest_class</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">)</span>
+
+        <span class="c1"># Compute the weighted probabilities for each class</span>
+        <span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_estimators</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">:</span>
+                    <span class="n">j_remapped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                    <span class="n">probabilities</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Y</span><span class="p">[</span>
+                        <span class="n">i</span><span class="p">,</span> <span class="p">:,</span> <span class="n">j_remapped</span>
+                    <span class="p">]</span>  <span class="c1"># / (1 - Y[i, :, rest_class])</span>
+                    <span class="c1"># print(j, Y[i, :, j_remapped])</span>
+
+        <span class="k">assert</span> <span class="ow">not</span> <span class="p">(</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(),</span> <span class="sa">f</span><span class="s2">&quot;Some classes are not mapped to any codeword. </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="c1"># Normalize the weighted probabilities to get the final class probabilities</span>
+        <span class="n">probabilities</span> <span class="o">/=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">probabilities</span> <span class="o">/=</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">probabilities</span>
+
+    <span class="k">def</span> <span class="nf">set_categorical_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="n">categorical_features</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.ManyClassClassifier.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#scripts.estimator.ManyClassClassifier.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fit underlying estimators.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>{array-like, sparse matrix} of shape (n_samples, n_features)
+Data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples,)
+Multi-class targets.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**fit_params</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>dict
+Parameters passed to the <code>estimator.fit</code> method of each
+sub-estimator.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>self</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>object
+Returns a fitted instance of self.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/estimator/many_class_classifier.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fit underlying estimators.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X : {array-like, sparse matrix} of shape (n_samples, n_features)</span>
+<span class="sd">            Data.</span>
+
+<span class="sd">        y : array-like of shape (n_samples,)</span>
+<span class="sd">            Multi-class targets.</span>
+
+<span class="sd">        **fit_params : dict</span>
+<span class="sd">            Parameters passed to the ``estimator.fit`` method of each</span>
+<span class="sd">            sub-estimator.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        self : object</span>
+<span class="sd">            Returns a fitted instance of self.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">init_model_and_get_model_config</span><span class="p">()</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="s2">&quot;no_validation&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">random_state</span> <span class="o">=</span> <span class="n">check_random_state</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_state</span><span class="p">)</span>
+    <span class="n">check_classification_targets</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">n_classes</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;DeciaryOutputCodeClassifier can not be fit when no class is present.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">n_classes</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_alphabet_size</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span>
+
+    <span class="c1"># Generate efficient deciary codebook</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_codebook</span><span class="p">(</span>
+        <span class="n">n_classes</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_n_estimators</span><span class="p">(</span><span class="n">n_classes</span><span class="p">),</span>
+        <span class="n">alphabet_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_alphabet_size</span><span class="p">(),</span>
+    <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">classes_index_</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="p">)}</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[:,</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">_num_samples</span><span class="p">(</span><span class="n">y</span><span class="p">))],</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span>
+
+    <span class="c1"># print(&#39;CLF DIST IN&#39;, list(zip(np.unique(y), (np.unique(y, return_counts=True)[1] / y.shape[0]).tolist())))</span>
+
+    <span class="k">return</span> <span class="bp">self</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.ManyClassClassifier.predict_proba" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_proba</span>
+
+
+<a href="#scripts.estimator.ManyClassClassifier.predict_proba" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict probabilities using the underlying estimators.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>{array-like, sparse matrix} of shape (n_samples, n_features)
+Data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>p</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_samples, n_classes)
+Returns the probability of the samples for each class in the model,
+where classes are ordered as they are in <code>self.classes_</code>.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/estimator/many_class_classifier.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict_proba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Predict probabilities using the underlying estimators.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X : {array-like, sparse matrix} of shape (n_samples, n_features)</span>
+<span class="sd">            Data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        p : ndarray of shape (n_samples, n_classes)</span>
+<span class="sd">            Returns the probability of the samples for each class in the model,</span>
+<span class="sd">            where classes are ordered as they are in `self.classes_`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">no_mapping_needed_</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">_fit_and_predict_proba</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y_train</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">X</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="p">],</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Y shape is (n_estimators, n_samples, n_classes_per_code)</span>
+    <span class="n">n_estimators</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_classes_per_code</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">rest_class</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">)</span>
+
+    <span class="c1"># Compute the weighted probabilities for each class</span>
+    <span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_estimators</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">:</span>
+                <span class="n">j_remapped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                <span class="n">probabilities</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Y</span><span class="p">[</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="p">:,</span> <span class="n">j_remapped</span>
+                <span class="p">]</span>  <span class="c1"># / (1 - Y[i, :, rest_class])</span>
+                <span class="c1"># print(j, Y[i, :, j_remapped])</span>
+
+    <span class="k">assert</span> <span class="ow">not</span> <span class="p">(</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(),</span> <span class="sa">f</span><span class="s2">&quot;Some classes are not mapped to any codeword. </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">classes_</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># Normalize the weighted probabilities to get the final class probabilities</span>
+    <span class="n">probabilities</span> <span class="o">/=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code_book_</span> <span class="o">!=</span> <span class="n">rest_class</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">probabilities</span> <span class="o">/=</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">probabilities</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div><p>ClassifierAsRegressor
+</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h1 id="scripts.estimator.ClassifierAsRegressor" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ClassifierAsRegressor</span>
+
+
+<a href="#scripts.estimator.ClassifierAsRegressor" class="headerlink" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="sklearn.base.RegressorMixin">RegressorMixin</span></code></p>
+
+  
+      <p>Wrapper class to use a classifier as a regressor.</p>
+<p>This class takes a classifier estimator and converts it into a regressor by
+encoding the target labels and treating the regression problem as a
+classification task.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>estimator</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>object
+Classifier estimator to be used as a regressor.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.estimator.ClassifierAsRegressor.label_encoder_">label_encoder_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>LabelEncoder
+Label encoder used to transform target regression labels to classes.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ClassifierAsRegressor.y_train_">y_train_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples,)
+Transformed target labels used for training.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ClassifierAsRegressor.categorical_features">categorical_features</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list
+List of categorical feature indices.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <blockquote>
+<blockquote>
+<blockquote>
+<p>from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from tabpfn.scripts.estimator import ManyClassClassifier, TabPFNClassifier, ClassifierAsRegressor
+x, y = load_diabetes(return_X_y=True)
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)
+clf = TabPFNClassifier()
+clf = ManyClassClassifier(clf, n_estimators=10, alphabet_size=clf.max_num_classes_)
+reg = ClassifierAsRegressor(clf)
+reg.fit(x_train, y_train)
+y_pred = reg.predict(x_test)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+            <details class="quote">
+              <summary>Source code in <code>scripts/estimator/classifier_as_regressor.py</code></summary>
+              <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ClassifierAsRegressor</span><span class="p">(</span><span class="n">RegressorMixin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Wrapper class to use a classifier as a regressor.</span>
+
+<span class="sd">    This class takes a classifier estimator and converts it into a regressor by</span>
+<span class="sd">    encoding the target labels and treating the regression problem as a</span>
+<span class="sd">    classification task.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        estimator : object</span>
+<span class="sd">            Classifier estimator to be used as a regressor.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        label_encoder_ : LabelEncoder</span>
+<span class="sd">            Label encoder used to transform target regression labels to classes.</span>
+<span class="sd">        y_train_ : array-like of shape (n_samples,)</span>
+<span class="sd">            Transformed target labels used for training.</span>
+<span class="sd">        categorical_features : list</span>
+<span class="sd">            List of categorical feature indices.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import load_diabetes</span>
+<span class="sd">    &gt;&gt;&gt; from sklearn.model_selection import train_test_split</span>
+<span class="sd">    &gt;&gt;&gt; from tabpfn.scripts.estimator import ManyClassClassifier, TabPFNClassifier, ClassifierAsRegressor</span>
+<span class="sd">    &gt;&gt;&gt; x, y = load_diabetes(return_X_y=True)</span>
+<span class="sd">    &gt;&gt;&gt; x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)</span>
+<span class="sd">    &gt;&gt;&gt; clf = TabPFNClassifier()</span>
+<span class="sd">    &gt;&gt;&gt; clf = ManyClassClassifier(clf, n_estimators=10, alphabet_size=clf.max_num_classes_)</span>
+<span class="sd">    &gt;&gt;&gt; reg = ClassifierAsRegressor(clf)</span>
+<span class="sd">    &gt;&gt;&gt; reg.fit(x_train, y_train)</span>
+<span class="sd">    &gt;&gt;&gt; y_pred = reg.predict(x_test)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">estimator</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span>
+            <span class="n">estimator</span><span class="p">,</span> <span class="s2">&quot;predict_proba&quot;</span>
+        <span class="p">),</span> <span class="s2">&quot;The estimator must have a predict_proba method to be used as a regressor.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">estimator</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fit the classifier as a regressor.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X : array-like of shape (n_samples, n_features)</span>
+<span class="sd">                Training data.</span>
+<span class="sd">            y : array-like of shape (n_samples,)</span>
+<span class="sd">                Target labels.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            self : object</span>
+<span class="sd">                Fitted estimator.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label_encoder_</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+        <span class="n">y_transformed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_encoder_</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_train_</span> <span class="o">=</span> <span class="n">y_transformed</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_transformed</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_bar_dist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the bar distribution for the target labels.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            BarDistribution</span>
+<span class="sd">                Bar distribution for the target labels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">unique_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_encoder_</span><span class="o">.</span><span class="n">classes_</span>
+        <span class="n">bucket_widths</span> <span class="o">=</span> <span class="n">unique_y</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">unique_y</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">borders</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">unique_y</span> <span class="o">-</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bucket_widths</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">bucket_widths</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">+</span> <span class="p">[</span><span class="n">unique_y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bucket_widths</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">BarDistribution</span><span class="p">(</span><span class="n">borders</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">borders</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Predict the target values for the input data.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X : array-like of shape (n_samples, n_features)</span>
+<span class="sd">                Input data.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            y_pred : array-like of shape (n_samples,)</span>
+<span class="sd">                Predicted target values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_full</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="s2">&quot;mean&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">set_categorical_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the categorical feature indices.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            categorical_features : list</span>
+<span class="sd">                List of categorical feature indices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="n">categorical_features</span>
+
+    <span class="k">def</span> <span class="nf">get_optimization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the optimization mode for the regressor.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str</span>
+<span class="sd">                Optimization mode (&quot;mean&quot;).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;mean&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">probabilities_to_logits_multiclass</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert probabilities to logits for a multi-class problem.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            probabilities : array-like of shape (n_samples, n_classes)</span>
+<span class="sd">                Input probabilities for each class.</span>
+<span class="sd">            eps : float, default=1e-6</span>
+<span class="sd">                Small value to avoid division by zero or taking logarithm of zero.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            logits : array-like of shape (n_samples, n_classes)</span>
+<span class="sd">                Output logits for each class.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">eps</span><span class="p">)</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span>
+            <span class="mi">1</span> <span class="o">-</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="n">eps</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">logits</span>
+
+    <span class="k">def</span> <span class="nf">predict_full</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Predict the full set of output values for the input data.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            X : array-like of shape (n_samples, n_features)</span>
+<span class="sd">                Input data.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict</span>
+<span class="sd">                Dictionary containing the predicted output values, including:</span>
+<span class="sd">                - &quot;mean&quot;: Predicted mean values.</span>
+<span class="sd">                - &quot;median&quot;: Predicted median values.</span>
+<span class="sd">                - &quot;mode&quot;: Predicted mode values.</span>
+<span class="sd">                - &quot;logits&quot;: Predicted logits.</span>
+<span class="sd">                - &quot;buckets&quot;: Predicted bucket probabilities.</span>
+<span class="sd">                - &quot;quantile_{q:.2f}&quot;: Predicted quantile values for each quantile q.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">class_probs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">class_logits</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span>
+                <span class="n">ClassifierAsRegressor</span><span class="o">.</span><span class="n">probabilities_to_logits_multiclass</span><span class="p">(</span><span class="n">class_probs</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="o">.</span><span class="n">float</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">bar_dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_bar_dist</span><span class="p">()</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">TabPFNRegressor</span><span class="o">.</span><span class="n">_post_process_predict_full</span><span class="p">(</span>
+            <span class="n">prediction</span><span class="o">=</span><span class="n">class_logits</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="n">bar_dist</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">r</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.ClassifierAsRegressor.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#scripts.estimator.ClassifierAsRegressor.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fit the classifier as a regressor.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples, n_features)
+Training data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples,)
+Target labels.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>self</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>object
+Fitted estimator.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/estimator/classifier_as_regressor.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fit the classifier as a regressor.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X : array-like of shape (n_samples, n_features)</span>
+<span class="sd">            Training data.</span>
+<span class="sd">        y : array-like of shape (n_samples,)</span>
+<span class="sd">            Target labels.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        self : object</span>
+<span class="sd">            Fitted estimator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">label_encoder_</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+    <span class="n">y_transformed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_encoder_</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">y_train_</span> <span class="o">=</span> <span class="n">y_transformed</span>
+
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_transformed</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.ClassifierAsRegressor.predict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict</span>
+
+
+<a href="#scripts.estimator.ClassifierAsRegressor.predict" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict the target values for the input data.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples, n_features)
+Input data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>y_pred</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>array-like of shape (n_samples,)
+Predicted target values.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>scripts/estimator/classifier_as_regressor.py</code></summary>
+            <div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Predict the target values for the input data.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        X : array-like of shape (n_samples, n_features)</span>
+<span class="sd">            Input data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        y_pred : array-like of shape (n_samples,)</span>
+<span class="sd">            Predicted target values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict_full</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="s2">&quot;mean&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
 
 </div>
 

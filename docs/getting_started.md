@@ -1,16 +1,6 @@
 # Installation
 
-To install TabPFN, you can simply use pip. The basic installation is suitable for most users who are interested in applying TabPFN models to their tabular data.
-
-```bash
-pip install tabpfn
-For users interested in a more comprehensive setup, including the ability to train models, evaluate them as done in our paper, and use baselines, the full installation is recommended:
-```
-
-```bash
-pip install tabpfn[full]
-```
-Note: To use AutoGluon and Auto-sklearn baselines, please create separate environments and install autosklearn==0.14.5 and autogluon==0.4.0 respectively. Installing them in the same environment as TabPFN may not be possible due to dependency conflicts.
+To install TabPFN, please use the notebooks provided in this review. After review we are going to release our models as a python package on the python repository pypi.
 
 ## Example
 

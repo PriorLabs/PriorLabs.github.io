@@ -1,4 +1,4 @@
-::: scripts.transformer_prediction_interface.TabPFNClassifier
+::: scripts.estimator.TabPFNClassifier
     handler: python
     options:
       members:
@@ -7,9 +7,7 @@
         - predict
         - predict_proba
         - predict_y_proba
+        - set_categorical_features
         - score
-        - plot_shap
-        - get_shap_values
-        - get_embeddings
         - estimate_memory_usage
         - estimate_computation_usage
