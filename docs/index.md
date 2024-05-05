@@ -1,6 +1,6 @@
-# This is a beta for review
+# TabPFN Documentation (beta)
 
-Please do not share. This documentation provides examples and in detail API documentation for TabPFN. 
+This page contains API documentation and usage examples of TabPFN. Please do not share this review version.
 
 ## Features
 
@@ -15,8 +15,10 @@ Please do not share. This documentation provides examples and in detail API docu
 - [Classification](classification.md): Dive into using TabPFN for classification tasks, with examples and tips.
 - [Regression](regression.md): Explore how to apply TabPFN to regression problems, including setup and evaluation.
 
-[//]: ## Getting Help
+<!---
+## Getting Help
 
-[//]: If you encounter any issues or have questions about using TabPFN, please refer to the [FAQs](#) or reach out to the community through [GitHub Issues](https://github.com/your-github-repo/issues).
+If you encounter any issues or have questions about using TabPFN, please refer to the [FAQs](#) or reach out to the community through [GitHub Issues](https://github.com/your-github-repo/issues).
 
-[//]: Thank you for choosing TabPFN. We hope you find this tool valuable in your data science endeavors.
+Thank you for choosing TabPFN. We hope you find this tool valuable in your data science endeavors.
+-->
