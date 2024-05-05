@@ -36,9 +36,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          # Specify the directory containing the static files
           static_site_generator: none
-          source_dir: site
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
