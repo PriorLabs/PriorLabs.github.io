@@ -3,7 +3,7 @@ theme:
   name: material
   features:
     - search.suggest
-repo_url: https://github.com/automl/TabPFN
+# repo_url: https://github.com/automl/TabPFN
 plugins:
   - search
   - mkdocstrings:
@@ -82,7 +82,7 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/PriorLabs
 
-copyright: Copyright &copy; 2024 PriorLabs
+# copyright: Copyright &copy; 2024 PriorLabs
   
 #extra:
 #  analytics:
