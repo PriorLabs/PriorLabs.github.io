@@ -1,7 +1,3 @@
-# MLP
-
-## MLP
-
 ::: model.mlp.MLP
     handler: python
     options:
