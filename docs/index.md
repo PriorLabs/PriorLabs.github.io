@@ -8,29 +8,44 @@ Please do not share this review version.
 
 ### Software Dependencies and Operating Systems
 Python: Version >= 3.9
+
 Operating Systems: The software has been tested on major operating systems including:
+
 - Ubuntu 20.04, 22.04
+
 - Windows 10, 11
+
 - macOS 11.0 (Big Sur) and later
+
 Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
 
 ### Software Dependencies (as specified in `requirements.txt`):
-torch>=2.1
-Includes CUDA support in version 2.1 and later
-scikit-learn>=1.4.2
-tqdm>=4.66.1
-numpy>=1.21.2
-hyperopt==0.2.7
-Note: Earlier versions fail with numpy number generator change
-pre-commit>=3.3.3
-einops>=0.6.0
-scipy>=1.8.0
-torchmetrics==1.2.0
-pytest>=7.1.3
-pandas[plot,output_formatting]>=2.0.3,<2.2
-Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed
-pyyaml>=6.0.1
-kditransform>=0.2.0
+
+- torch>=2.1 (Includes CUDA support in version 2.1 and later)
+
+- scikit-learn>=1.4.2
+
+- tqdm>=4.66.
+
+- numpy>=1.21.2
+
+- hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
+
+- pre-commit>=3.3.3
+
+- einops>=0.6.0
+
+- scipy>=1.8.0
+
+- torchmetrics==1.2.0
+
+- pytest>=7.1.3
+
+- pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
+
+- pyyaml>=6.0.1
+
+- kditransform>=0.2.0
 
 For GPU usage CUDA 12.1 has been tested.
 
@@ -80,4 +95,4 @@ please check the technical documentation of [scripts.estimator.TabPFNClassifier.
 ## Expected Runtime
 The runtime of the model is dependent on the number of estimators and the size of the dataset. For a dataset of 1000
 samples and 4 features, the runtime on GPU is typically less than 1 second. For a dataset of 10000 samples and 4 features, the
-runtime on GPU is typically less than 10 seconds, .
+runtime on GPU is typically less than 10 seconds.
