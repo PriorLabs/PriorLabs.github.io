@@ -29,9 +29,10 @@ plugins:
             
 nav:
   - Home: index.md
-  - Getting Started: getting_started.md
   - Classification: classification.md
   - Regression: regression.md
+  - Code download: code_download.md
+  - Experimental Reproduction: reproduction.md
   - API Reference:
     - TabPFNClassifier: api/tabpfn_classifier.md
     - TabPFNRegressor: api/tabpfn_regressor.md
