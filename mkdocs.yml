@@ -6,18 +6,19 @@ theme:
 # repo_url: https://github.com/automl/TabPFN
 plugins:
   - search
+  - autorefs
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
           paths: ["src/tabpfn"]
           rendering:
-            show_source: true
             merge_init_into_class: true
             docstring_style: "google"
           options:
             filters: ["!^_"]
             heading_level: 1
+            line_length: 60
             inherited_members: true
             separate_signature: true
             show_root_heading: true
@@ -26,6 +27,7 @@ plugins:
             signature_crossrefs: true
             summary: true
             show_signature: true
+            show_source: False
             
 nav:
   - Home: index.md
