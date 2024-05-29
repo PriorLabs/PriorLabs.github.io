@@ -54,7 +54,7 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
 
 ## Installation
 
-To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code.
+To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
 
 ## Example usage
 ```python

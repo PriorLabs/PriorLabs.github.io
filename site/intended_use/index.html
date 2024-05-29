@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../regression/">
+      
+      
+        <link rel="next" href="../code_download/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Cheat Sheet / Best practices - TabPFN</title>
+        <title>Usage Tips - TabPFN</title>
       
     
     
@@ -60,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cheat-sheet-best-practices" class="md-skip">
+        <a href="#usage-tips" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheat Sheet / Best practices
+              Usage Tips
             
           </span>
         </div>
@@ -248,10 +252,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../intended_use/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Usage Tips
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -260,6 +282,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -510,8 +559,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -526,8 +590,27 @@
                   
 
 
-<h1 id="cheat-sheet-best-practices">Cheat Sheet / Best practices<a class="headerlink" href="#cheat-sheet-best-practices" title="Permanent link">&para;</a></h1>
-<p>Look at Autogluon cheat sheet [<a href="https://auto.gluon.ai/stable/cheatsheet.html">https://auto.gluon.ai/stable/cheatsheet.html</a>]</p>
+  <h1>Usage Tips</h1>
+
+<h3 id="usage-tips">Usage tips<a class="headerlink" href="#usage-tips" title="Permanent link">&para;</a></h3>
+<p><strong>When to use TabPFN</strong></p>
+<p>TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, approaches such as CatBoost, XGB, or AutoGluon are likely to outperform TabPFN.</p>
+<p><strong>Intended Use of TabPFN</strong></p>
+<p>While TabPFN provides a powerful drop-in replacement for traditional tabular data models, achieving top performance on real-world problems often requires domain expertise and the ingenuity of data scientists. Data scientists should continue to apply their skills in feature engineering, data cleaning, and problem framing to get the most out of TabPFN.</p>
+<p><strong>Limitations of TabPFN</strong></p>
+<ol>
+<li>TabPFN's inference speed may be slower than highly optimized approaches like CatBoost.</li>
+<li>TabPFN's memory usage scales linearly with dataset size, which can be prohibitive for very large datasets.</li>
+<li>Our evaluation focused on datasets with up to 10,000 samples and 500 features; scalability to larger datasets requires further study.</li>
+</ol>
+<p><strong>Computational and Time Requirements</strong></p>
+<p>TabPFN is computationally efficient and can run on consumer hardware for most datasets. Training on a new dataset is recommended to run on a GPU as this speeds it up significantly. However, TabPFN is not optimized for real-time inference tasks.</p>
+<p><strong>Data Preparation</strong></p>
+<p>TabPFN can handle raw data with minimal preprocessing. Provide the data in a tabular format, and TabPFN will automatically handle missing values, encode categorical variables, and normalize features. While TabPFN works well out-of-the-box, performance can further be improved using dataset-specific preprocessings.</p>
+<p><strong>Interpreting Results</strong></p>
+<p>TabPFN's predictions come with uncertainty estimates, allowing you to assess the reliability of the results. You can use SHAP to interpret TabPFN's predictions and identify the most important features driving the model's decisions.</p>
+<p><strong>Hyperparameter Tuning</strong></p>
+<p>TabPFN provides strong performance out-of-the-box without extensive hyperparameter tuning. If you have additional computational resources, you can further optimize TabPFN's performance using random hyperparameter tuning or the Post-Hoc Ensembling (PHE) technique.</p>
 
 
 

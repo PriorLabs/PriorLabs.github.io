@@ -33,6 +33,7 @@ nav:
   - Home: index.md
   - Classification: classification.md
   - Regression: regression.md
+  - Usage Tips: intended_use.md
   - Code download: code_download.md
   - Experimental Reproduction: reproduction.md
   - API Reference:
