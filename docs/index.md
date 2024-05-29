@@ -6,7 +6,7 @@
     
     Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the “linktree” in our main paper or the code submission checklist. 
 
-This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). An in-depth technical documentation of our software interfaces can be found in the [API Reference](api_reference)
+This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). An in-depth technical documentation of our software interfaces can be found in the [API Reference](api/tabpfn_classifier/)
 
 ## Installation
 
