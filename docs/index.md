@@ -21,31 +21,55 @@ Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
 
 ### Software Dependencies (as specified in `requirements.txt`):
 
-- torch>=2.1 (Includes CUDA support in version 2.1 and later)
+=== "TabPFN"
 
-- scikit-learn>=1.4.2
+    ```
+    torch>=2.1 (Includes CUDA support in version 2.1 and later)
+    scikit-learn>=1.4.2
+    tqdm>=4.66.
+    numpy>=1.21.2
+    hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
+    pre-commit>=3.3.3
+    einops>=0.6.0
+    scipy>=1.8.0
+    torchmetrics==1.2.0
+    pytest>=7.1.3
+    pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
+    pyyaml>=6.0.1
+    kditransform>=0.2.0
+    ```
 
-- tqdm>=4.66.
+=== "TabPFN and Baselines"
 
-- numpy>=1.21.2
-
-- hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
-
-- pre-commit>=3.3.3
-
-- einops>=0.6.0
-
-- scipy>=1.8.0
-
-- torchmetrics==1.2.0
-
-- pytest>=7.1.3
-
-- pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
-
-- pyyaml>=6.0.1
-
-- kditransform>=0.2.0
+    ```
+    torch>=2.1 (Includes CUDA support in version 2.1 and later)
+    scikit-learn>=1.4.2
+    tqdm>=4.66.
+    numpy>=1.21.2
+    hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
+    pre-commit>=3.3.3
+    einops>=0.6.0
+    scipy>=1.8.0
+    torchmetrics==1.2.0
+    pytest>=7.1.3
+    pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
+    pyyaml>=6.0.1
+    kditransform>=0.2.0
+    seaborn==0.12.2
+    openml==0.14.1
+    numba>=0.58.1
+    shap>=0.44.1
+    
+    # Baselines
+    lightgbm==3.3.5
+    xgboost>=2.0.0
+    catboost>=1.1.1
+    #auto-sklearn==0.14.5
+    #autogluon==0.4.0
+    
+    # -- Quantile Baseline
+    quantile-forest==1.2.4
+    ```
 
 For GPU usage CUDA 12.1 has been tested.
 
@@ -56,35 +80,53 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
 
 To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
 
+
+
 ## Example usage
-```python
-import numpy as np
-import sklearn
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
 
-from tabpfn import TabPFNClassifier
- 
-# Create a classifier
-# The model will use a CUDA-enabled GPU if available, otherwise it will use the CPU.
-# The most important parameters:
-#   - The default is to `fit_at_predict_time` which means that the model will be fit at the time of prediction, this is useful for large datasets and when you only want to predict once.
-#     If you want to predict multiple times for the same training set, set `fit_at_predict_time=False` and the model will be fit at the time of `fit` and save its state for later.
-#   - You can also set the number of `n_estimators`, this is the easiest way to control the trade-off between speed and accuracy.
-clf = TabPFNClassifier(fit_at_predict_time=True)
+=== "Classification"
 
-X, y = load_iris(return_X_y=True)
-feature_names = load_iris()['feature_names']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+    ```python
+    import numpy as np
+    import sklearn
+    from sklearn.datasets import load_iris
+    from sklearn.model_selection import train_test_split
+    
+    from tabpfn import TabPFNClassifier
+    
+    # Create a classifier
+    clf = TabPFNClassifier(fit_at_predict_time=True)
+    
+    X, y = load_iris(return_X_y=True)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+    
+    clf.fit(X_train, y_train)
+    preds = clf.predict_proba(X_test)
+    y_eval = np.argmax(preds, axis=1)
+    
+    print('ROC AUC: ', sklearn.metrics.roc_auc_score(y_test, preds, multi_class='ovr'), 'Accuracy', sklearn.metrics.accuracy_score(y_test, y_eval))
+    ```
 
-clf.fit(X_train, y_train)
+=== "Regression"
 
-preds = clf.predict_proba(X_test)  # <- all the compute happens in here
-y_eval = np.argmax(preds, axis=1)
-
-print('ROC AUC: ',  sklearn.metrics.roc_auc_score(y_test, preds, multi_class='ovr'), 'Accuracy', sklearn.metrics.accuracy_score(y_test, y_eval))
-```
-
+    ```python
+    from tabpfn import TabPFNRegressor
+    from sklearn.datasets import load_diabetes
+    from sklearn.model_selection import train_test_split
+    import numpy as np
+    import sklearn
+    
+    reg = TabPFNRegressor(device='auto')
+    X, y = load_diabetes(return_X_y=True)
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+    reg.fit(X_train, y_train)
+    preds = reg.predict(X_test)
+    
+    print('Mean Squared Error (MSE): ', sklearn.metrics.mean_squared_error(y_test, preds))
+    print('Mean Absolute Error (MAE): ', sklearn.metrics.mean_absolute_error(y_test, preds))
+    print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
+    ```
 
 ## Expected Output
 Our models follow the interfaces provided by sklearn, so you can expect the same output as you would from sklearn models.

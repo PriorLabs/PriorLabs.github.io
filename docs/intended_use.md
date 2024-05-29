@@ -1,4 +1,4 @@
-### Usage tips
+# Usage tips
 
 **When to use TabPFN**
 

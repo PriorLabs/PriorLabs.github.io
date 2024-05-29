@@ -1,0 +1,5 @@
+:root {
+  background: #fff;
+  /* or, using CSS variables */
+  --md-default-bg-color: #fff;
+}

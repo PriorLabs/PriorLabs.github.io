@@ -24,6 +24,9 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
       
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -43,6 +46,8 @@
     
       <link rel="stylesheet" href="assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -53,7 +58,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -74,9 +84,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="TabPFN" class="md-header__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
@@ -105,8 +113,8 @@
       </div>
     </div>
     
+      
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -159,6 +167,137 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="classification/" class="md-tabs__link">
+        
+  
+    
+  
+  Classification
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="regression/" class="md-tabs__link">
+        
+  
+    
+  
+  Regression
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="intended_use/" class="md-tabs__link">
+        
+  
+    
+  
+  Usage Tips
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="code_download/" class="md-tabs__link">
+        
+  
+    
+  
+  Code download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="reproduction/" class="md-tabs__link">
+        
+  
+    
+  
+  Experimental Reproduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="api/tabpfn_classifier/" class="md-tabs__link">
+          
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -172,8 +311,12 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="TabPFN" class="md-nav__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
@@ -433,6 +576,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -620,110 +766,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Requirements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#software-dependencies-and-operating-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Software Dependencies and Operating Systems
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-dependencies-as-specified-in-requirementstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Software Dependencies (as specified in requirements.txt):
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-standard-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non-Standard Hardware
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Runtime
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -752,53 +794,65 @@
 </ul>
 <p>Git Version 2 or later (<a href="https://git-scm.com/">https://git-scm.com/</a>)</p>
 <h3 id="software-dependencies-as-specified-in-requirementstxt">Software Dependencies (as specified in <code>requirements.txt</code>):<a class="headerlink" href="#software-dependencies-as-specified-in-requirementstxt" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)</p>
-</li>
-<li>
-<p>scikit-learn&gt;=1.4.2</p>
-</li>
-<li>
-<p>tqdm&gt;=4.66.</p>
-</li>
-<li>
-<p>numpy&gt;=1.21.2</p>
-</li>
-<li>
-<p>hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)</p>
-</li>
-<li>
-<p>pre-commit&gt;=3.3.3</p>
-</li>
-<li>
-<p>einops&gt;=0.6.0</p>
-</li>
-<li>
-<p>scipy&gt;=1.8.0</p>
-</li>
-<li>
-<p>torchmetrics==1.2.0</p>
-</li>
-<li>
-<p>pytest&gt;=7.1.3</p>
-</li>
-<li>
-<p>pandas[plot,output_formatting]&gt;=2.0.3,&lt;2.2 (Note: Version 2.2 has a bug with multi-index tables (<a href="https://github.com/pandas-dev/pandas/issues/57663">https://github.com/pandas-dev/pandas/issues/57663</a>), recheck when fixed)</p>
-</li>
-<li>
-<p>pyyaml&gt;=6.0.1</p>
-</li>
-<li>
-<p>kditransform&gt;=0.2.0</p>
-</li>
-</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TabPFN</label><label for="__tabbed_1_2">TabPFN and Baselines</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
+scikit-learn&gt;=1.4.2
+tqdm&gt;=4.66.
+numpy&gt;=1.21.2
+hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
+pre-commit&gt;=3.3.3
+einops&gt;=0.6.0
+scipy&gt;=1.8.0
+torchmetrics==1.2.0
+pytest&gt;=7.1.3
+pandas[plot,output_formatting]&gt;=2.0.3,&lt;2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
+pyyaml&gt;=6.0.1
+kditransform&gt;=0.2.0
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
+scikit-learn&gt;=1.4.2
+tqdm&gt;=4.66.
+numpy&gt;=1.21.2
+hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
+pre-commit&gt;=3.3.3
+einops&gt;=0.6.0
+scipy&gt;=1.8.0
+torchmetrics==1.2.0
+pytest&gt;=7.1.3
+pandas[plot,output_formatting]&gt;=2.0.3,&lt;2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
+pyyaml&gt;=6.0.1
+kditransform&gt;=0.2.0
+seaborn==0.12.2
+openml==0.14.1
+numba&gt;=0.58.1
+shap&gt;=0.44.1
+
+# Baselines
+lightgbm==3.3.5
+xgboost&gt;=2.0.0
+catboost&gt;=1.1.1
+#auto-sklearn==0.14.5
+#autogluon==0.4.0
+
+# -- Quantile Baseline
+quantile-forest==1.2.4
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>For GPU usage CUDA 12.1 has been tested.</p>
 <h3 id="non-standard-hardware">Non-Standard Hardware<a class="headerlink" href="#non-standard-hardware" title="Permanent link">&para;</a></h3>
 <p>GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. </p>
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Classification</label><label for="__tabbed_2_2">Regression</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">sklearn</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
@@ -807,24 +861,39 @@
 <span class="kn">from</span> <span class="nn">tabpfn</span> <span class="kn">import</span> <span class="n">TabPFNClassifier</span>
 
 <span class="c1"># Create a classifier</span>
-<span class="c1"># The model will use a CUDA-enabled GPU if available, otherwise it will use the CPU.</span>
-<span class="c1"># The most important parameters:</span>
-<span class="c1">#   - The default is to `fit_at_predict_time` which means that the model will be fit at the time of prediction, this is useful for large datasets and when you only want to predict once.</span>
-<span class="c1">#     If you want to predict multiple times for the same training set, set `fit_at_predict_time=False` and the model will be fit at the time of `fit` and save its state for later.</span>
-<span class="c1">#   - You can also set the number of `n_estimators`, this is the easiest way to control the trade-off between speed and accuracy.</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">TabPFNClassifier</span><span class="p">(</span><span class="n">fit_at_predict_time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">feature_names</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">]</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="n">preds</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>  <span class="c1"># &lt;- all the compute happens in here</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">y_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROC AUC: &#39;</span><span class="p">,</span>  <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">),</span> <span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_eval</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ROC AUC: &#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="n">multi_class</span><span class="o">=</span><span class="s1">&#39;ovr&#39;</span><span class="p">),</span> <span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_eval</span><span class="p">))</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tabpfn</span> <span class="kn">import</span> <span class="n">TabPFNRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_diabetes</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+
+<span class="n">reg</span> <span class="o">=</span> <span class="n">TabPFNRegressor</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_diabetes</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Squared Error (MSE): &#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Absolute Error (MAE): &#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R-squared (R^2): &#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">preds</span><span class="p">))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h2>
 <p>Our models follow the interfaces provided by sklearn, so you can expect the same output as you would from sklearn models.
 TabPFNClassifier will return a numpy array of shape <code>(n_samples, n_classes)</code> with the probabilities of each class, while
@@ -895,7 +964,7 @@ runtime on GPU is typically less than 10 seconds.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["search.suggest"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "navigation.tabs", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>

@@ -3,6 +3,10 @@ theme:
   name: material
   features:
     - search.suggest
+    - navigation.tabs
+    - toc.integrate
+  palette:
+    primary: custom
 # repo_url: https://github.com/automl/TabPFN
 plugins:
   - search
@@ -28,7 +32,9 @@ plugins:
             summary: true
             show_signature: true
             show_source: False
-            
+extra_css:
+  - stylesheets/extra.css
+    
 nav:
   - Home: index.md
   - Classification: classification.md
@@ -77,12 +83,13 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
-  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+        
 extra:
   social:
     - icon: fontawesome/brands/github-alt
