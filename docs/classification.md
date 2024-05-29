@@ -29,6 +29,10 @@ print('Test Accuracy:', accuracy_score(y_test, y_pred))
 
 ## Example with AutoTabPFNClassifier
 
+!!! abstract
+	
+	The AutoTabPFNClassifier and AutoTabPFNRegressor automatically run a hyperparameter search and build an ensemble of strong hyperparameters. You can control the runtime using ´max_time´ and need to make no further adjustments to get best results.
+
 ```python
 from tabpfn.scripts.estimator.post_hoc_ensembles import AutoTabPFNClassifier, AutoTabPFNRegressor
 # we refer to the PHE variant of TabPFN as AutoTabPFN in the code

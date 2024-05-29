@@ -1,12 +1,22 @@
-# Highly Accurate Predictions for Small Data With the Tabular Foundation Model TabPFN (beta)
+# Highly Accurate Predictions for Small Data With the Tabular Foundation Model TabPFN
 
-This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). You will also find an in-depth technical documentation of our source code with a documentation of our software interfaces on the left hand side.
+!!! warning
 
-Please do not share this review version.
+    This is a beta version of our documentation created for the review phase. Please do not share this review version.
+    
+    Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the “linktree” in our main paper or the code submission checklist. 
 
-## System Requirements
+This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). An in-depth technical documentation of our software interfaces can be found in the [API Reference](api_reference)
 
-### Software Dependencies and Operating Systems
+## Installation
+
+To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
+
+!!! tip
+	
+	The easiest way to install and run our code is via the Colab Notebooks shared in the “linktree” in our submission.
+
+#### Software Dependencies and Operating Systems
 Python: Version >= 3.9
 
 Operating Systems: The software has been tested on major operating systems including:
@@ -19,7 +29,7 @@ Operating Systems: The software has been tested on major operating systems inclu
 
 Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
 
-### Software Dependencies (as specified in `requirements.txt`):
+#### Software Dependencies (as specified in `requirements.txt`):
 
 === "TabPFN"
 
@@ -73,13 +83,8 @@ Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
 
 For GPU usage CUDA 12.1 has been tested.
 
-### Non-Standard Hardware
+#### Non-Standard Hardware
 GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.
-
-## Installation
-
-To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
-
 
 
 ## Example usage

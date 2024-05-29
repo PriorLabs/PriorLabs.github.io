@@ -1,3 +1,3 @@
 # Experimental Reproduction
 
-To reproduce our experiments please run the codes provided in the experimental reproduction notebook provided in the private “linktree”. We do not link this notebook on this public website.
+Our code is currently stored in a private repository on GitHub, to avoid indexing at this point. We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the “linktree” in our main paper or the code submission checklist. 

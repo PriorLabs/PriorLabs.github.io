@@ -86,7 +86,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="TabPFN" class="md-header__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
@@ -162,14 +164,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -299,7 +295,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -839,9 +841,9 @@
     <span class="n">optimize_metric</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="scripts.estimator.base.RegressionOptimizationMetricType" href="../../api_reference/#scripts.estimator.RegressionOptimizationMetricType">RegressionOptimizationMetricType</a></span> <span class="o">=</span> <span class="s2">&quot;rmse&quot;</span><span class="p">,</span>
     <span class="n">transformer_predict_kwargs</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">softmax_temperature</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">float</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span>
-    <span class="n">use_poly_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">max_poly_features</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-    <span class="n">transductive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">use_poly_features</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">max_poly_features</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">transductive</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">remove_outliers</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">regression_y_preprocess_transforms</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span>
         <span class="n"><span title="typing.Tuple">Tuple</span></span><span class="p">[</span>
@@ -1020,6 +1022,7 @@ features specified with <code>self.fit(..., categorical_features=...)</code>.</p
         <tr>
           <td><code>use_poly_features</code></td>
           <td>
+                <code>bool</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1033,6 +1036,7 @@ features specified with <code>self.fit(..., categorical_features=...)</code>.</p
         <tr>
           <td><code>max_poly_features</code></td>
           <td>
+                <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1046,6 +1050,7 @@ features specified with <code>self.fit(..., categorical_features=...)</code>.</p
         <tr>
           <td><code>transductive</code></td>
           <td>
+                <code>bool</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1743,7 +1748,7 @@ and are the main bottleneck for the computation time.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.tabs", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>

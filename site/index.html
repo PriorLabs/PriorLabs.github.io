@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn-beta" class="md-skip">
+        <a href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +84,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="TabPFN" class="md-header__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
@@ -160,14 +162,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -297,7 +293,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -382,13 +384,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      System Requirements
+      Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="System Requirements">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -420,15 +422,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
   
 </li>
       
@@ -774,11 +767,20 @@
                   
 
 
-<h1 id="highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn-beta">Highly Accurate Predictions for Small Data With the Tabular Foundation Model TabPFN (beta)<a class="headerlink" href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn-beta" title="Permanent link">&para;</a></h1>
-<p>This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). You will also find an in-depth technical documentation of our source code with a documentation of our software interfaces on the left hand side.</p>
-<p>Please do not share this review version.</p>
-<h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<h3 id="software-dependencies-and-operating-systems">Software Dependencies and Operating Systems<a class="headerlink" href="#software-dependencies-and-operating-systems" title="Permanent link">&para;</a></h3>
+<h1 id="highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn">Highly Accurate Predictions for Small Data With the Tabular Foundation Model TabPFN<a class="headerlink" href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a beta version of our documentation created for the review phase. Please do not share this review version.</p>
+<p>Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the “linktree” in our main paper or the code submission checklist. </p>
+</div>
+<p>This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages (menu left). An in-depth technical documentation of our software interfaces can be found in the <a href="api_reference">API Reference</a></p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The easiest way to install and run our code is via the Colab Notebooks shared in the “linktree” in our submission.</p>
+</div>
+<h4 id="software-dependencies-and-operating-systems">Software Dependencies and Operating Systems<a class="headerlink" href="#software-dependencies-and-operating-systems" title="Permanent link">&para;</a></h4>
 <p>Python: Version &gt;= 3.9</p>
 <p>Operating Systems: The software has been tested on major operating systems including:</p>
 <ul>
@@ -793,7 +795,7 @@
 </li>
 </ul>
 <p>Git Version 2 or later (<a href="https://git-scm.com/">https://git-scm.com/</a>)</p>
-<h3 id="software-dependencies-as-specified-in-requirementstxt">Software Dependencies (as specified in <code>requirements.txt</code>):<a class="headerlink" href="#software-dependencies-as-specified-in-requirementstxt" title="Permanent link">&para;</a></h3>
+<h4 id="software-dependencies-as-specified-in-requirementstxt">Software Dependencies (as specified in <code>requirements.txt</code>):<a class="headerlink" href="#software-dependencies-as-specified-in-requirementstxt" title="Permanent link">&para;</a></h4>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TabPFN</label><label for="__tabbed_1_2">TabPFN and Baselines</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -845,10 +847,8 @@ quantile-forest==1.2.4
 </div>
 </div>
 <p>For GPU usage CUDA 12.1 has been tested.</p>
-<h3 id="non-standard-hardware">Non-Standard Hardware<a class="headerlink" href="#non-standard-hardware" title="Permanent link">&para;</a></h3>
+<h4 id="non-standard-hardware">Non-Standard Hardware<a class="headerlink" href="#non-standard-hardware" title="Permanent link">&para;</a></h4>
 <p>GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. </p>
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Classification</label><label for="__tabbed_2_2">Regression</label></div>
 <div class="tabbed-content">
@@ -964,7 +964,7 @@ runtime on GPU is typically less than 10 seconds.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "navigation.tabs", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>

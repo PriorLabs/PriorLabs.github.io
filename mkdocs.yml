@@ -4,6 +4,7 @@ theme:
   features:
     - search.suggest
     - navigation.tabs
+    - navigation.tabs.sticky
     - toc.integrate
   palette:
     primary: custom
