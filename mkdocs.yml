@@ -33,6 +33,7 @@ plugins:
             summary: true
             show_signature: true
             show_source: False
+            
 extra_css:
   - stylesheets/extra.css
     
@@ -48,6 +49,7 @@ nav:
     - TabPFNRegressor: api/tabpfn_regressor.md
     - AutoTabPFNClassifier: api/AutoTabPFNClassifier.md
     - AutoTabPFNRegressor: api/AutoTabPFNRegressor.md
+    - TabPFNUnsupervisedModel: api/TabPFNUnsupervisedModel.md
     - Transformer: api/model.transformer.md
     - MLP: api/model.mlp.md
     - Encoders: api/model.encoders.md

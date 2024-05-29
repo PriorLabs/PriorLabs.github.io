@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../AutoTabPFNRegressor/">
+      
+      
+        <link rel="next" href="../model.transformer/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Tabpfn unsupervised - TabPFN</title>
+        <title>TabPFNUnsupervisedModel - TabPFN</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts.estimator.TabPFNUnsupervisedModel" class="md-skip">
+        <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tabpfn unsupervised
+              TabPFNUnsupervisedModel
             
           </span>
         </div>
@@ -271,10 +275,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../tabpfn_classifier/" class="md-tabs__link">
           
   
@@ -451,23 +457,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -478,7 +489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -573,6 +584,130 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TabPFNUnsupervisedModel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TabPFNUnsupervisedModel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.set_categorical_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_categorical_features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.impute" class="md-nav__link">
+    <span class="md-ellipsis">
+      impute
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.get_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_embeddings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.outliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      outliers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.generate_synthetic_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      generate_synthetic_data
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -658,11 +793,11 @@
 
 
 
-<h1 id="scripts.estimator.TabPFNUnsupervisedModel" class="doc doc-heading">
+<h1 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel" class="doc doc-heading">
           <span class="doc doc-object-name doc-class-name">TabPFNUnsupervisedModel</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel" class="headerlink" title="Permanent link">&para;</a></h1>
 
 
   <div class="doc doc-contents first">
@@ -733,7 +868,7 @@ assumes that there are no numerical features in the data.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code><span title="scripts.estimator.TabPFNUnsupervisedModel.categorical_features">categorical_features</span></code></td>
+          <td><code><span title="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.categorical_features">categorical_features</span></code></td>
           <td>
           </td>
           <td>
@@ -779,11 +914,11 @@ List of indices of categorical features in the input data.</p>
 
 
 
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.__init__" class="doc doc-heading">
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.__init__" class="doc doc-heading">
           <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
     <span class="n">tabpfn_clf</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="scripts.estimator.base.TabPFNClassifier" href="../tabpfn_classifier/#scripts.estimator.TabPFNClassifier">TabPFNClassifier</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">tabpfn_reg</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="scripts.estimator.base.TabPFNRegressor" href="../tabpfn_regressor/#scripts.estimator.TabPFNRegressor">TabPFNRegressor</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -849,11 +984,11 @@ assumes that there are no numerical features in the data.</p>
 
 
 
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.fit" class="doc doc-heading">
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.fit" class="doc doc-heading">
           <span class="doc doc-object-name doc-function-name">fit</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.fit" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
@@ -939,19 +1074,15 @@ Fitted model.</p>
 
 
 
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.get_embeddings" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_embeddings</span>
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.set_categorical_features" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">set_categorical_features</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.get_embeddings" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_embeddings</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.tensor">tensor</span></span>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.set_categorical_features" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">set_categorical_features</span><span class="p">(</span><span class="n">categorical_features</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-  
-      <p>Get the transformer embeddings for the test data X.</p>
-<p>:param X:
-:return:</p>
 
   </div>
 
@@ -962,11 +1093,177 @@ Fitted model.</p>
 
 
 
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.outliers" class="doc doc-heading">
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.impute" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">impute</span>
+
+
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.impute" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">impute</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="mf">1e-09</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.tensor">tensor</span></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Impute missing values in the input data.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>torch.Tensor of shape (n_samples, n_features)
+Input data with missing values encoded as np.nan.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>t</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>float, default=0.000000001
+Temperature for sampling from the imputation distribution. Lower values result in
+more deterministic imputations.</p>
+            </div>
+          </td>
+          <td>
+                <code>1e-09</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="torch.tensor">tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>torch.Tensor of shape (n_samples, n_features)
+Imputed data with missing values replaced.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.get_embeddings" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_embeddings</span>
+
+
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.get_embeddings" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">get_embeddings</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.tensor">tensor</span></span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the transformer embeddings for the test data X.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="torch.tensor">tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="torch.tensor">tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>torch.Tensor of shape (n_samples, embedding_dim)</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.outliers" class="doc doc-heading">
           <span class="doc doc-object-name doc-function-name">outliers</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.outliers" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.outliers" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">outliers</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.tensor">tensor</span></span>
 </code></pre></div>
 
@@ -975,8 +1272,32 @@ Fitted model.</p>
       <p>Preferred implementation for outliers, where we calculate the sample probability for each sample in X by
 multiplying the probabilities of each feature according to chain rule of probability. The first feature is
 estimated by using a zero feature as input.</p>
-<p>:param X: Samples to calculate the sample probability for, shape (n_samples, n_features)
-:return: Sample probability for each sample in X, shape (n_samples,)</p>
+<p>Args
+    X: Samples to calculate the sample probability for, shape (n_samples, n_features)</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="torch.tensor">tensor</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Sample probability for each sample in X, shape (n_samples,)</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 
@@ -987,11 +1308,11 @@ estimated by using a zero feature as input.</p>
 
 
 
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.generate_synthetic_data" class="doc doc-heading">
+<h2 id="scripts.estimator.unsupervised.TabPFNUnsupervisedModel.generate_synthetic_data" class="doc doc-heading">
           <span class="doc doc-object-name doc-function-name">generate_synthetic_data</span>
 
 
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.generate_synthetic_data" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#scripts.estimator.unsupervised.TabPFNUnsupervisedModel.generate_synthetic_data" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">generate_synthetic_data</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div>
 
@@ -1069,25 +1390,6 @@ Generated synthetic data.</p>
         </tr>
     </tbody>
   </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="scripts.estimator.TabPFNUnsupervisedModel.set_categorical_features" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">set_categorical_features</span>
-
-
-<a href="#scripts.estimator.TabPFNUnsupervisedModel.set_categorical_features" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">set_categorical_features</span><span class="p">(</span><span class="n">categorical_features</span><span class="p">)</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
 
   </div>
 
