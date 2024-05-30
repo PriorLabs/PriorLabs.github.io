@@ -6,6 +6,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.integrate
+  #logo: assets/logo.png
   palette:
     primary: custom
 # repo_url: https://github.com/automl/TabPFN
@@ -41,6 +42,7 @@ nav:
   - Home: index.md
   - Classification: classification.md
   - Regression: regression.md
+  - Unsupervised: unsupervised.md
   - Usage Tips: intended_use.md
   - Code download: code_download.md
   - Experimental Reproduction: reproduction.md
@@ -56,6 +58,10 @@ nav:
     
 # Extensions
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - markdown.extensions.admonition
   - markdown.extensions.attr_list
   - markdown.extensions.codehilite:
@@ -66,6 +72,7 @@ markdown_extensions:
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
+  - md_in_html
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
