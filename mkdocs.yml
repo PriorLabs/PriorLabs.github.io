@@ -45,7 +45,7 @@ nav:
   - Unsupervised: unsupervised.md
   - Usage Tips: intended_use.md
   - Code download: code_download.md
-  - Experimental Reproduction: reproduction.md
+#  - Experimental Reproduction: reproduction.md
   - API Reference:
     - TabPFNClassifier: api/tabpfn_classifier.md
     - TabPFNRegressor: api/tabpfn_regressor.md
