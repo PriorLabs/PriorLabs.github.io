@@ -144,6 +144,7 @@ The runtime of the model is dependent on the number of estimators and the size o
 samples and 4 features, the runtime on GPU is typically less than 1 second. For a dataset of 10000 samples and 4 features, the
 runtime on GPU is typically less than 10 seconds.
 
+<!---
 ## Why TabPFN
 
 TabPFN offers several compelling advantages over previous classifiers, particularly when dealing with small to medium-sized datasets. Here are the key reasons to consider using TabPFN:
@@ -192,3 +193,4 @@ TabPFN offers several compelling advantages over previous classifiers, particula
 
 <br>
 <br>
+-->
