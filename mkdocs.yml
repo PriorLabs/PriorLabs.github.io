@@ -52,6 +52,9 @@ nav:
     - AutoTabPFNClassifier: api/AutoTabPFNClassifier.md
     - AutoTabPFNRegressor: api/AutoTabPFNRegressor.md
     - TabPFNUnsupervisedModel: api/TabPFNUnsupervisedModel.md
+    - ManyClassClassifier: api/ManyClassClassifier.md
+    - ClassifierAsRegressor: api/ClassifierAsRegressor.md
+    - PreprocessorConfig: api/PreprocessorConfig.md
     - Transformer: api/model.transformer.md
     - MLP: api/model.mlp.md
     - Encoders: api/model.encoders.md

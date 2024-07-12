@@ -720,6 +720,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../ManyClassClassifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ManyClassClassifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ClassifierAsRegressor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ClassifierAsRegressor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreprocessorConfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PreprocessorConfig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../model.transformer/" class="md-nav__link">
         
   
@@ -844,7 +907,7 @@
     <span class="p">),</span>
     <span class="n">n_estimators</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
     <span class="n">preprocess_transforms</span><span class="p">:</span> <span class="n"><span title="typing.Tuple">Tuple</span></span><span class="p">[</span>
-        <span class="n"><a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../../api_reference/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a></span><span class="p">,</span> <span class="o">...</span>
+        <span class="n"><a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../PreprocessorConfig/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a></span><span class="p">,</span> <span class="o">...</span>
     <span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">PreprocessorConfig</span><span class="p">(</span>
             <span class="s2">&quot;quantile_uni&quot;</span><span class="p">,</span>
@@ -890,6 +953,8 @@
     <span class="n">save_peak_memory</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span>
         <span class="s2">&quot;True&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span>
     <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="n">maximum_free_memory_in_gb</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">split_test_samples</span><span class="p">:</span> <span class="n">float</span> <span class="o">|</span> <span class="n">str</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 
@@ -940,7 +1005,7 @@
         <tr>
           <td><code>preprocess_transforms</code></td>
           <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../../api_reference/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>, ...]</code>
+                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../PreprocessorConfig/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>, ...]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -953,7 +1018,7 @@ features specified with <code>self.fit(..., categorical_features=...)</code>.</p
             </div>
           </td>
           <td>
-                <code>(<a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../../api_reference/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>(&#39;quantile_uni&#39;, append_original=True, categorical_name=&#39;ordinal_very_common_categories_shuffled&#39;, global_transformer_name=&#39;svd&#39;), <a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../../api_reference/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>(&#39;safepower&#39;, categorical_name=&#39;onehot&#39;))</code>
+                <code>(<a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../PreprocessorConfig/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>(&#39;quantile_uni&#39;, append_original=True, categorical_name=&#39;ordinal_very_common_categories_shuffled&#39;, global_transformer_name=&#39;svd&#39;), <a class="autorefs autorefs-internal" title="scripts.estimator.configs.PreprocessorConfig" href="../PreprocessorConfig/#scripts.estimator.PreprocessorConfig">PreprocessorConfig</a>(&#39;safepower&#39;, categorical_name=&#39;onehot&#39;))</code>
           </td>
         </tr>
         <tr>
@@ -1517,6 +1582,7 @@ are considered categorical features.</p>
 <div class="doc-signature codehilite"><pre><span></span><code><span class="n">estimate_memory_usage</span><span class="p">(</span>
     <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span> <span class="o">|</span> <span class="n"><span title="torch.tensor">tensor</span></span><span class="p">,</span>
     <span class="n">unit</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;mb&quot;</span><span class="p">,</span> <span class="s2">&quot;gb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;gb&quot;</span><span class="p">,</span>
+    <span class="n">eval_position</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
     <span class="o">**</span><span class="n">overwrite_params</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
@@ -1619,6 +1685,7 @@ table this is used as the batch size used during inference, otherwise this depen
     <span class="n">unit</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span>
         <span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span>
     <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;sequential_flops&quot;</span><span class="p">,</span>
+    <span class="n">eval_position</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
     <span class="o">**</span><span class="n">overwrite_params</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>

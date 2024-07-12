@@ -14,22 +14,4 @@ ClassificationOptimizationMetricType
 RegressionOptimizationMetricType
 ::: scripts.estimator.RegressionOptimizationMetricType
     handler: python
-    
-ManyClassClassifier
-::: scripts.estimator.ManyClassClassifier
-    handler: python
-    options:
-      members:
-        - init
-        - fit
-        - predict
-        - predict_proba
         
-ClassifierAsRegressor
-::: scripts.estimator.ClassifierAsRegressor
-    handler: python
-    options:
-      members:
-        - init
-        - fit
-        - predict

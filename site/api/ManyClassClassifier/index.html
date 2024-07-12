@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../AutoTabPFNClassifier/">
+        <link rel="prev" href="../TabPFNUnsupervisedModel/">
       
       
-        <link rel="next" href="../TabPFNUnsupervisedModel/">
+        <link rel="next" href="../ClassifierAsRegressor/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>AutoTabPFNRegressor - TabPFN</title>
+        <title>ManyClassClassifier - TabPFN</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor" class="md-skip">
+        <a href="#scripts.estimator.ManyClassClassifier" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AutoTabPFNRegressor
+              ManyClassClassifier
             
           </span>
         </div>
@@ -563,30 +563,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    AutoTabPFNRegressor
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../AutoTabPFNRegressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,53 +575,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      fit
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.predict" class="md-nav__link">
-    <span class="md-ellipsis">
-      predict
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -672,10 +605,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ManyClassClassifier/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ManyClassClassifier
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -684,6 +637,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.ManyClassClassifier.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts.estimator.ManyClassClassifier.predict_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_proba
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -820,24 +811,132 @@
 
 
 
-<h1 id="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">AutoTabPFNRegressor</span>
+<h1 id="scripts.estimator.ManyClassClassifier" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ManyClassClassifier</span>
 
 
-<a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#scripts.estimator.ManyClassClassifier" class="headerlink" title="Permanent link">&para;</a></h1>
 
 
   <div class="doc doc-contents first">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.base.BaseEstimator">BaseEstimator</span></code>, <code><span title="sklearn.base.RegressorMixin">RegressorMixin</span></code></p>
+            Bases: <code><span title="sklearn.multiclass.OutputCodeClassifier">OutputCodeClassifier</span></code></p>
 
   
-      <p>Automatic Post Hoc Ensemble Regressor for TabPFN models.
-Attributes:
-    predictor_ : AutoPostHocEnsemblePredictor
-        The predictor interface used to make predictions, see post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more.
-    phe_init_args_ : dict
-        The optional initialization arguments used for the post hoc ensemble predictor.</p>
+      <p>Output-Code multiclass strategy with deciary codebook.</p>
+<p>This class extends the original OutputCodeClassifier to support n-ary codebooks (with n=alphabet_size),
+allowing for handling more classes.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>estimator</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>estimator object
+An estimator object implementing :term:<code>fit</code> and one of
+:term:<code>decision_function</code> or :term:<code>predict_proba</code>. The base classifier
+should be able to handle up to <code>alphabet_size</code> classes.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>random_state</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>int, RandomState instance, default=None
+The generator used to initialize the codebook.
+Pass an int for reproducible output across multiple function calls.
+See :term:<code>Glossary &lt;random_state&gt;</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.estimators_">estimators_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>list of <code>int(n_classes * code_size)</code> estimators
+Estimators used for predictions.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.classes_">classes_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_classes,)
+Array containing labels.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.ManyClassClassifier.code_book_">code_book_</span></code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_classes, <code>len(estimators_)</code>)
+Deciary array containing the code of each class.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <blockquote>
+<blockquote>
+<blockquote>
+<p>from sklearn.datasets import load_iris
+from tabpfn.scripts.estimator import ManyClassClassifier, TabPFNClassifier
+from sklearn.model_selection import train_test_split
+x, y = load_iris(return_X_y=True)
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)
+clf = TabPFNClassifier()
+clf = ManyClassClassifier(clf, alphabet_size=clf.max_num_classes_)
+clf.fit(x_train, y_train)
+clf.predict(x_test)</p>
+</blockquote>
+</blockquote>
+</blockquote>
 
 
   
@@ -857,26 +956,17 @@ Attributes:
 
 
 
-<h2 id="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.__init__" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">__init__</span>
+<h2 id="scripts.estimator.ManyClassClassifier.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
 
 
-<a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
-    <span class="n">max_time</span><span class="p">:</span> <span class="n">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
-    <span class="n">preset</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span>
-        <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="s2">&quot;custom_hps&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_overfitting&quot;</span>
-    <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
-    <span class="n">ges_scoring_string</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;mse&quot;</span><span class="p">,</span>
-    <span class="n">device</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s2">&quot;cpu&quot;</span><span class="p">,</span> <span class="s2">&quot;cuda&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
-    <span class="n">random_state</span><span class="p">:</span> <span class="n">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">|</span> <span class="n"><span title="numpy.random.RandomState">RandomState</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">categorical_feature_indices</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">phe_init_args</span><span class="p">:</span> <span class="n">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">)</span>
+<a href="#scripts.estimator.ManyClassClassifier.fit" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
+      <p>Fit underlying estimators.</p>
 
 
 
@@ -892,105 +982,70 @@ Attributes:
     </thead>
     <tbody>
         <tr>
-          <td><code>max_time</code></td>
+          <td><code>X</code></td>
           <td>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>int | None, default=None
-The maximum time to spend on fitting the post hoc ensemble.</p>
+              <p>{array-like, sparse matrix} of shape (n_samples, n_features)
+Data.</p>
             </div>
           </td>
           <td>
-                <code>30</code>
+              <em>required</em>
           </td>
         </tr>
         <tr>
-          <td><code>preset</code></td>
+          <td><code>y</code></td>
           <td>
-                <code><span title="typing.Literal">Literal</span>[&#39;default&#39;, &#39;custom_hps&#39;, &#39;avoid_overfitting&#39;]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>{"default", "custom_hps", "avoid_overfitting"}, default="default"
-The preset to use for the post hoc ensemble.</p>
+              <p>array-like of shape (n_samples,)
+Multi-class targets.</p>
             </div>
           </td>
           <td>
-                <code>&#39;default&#39;</code>
+              <em>required</em>
           </td>
         </tr>
         <tr>
-          <td><code>ges_scoring_string</code></td>
+          <td><code>**fit_params</code></td>
           <td>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>str, default="mse"
-The scoring string to use for the greedy ensemble search.
-Allowed values are: {"rmse", "mse", "mae"}.</p>
+              <p>dict
+Parameters passed to the <code>estimator.fit</code> method of each
+sub-estimator.</p>
             </div>
           </td>
           <td>
-                <code>&#39;mse&#39;</code>
+                <code>{}</code>
           </td>
         </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr>
-          <td><code>device</code></td>
-          <td>
+<td><code>self</code></td>          <td>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>{"cpu", "cuda"}, default="cuda"
-The device to use for training and prediction.</p>
+              <p>object
+Returns a fitted instance of self.</p>
             </div>
-          </td>
-          <td>
-                <code>&#39;cpu&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>random_state</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>int, RandomState instance or None, default=None
-Controls both the randomness base models and the post hoc ensembling method.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>categorical_feature_indices</code></td>
-          <td>
-                <code>list[int] | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list[int] or None, default=None
-The indices of the categorical features in the input data. Can also be passed to <code>fit()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>phe_init_args</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>dict | None, default=None
-The initialization arguments for the post hoc ensemble predictor.
-See post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more options and all details.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
           </td>
         </tr>
     </tbody>
@@ -1005,38 +1060,72 @@ See post_hoc_ensembles.pfn_phe.AutoPostHocEnsemblePredictor for more options and
 
 
 
-<h2 id="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.fit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">fit</span>
+<h2 id="scripts.estimator.ManyClassClassifier.predict_proba" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_proba</span>
 
 
-<a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.fit" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">fit</span><span class="p">(</span>
-    <span class="n">X</span><span class="p">,</span>
-    <span class="n">y</span><span class="p">,</span>
-    <span class="n">categorical_feature_indices</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">)</span>
+<a href="#scripts.estimator.ManyClassClassifier.predict_proba" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
+  
+      <p>Predict probabilities using the underlying estimators.</p>
 
 
 
-<h2 id="scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.predict" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">predict</span>
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>{array-like, sparse matrix} of shape (n_samples, n_features)
+Data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 
-<a href="#scripts.estimator.post_hoc_ensembles.sklearn_interface.AutoTabPFNRegressor.predict" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</code></pre></div>
 
-  <div class="doc doc-contents ">
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>p</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>ndarray of shape (n_samples, n_classes)
+Returns the probability of the samples for each class in the model,
+where classes are ordered as they are in <code>self.classes_</code>.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 

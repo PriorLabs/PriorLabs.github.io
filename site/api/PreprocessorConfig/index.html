@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../ClassifierAsRegressor/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../model.transformer/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>TabPFN</title>
+        <title>PreprocessorConfig - TabPFN</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="/assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#scripts.estimator.PreprocessorConfig" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="TabPFN" class="md-header__button md-logo" aria-label="TabPFN" data-md-component="logo">
+    <a href="../.." title="TabPFN" class="md-header__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -101,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              PreprocessorConfig
             
           </span>
         </div>
@@ -166,7 +175,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -183,7 +192,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/classification/" class="md-tabs__link">
+      <a href="../../classification/" class="md-tabs__link">
         
   
     
@@ -200,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/regression/" class="md-tabs__link">
+      <a href="../../regression/" class="md-tabs__link">
         
   
     
@@ -217,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/unsupervised/" class="md-tabs__link">
+      <a href="../../unsupervised/" class="md-tabs__link">
         
   
     
@@ -234,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/intended_use/" class="md-tabs__link">
+      <a href="../../intended_use/" class="md-tabs__link">
         
   
     
@@ -251,7 +260,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/code_download/" class="md-tabs__link">
+      <a href="../../code_download/" class="md-tabs__link">
         
   
     
@@ -266,11 +275,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/api/tabpfn_classifier/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../tabpfn_classifier/" class="md-tabs__link">
           
   
   API Reference
@@ -311,7 +322,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="TabPFN" class="md-nav__button md-logo" aria-label="TabPFN" data-md-component="logo">
+    <a href="../.." title="TabPFN" class="md-nav__button md-logo" aria-label="TabPFN" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -329,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/classification/" class="md-nav__link">
+      <a href="../../classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/regression/" class="md-nav__link">
+      <a href="../../regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/unsupervised/" class="md-nav__link">
+      <a href="../../unsupervised/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -409,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/intended_use/" class="md-nav__link">
+      <a href="../../intended_use/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/code_download/" class="md-nav__link">
+      <a href="../../code_download/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,23 +457,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -473,7 +489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -487,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/tabpfn_classifier/" class="md-nav__link">
+      <a href="../tabpfn_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/tabpfn_regressor/" class="md-nav__link">
+      <a href="../tabpfn_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/AutoTabPFNClassifier/" class="md-nav__link">
+      <a href="../AutoTabPFNClassifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/AutoTabPFNRegressor/" class="md-nav__link">
+      <a href="../AutoTabPFNRegressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/TabPFNUnsupervisedModel/" class="md-nav__link">
+      <a href="../TabPFNUnsupervisedModel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/ManyClassClassifier/" class="md-nav__link">
+      <a href="../ManyClassClassifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -613,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/ClassifierAsRegressor/" class="md-nav__link">
+      <a href="../ClassifierAsRegressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,10 +647,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/api/PreprocessorConfig/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -643,6 +668,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -655,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/model.transformer/" class="md-nav__link">
+      <a href="../model.transformer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/model.mlp/" class="md-nav__link">
+      <a href="../model.mlp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/api/model.encoders/" class="md-nav__link">
+      <a href="../model.encoders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,8 +756,134 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<div class="doc doc-object doc-class">
+
+
+
+<h1 id="scripts.estimator.PreprocessorConfig" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">PreprocessorConfig</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#scripts.estimator.PreprocessorConfig" class="headerlink" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-contents first">
+
+  
+      <p>Configuration for data preprocessors.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.name">name</span></code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the preprocessor.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.categorical_name">categorical_name</span></code></td>
+          <td>
+                <code><span title="typing.Literal">Literal</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the categorical encoding method. Valid options are "none", "numeric",
+                    "onehot", "ordinal", "ordinal_shuffled". Default is "none".</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.append_original">append_original</span></code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to append the original features to the transformed features. Default is False.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.subsample_features">subsample_features</span></code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fraction of features to subsample. -1 means no subsampling. Default is -1.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="scripts.estimator.PreprocessorConfig.global_transformer_name">global_transformer_name</span></code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the global transformer to use. Default is None.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -780,10 +932,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
