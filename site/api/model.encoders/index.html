@@ -847,8 +847,8 @@
 
 
 <a href="#model.encoders.InputEncoder.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">()</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__init__</span><span class="p">()</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
 
@@ -866,8 +866,8 @@
 
 
 <a href="#model.encoders.InputEncoder.forward" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n"><span title="torch.Tensor">Tensor</span></span><span class="p">,</span> <span class="n">single_eval_pos</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.Tensor">Tensor</span></span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n"><span title="torch.Tensor">Tensor</span></span><span class="p">,</span> <span class="n">single_eval_pos</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.Tensor">Tensor</span></span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -997,8 +997,8 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.SequentialEncoder.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">output_key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">output_key</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1075,8 +1075,8 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.SequentialEncoder.forward" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">forward</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.Tensor">Tensor</span></span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">forward</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="torch.Tensor">Tensor</span></span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1205,15 +1205,15 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.LinearInputEncoderStep.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
-    <span class="n">num_features</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span>
-    <span class="n">emsize</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span>
-    <span class="n">replace_nan_by_zero</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">bias</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">in_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">),</span>
-    <span class="n">out_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">num_features</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">emsize</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">replace_nan_by_zero</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">bias</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">in_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">),</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">out_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">),</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1333,12 +1333,12 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.LinearInputEncoderStep.forward" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">forward</span><span class="p">(</span>
-    <span class="n">state</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span>
-    <span class="n">cache_trainset_representation</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">forward</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">state</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">cache_trainset_representation</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="o">**</span><span class="n">kwargs</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1479,12 +1479,12 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.NanHandlingEncoderStep.__init__" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
-    <span class="n">keep_nans</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">in_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">),</span>
-    <span class="n">out_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="s2">&quot;nan_indicators&quot;</span><span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">keep_nans</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">in_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">),</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">out_keys</span><span class="p">:</span> <span class="n">tuple</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="s2">&quot;nan_indicators&quot;</span><span class="p">),</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1563,12 +1563,12 @@ The input is passed through each step in the provided order.</p>
 
 
 <a href="#model.encoders.NanHandlingEncoderStep.forward" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature codehilite"><pre><span></span><code><span class="n">forward</span><span class="p">(</span>
-    <span class="n">state</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span>
-    <span class="n">cache_trainset_representation</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">forward</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">state</span><span class="p">:</span> <span class="n">dict</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">cache_trainset_representation</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="o">**</span><span class="n">kwargs</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
+</span></code></pre></div>
 
   <div class="doc doc-contents ">
   
@@ -1728,7 +1728,7 @@ The input is passed through each step in the provided order.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
