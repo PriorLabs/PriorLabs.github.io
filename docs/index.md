@@ -4,17 +4,17 @@
 
     This is a beta version of our documentation created for the review phase. Please do not share this review version.
     
-    Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the “linktree” in our main paper or the code submission checklist. 
+    Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the link in our main paper or the code submission checklist. 
 
 This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages. An in-depth technical documentation of our software interfaces can be found in the [API Reference](api/tabpfn_classifier/)
 
 ## Installation
 
-To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private “linktree” shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
+To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private link shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. 
 
 !!! tip
 	
-	The easiest way to install and run our code is via the Colab Notebooks shared in the “linktree” in our submission.
+	The easiest way to install and run our code is via the Colab Notebooks shared in the link in our submission.
 
 #### Software Dependencies and Operating Systems
 Python: Version >= 3.9
