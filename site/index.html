@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn" class="md-skip">
+        <a href="#tabpfn-tabular-foundation-model" class="md-skip">
           Skip to content
         </a>
       
@@ -390,63 +390,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#software-dependencies-and-operating-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Software Dependencies and Operating Systems
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-dependencies-as-specified-in-requirementstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Software Dependencies (as specified in requirements.txt):
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-standard-hardware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non-Standard Hardware
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
   <a href="#example-usage" class="md-nav__link">
     <span class="md-ellipsis">
       Example usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Output
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expected-runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expected Runtime
     </span>
   </a>
   
@@ -851,39 +800,36 @@
                   
 
 
-<h1 id="highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn">Highly Accurate Predictions for Small Data With the Tabular Foundation Model TabPFN<a class="headerlink" href="#highly-accurate-predictions-for-small-data-with-the-tabular-foundation-model-tabpfn" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a beta version of our documentation created for the review phase. Please do not share this review version.</p>
-<p>Our code is currently stored in a private repository on GitHub We do not share this links on this public website. To access our code and any example notebooks, please use the notebook provided in the links to our submission via the link in our main paper or the code submission checklist. </p>
-</div>
+<h1 id="tabpfn-tabular-foundation-model">TabPFN Tabular Foundation Model<a class="headerlink" href="#tabpfn-tabular-foundation-model" title="Permanent link">&para;</a></h1>
 <p>This page contains usage examples and installation instructions of TabPFN. Please find additional instructions on our Classifiers and Regressors on the respective subpages. An in-depth technical documentation of our software interfaces can be found in the <a href="api/tabpfn_classifier/">API Reference</a></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>To install our software, we use pip the python package installer in combination with Git for code-management. Please find the code for installation via the private link shared with you, that also contains the private access tokens to the code. An installation typically takes 5 minutes in a setup python environment. </p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The easiest way to install and run our code is via the Colab Notebooks shared in the link in our submission.</p>
-</div>
-<h4 id="software-dependencies-and-operating-systems">Software Dependencies and Operating Systems<a class="headerlink" href="#software-dependencies-and-operating-systems" title="Permanent link">&para;</a></h4>
-<p>Python: Version &gt;= 3.9</p>
-<p>Operating Systems: The software has been tested on major operating systems including:</p>
-<ul>
-<li>
-<p>Ubuntu 20.04, 22.04</p>
-</li>
-<li>
-<p>Windows 10, 11</p>
-</li>
-<li>
-<p>macOS 11.0 (Big Sur) and later</p>
-</li>
-</ul>
-<p>Git Version 2 or later (<a href="https://git-scm.com/">https://git-scm.com/</a>)</p>
-<h4 id="software-dependencies-as-specified-in-requirementstxt">Software Dependencies (as specified in <code>requirements.txt</code>):<a class="headerlink" href="#software-dependencies-as-specified-in-requirementstxt" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">TabPFN</label><label for="__tabbed_1_2">TabPFN and Baselines</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
+<!---
+To install our software, we use pip the python package installer in combination with Git for code-management. An installation typically takes 5 minutes in a setup python environment. 
+!!! tip
+
+    The easiest way to install and run our code is via the Colab Notebooks shared in the link in our submission.
+-->
+<p>You can access our models through our API (<a href="https://github.com/automl/tabpfn-client">https://github.com/automl/tabpfn-client</a>) or via our user interface built on top of the API (<a href="https://www.priorlabs.ai/tabpfn-gui">https://www.priorlabs.ai/tabpfn-gui</a>).
+We will release open weights models soon, currently we are available via api and via our user interface built on top of the API.</p>
+<!---
+#### Software Dependencies and Operating Systems
+Python: Version >= 3.9
+
+Operating Systems: The software has been tested on major operating systems including:
+
+- Ubuntu 20.04, 22.04
+
+- Windows 10, 11
+
+- macOS 11.0 (Big Sur) and later
+
+Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
+
+#### Software Dependencies (as specified in `requirements.txt`):
+
+=== "TabPFN"
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>scikit-learn&gt;=1.4.2
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>tqdm&gt;=4.66.
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>numpy&gt;=1.21.2
@@ -897,9 +843,10 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>pyyaml&gt;=6.0.1
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>kditransform&gt;=0.2.0
 </span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
+
+=== "TabPFN and Baselines"
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>torch&gt;=2.1 (Includes CUDA support in version 2.1 and later)
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>scikit-learn&gt;=1.4.2
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>tqdm&gt;=4.66.
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>numpy&gt;=1.21.2
@@ -927,14 +874,15 @@
 </span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a># -- Quantile Baseline
 </span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>quantile-forest==1.2.4
 </span></code></pre></div>
-</div>
-</div>
-</div>
-<p>For GPU usage CUDA 12.1 has been tested.</p>
-<h4 id="non-standard-hardware">Non-Standard Hardware<a class="headerlink" href="#non-standard-hardware" title="Permanent link">&para;</a></h4>
-<p>GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.</p>
+
+For GPU usage CUDA 12.1 has been tested.
+
+#### Non-Standard Hardware
+GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.
+-->
+
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Classification</label><label for="__tabbed_2_2">Regression</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Classification</label><label for="__tabbed_1_2">Regression</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -978,15 +926,19 @@
 </div>
 </div>
 </div>
-<h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h2>
-<p>Our models follow the interfaces provided by sklearn, so you can expect the same output as you would from sklearn models.
-TabPFNClassifier will return a numpy array of shape <code>(n_samples, n_classes)</code> with the probabilities of each class, while
-TabPFNRegressor will return a numpy array of shape <code>(n_samples,)</code> with the predicted values. For more detailed documentation
-please check the technical documentation of <a href="https://priorlabs.github.io/api/tabpfn_classifier/#scripts.estimator.TabPFNClassifier.predict_proba">scripts.estimator.TabPFNClassifier.predict_proba</a>.</p>
-<h2 id="expected-runtime">Expected Runtime<a class="headerlink" href="#expected-runtime" title="Permanent link">&para;</a></h2>
-<p>The runtime of the model is dependent on the number of estimators and the size of the dataset. For a dataset of 1000
+<!---
+## Expected Output
+Our models follow the interfaces provided by sklearn, so you can expect the same output as you would from sklearn models.
+TabPFNClassifier will return a numpy array of shape `(n_samples, n_classes)` with the probabilities of each class, while
+TabPFNRegressor will return a numpy array of shape `(n_samples,)` with the predicted values. For more detailed documentation
+please check the technical documentation of [scripts.estimator.TabPFNClassifier.predict_proba](https://priorlabs.github.io/api/tabpfn_classifier/#scripts.estimator.TabPFNClassifier.predict_proba).
+
+## Expected Runtime
+The runtime of the model is dependent on the number of estimators and the size of the dataset. For a dataset of 1000
 samples and 4 features, the runtime on GPU is typically less than 1 second. For a dataset of 10000 samples and 4 features, the
-runtime on GPU is typically less than 10 seconds.</p>
+runtime on GPU is typically less than 10 seconds.
+-->
+
 <!---
 ## Why TabPFN
 

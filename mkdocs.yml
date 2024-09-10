@@ -10,7 +10,7 @@ theme:
   #logo: assets/logo.png
   palette:
     primary: custom
-# repo_url: https://github.com/automl/TabPFN
+  repo_url: https://github.com/automl/TabPFN-client
 plugins:
   - search
   - autorefs
