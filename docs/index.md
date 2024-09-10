@@ -132,6 +132,44 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
     print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
     ```
 
+## User Interface
+{% raw %}
+<style>
+  #loader {
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+</style>
+
+<script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.43.0/gradio.js"></script>
+
+  <div id="loader">
+        <p>Loading app, might take a few seconds...</p>
+    </div>
+
+<gradio-app src="https://noahho-tabpfn-client-gui.hf.space" theme_mode="light" eager="true" container="false">
+</gradio-app>
+
+<script>
+  document.querySelector('gradio-app').addEventListener('render', () => {
+    document.querySelector('#loader').style.display = 'none';
+  });
+</script>
+{% endraw %}
 <!---
 ## Expected Output
 Our models follow the interfaces provided by sklearn, so you can expect the same output as you would from sklearn models.
