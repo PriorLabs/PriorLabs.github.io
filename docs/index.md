@@ -91,45 +91,56 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
 === "Classification"
 
     ```python
-    import numpy as np
-    import sklearn
     from sklearn.datasets import load_iris
+    from sklearn.metrics import accuracy_score, roc_auc_score
     from sklearn.model_selection import train_test_split
     
     from tabpfn import TabPFNClassifier
     
-    # Create a classifier
-    clf = TabPFNClassifier(fit_at_predict_time=True)
-    
+    # Load data
     X, y = load_iris(return_X_y=True)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
     
+    # Initialize a classifier
+    clf = TabPFNClassifier(fit_at_predict_time=True)
     clf.fit(X_train, y_train)
-    preds = clf.predict_proba(X_test)
-    y_eval = np.argmax(preds, axis=1)
     
-    print('ROC AUC: ', sklearn.metrics.roc_auc_score(y_test, preds, multi_class='ovr'), 'Accuracy', sklearn.metrics.accuracy_score(y_test, y_eval))
+    # Predict probabilities
+    prediction_probabilities = clf.predict_proba(X_test)
+    print("ROC AUC:", roc_auc_score(y_test, prediction_probabilities, multi_class="ovr"))
+    
+    # Predict labels
+    predictions = clf.predict(X_test)
+    print("Accuracy", accuracy_score(y_test, predictions))
     ```
 
 === "Regression"
 
     ```python
-    from tabpfn import TabPFNRegressor
     from sklearn.datasets import load_diabetes
+    from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
     from sklearn.model_selection import train_test_split
-    import numpy as np
-    import sklearn
     
-    reg = TabPFNRegressor(device='auto')
+    from tabpfn import TabPFNRegressor
+    
+    # Load data
     X, y = load_diabetes(return_X_y=True)
-    
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-    reg.fit(X_train, y_train)
-    preds = reg.predict(X_test)
     
-    print('Mean Squared Error (MSE): ', sklearn.metrics.mean_squared_error(y_test, preds))
-    print('Mean Absolute Error (MAE): ', sklearn.metrics.mean_absolute_error(y_test, preds))
-    print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
+    # Initialize a regressor
+    reg = TabPFNRegressor(device="auto")
+    reg.fit(X_train, y_train)
+    
+    # Predict
+    predictions = reg.predict(X_test)
+    
+    print("Mean Squared Error (MSE):", mean_squared_error(y_test, predictions))
+    print("Mean Absolute Error (MAE):", mean_absolute_error(y_test, predictions))
+    print("R-squared (R^2):", r2_score(y_test, predictions))
+    
+    # Predict distribution for regression
+    full_predictions = reg.predict_full(X_test)  # returns a dict with predictions for mean, median, mode, and quantiles.
+    print("R-squared with median instead of mean predictions:", r2_score(y_test, full_predictions["median"]))
     ```
 
 ## User Interface
