@@ -102,7 +102,7 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
     
     # Initialize a classifier
-    clf = TabPFNClassifier(fit_at_predict_time=True)
+    clf = TabPFNClassifier()
     clf.fit(X_train, y_train)
     
     # Predict probabilities
@@ -128,7 +128,7 @@ GPU: A CUDA-enabled GPU is recommended for optimal performance, though the softw
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
     
     # Initialize a regressor
-    reg = TabPFNRegressor(device="auto")
+    reg = TabPFNRegressor()
     reg.fit(X_train, y_train)
     
     # Predict
