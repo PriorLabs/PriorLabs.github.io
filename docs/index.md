@@ -147,41 +147,6 @@ samples and 4 features, the runtime on GPU is typically less than 1 second. For 
 runtime on GPU is typically less than 10 seconds.
 -->
 
-## TabPFN Integrations
-
-<div class="grid cards" markdown>
-
--   :material-cloud-check:{ .lg .middle } **API Client**
-
-    ---
-
-    The fastest way to get started with TabPFN. Access our models through the cloud without requiring local GPU resources.
-
--   :material-application:{ .lg .middle } **User Interface**
-
-    ---
-
-    Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
-
-    [:octicons-arrow-right-24: Access GUI](https://www.priorlabs.ai/tabpfn-gui)
-
--   :material-language-python:{ .lg .middle } **Python Package**
-
-    ---
-
-    Coming soon! Local installation with GPU support and scikit-learn compatible interface.
-
-    [comment]: <> ([:octicons-arrow-right-24: Documentation](#))
-
--   :material-language-r:{ .lg .middle } **R Integration**
-
-    ---
-
-    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers.
-
-    [comment]: <> ([:octicons-arrow-right-24: Learn More](#))
-
-</div>
 
 ## Why TabPFN
 
@@ -224,6 +189,42 @@ runtime on GPU is typically less than 10 seconds.
     ---
 
     The model handles various types of raw data, including missing values and categorical variables, with minimal preprocessing. This reduces the burden on users to perform extensive data preparation.
+
+</div>
+
+## TabPFN Integrations
+
+<div class="grid cards" markdown>
+
+-   :material-cloud-check:{ .lg .middle } **API Client**
+
+    ---
+
+    The fastest way to get started with TabPFN. Access our models through the cloud without requiring local GPU resources.
+
+-   :material-application:{ .lg .middle } **User Interface**
+
+    ---
+
+    Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
+
+    [:octicons-arrow-right-24: Access GUI](https://www.priorlabs.ai/tabpfn-gui)
+
+-   :material-language-python:{ .lg .middle } **Python Package**
+
+    ---
+
+    Coming soon! Local installation with GPU support and scikit-learn compatible interface.
+
+    [comment]: <> ([:octicons-arrow-right-24: Documentation](#))
+
+-   :material-language-r:{ .lg .middle } **R Integration**
+
+    ---
+
+    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers.
+
+    [comment]: <> ([:octicons-arrow-right-24: Learn More](#))
 
 </div>
 

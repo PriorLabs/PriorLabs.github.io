@@ -8,7 +8,7 @@ An example usage of `TabPFNRegressor` is shown below:
 
 === "Python API Client (No GPU, Online)"
 
-		```python
+	```python
 	from tabpfn_client import TabPFNRegressor
 	from sklearn.datasets import load_diabetes
 	from sklearn.model_selection import train_test_split
@@ -26,6 +26,7 @@ An example usage of `TabPFNRegressor` is shown below:
 	print('Mean Absolute Error (MAE): ', sklearn.metrics.mean_absolute_error(y_test, preds))
 	print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
 	```
+	
 === "Python Local (GPU)"
 
 	```python
@@ -46,6 +47,7 @@ An example usage of `TabPFNRegressor` is shown below:
 	print('Mean Absolute Error (MAE): ', sklearn.metrics.mean_absolute_error(y_test, preds))
 	print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
 	```
+	
 This example demonstrates how to train and evaluate a regression model. For more details on TabPFNRegressor and its parameters, refer to the API Reference section.
 
 ## Example with AutoTabPFNRegressor
