@@ -197,7 +197,7 @@ extra:
     actions:
       - accept
       - manage 
-      - decline
+      - reject
     cookies:
       analytics:
         name: Google Analytics
