@@ -98,6 +98,7 @@ nav:
     # - Time Series: tutorials/timeseries.md
     # - Usage Tips: tutorials/cheat_sheet.md
     # - Experimental Reproduction: reproduction.md
+    # - Text Tabular
   - Research:
       - Papers: research/papers.md
   #    - Benchmarks: benchmarks.md
