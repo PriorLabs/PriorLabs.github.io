@@ -178,8 +178,6 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-        
-
 
 copyright: Copyright &copy; 2024 PriorLabs GmbH
   
