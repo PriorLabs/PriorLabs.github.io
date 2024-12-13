@@ -208,7 +208,7 @@ runtime on GPU is typically less than 10 seconds.
 
     Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
 
-    [:octicons-arrow-right-24: Access GUI](https://www.ux.priorlabs.ai/)
+    [:octicons-arrow-right-24: Access GUI](https://ux.priorlabs.ai/)
 
 -   :material-language-python:{ .lg .middle } **Python Package**
 
@@ -236,7 +236,7 @@ To install our software, we use pip the python package installer in combination 
 	
 	The easiest way to install and run our code is via the Colab Notebooks shared in the link in our submission.
 -->
-You can access our models through our API (https://github.com/automl/tabpfn-client) or via our user interface built on top of the API (https://www.priorlabs.ai/tabpfn-gui).
+You can access our models through our API (https://github.com/automl/tabpfn-client) or via our user interface built on top of the API (https://ux.priorlabs.ai/).
 We will release open weights models soon, currently we are available via api and via our user interface built on top of the API.
 === "Python API Client (No GPU, Online)"
 
