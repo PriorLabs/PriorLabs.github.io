@@ -208,7 +208,7 @@ runtime on GPU is typically less than 10 seconds.
 
     Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
 
-    [:octicons-arrow-right-24: Access GUI](https://www.priorlabs.ai/tabpfn-gui)
+    [:octicons-arrow-right-24: Access GUI](https://www.ux.priorlabs.ai/)
 
 -   :material-language-python:{ .lg .middle } **Python Package**
 

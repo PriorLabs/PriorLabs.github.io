@@ -89,8 +89,6 @@ extra_css:
 nav:
   - Home: index.md # Includes link to 
   - Installation: getting_started/install.md
-  # About us: 
-  #- Use Cases
   - Tutorials:
     - Classification: tutorials/classification.md
     - Regression: tutorials/regression.md
@@ -99,6 +97,9 @@ nav:
     # - Usage Tips: tutorials/cheat_sheet.md
     # - Experimental Reproduction: reproduction.md
     # - Text Tabular
+  #- Use Cases:
+    # - Runtime Prediction
+    # - 
   - Research:
       - Papers: research/papers.md
   #    - Benchmarks: benchmarks.md
@@ -106,18 +107,18 @@ nav:
   #- Team:
   # Demo
   - API Reference:
-    - TabPFN-Local:
-      - TabPFNClassifier: api/tabpfn/tabpfn_classifier.md
-      - TabPFNRegressor: api/tabpfn/tabpfn_regressor.md
-      - AutoTabPFNClassifier: api/tabpfn/AutoTabPFNClassifier.md
-      - AutoTabPFNRegressor: api/tabpfn/AutoTabPFNRegressor.md
-      - TabPFNUnsupervisedModel: api/tabpfn/TabPFNUnsupervisedModel.md
-      - ManyClassClassifier: api/tabpfn/ManyClassClassifier.md
-      - ClassifierAsRegressor: api/tabpfn/ClassifierAsRegressor.md
-      - PreprocessorConfig: api/tabpfn/PreprocessorConfig.md
-      - Transformer: api/tabpfn/model.transformer.md
-      - MLP: api/tabpfn/model.mlp.md
-      - Encoders: api/tabpfn/model.encoders.md
+#    - TabPFN-Local:
+#      - TabPFNClassifier: api/tabpfn/tabpfn_classifier.md
+#      - TabPFNRegressor: api/tabpfn/tabpfn_regressor.md
+#      - AutoTabPFNClassifier: api/tabpfn/AutoTabPFNClassifier.md
+#      - AutoTabPFNRegressor: api/tabpfn/AutoTabPFNRegressor.md
+#      - TabPFNUnsupervisedModel: api/tabpfn/TabPFNUnsupervisedModel.md
+#      - ManyClassClassifier: api/tabpfn/ManyClassClassifier.md
+#      - ClassifierAsRegressor: api/tabpfn/ClassifierAsRegressor.md
+#      - PreprocessorConfig: api/tabpfn/PreprocessorConfig.md
+#      - Transformer: api/tabpfn/model.transformer.md
+#      - MLP: api/tabpfn/model.mlp.md
+#      - Encoders: api/tabpfn/model.encoders.md
     - TabPFN-Client:
       - TabPFNConfig: api/tabpfn-client/TabPFNConfig.md
       - SensitiveDataFilter: api/tabpfn-client/SensitiveDataFilter.md
