@@ -1,0 +1,204 @@
+site_name: Prior Labs
+repo_url: https://github.com/automl/TabPFN
+
+theme:
+  name: material
+  logo: https://media.licdn.com/dms/image/v2/D4E0BAQFnhOwuGrh01g/company-logo_100_100/company-logo_100_100/0/1732718866755/prior_labs_logo?e=1741219200&v=beta&t=wV1YD88sRxvext6bF-Bpml-OBfbbvGBrO_V2zlMRtRA
+  
+  features:
+    - announce.dismiss
+    #- content.action.edit
+    #- content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    #- search.highlight
+    #- search.share
+    #- search.suggest
+    - toc.follow
+    - toc.integrate
+    # - toc.integrate
+  #logo: assets/logo.png
+  palette:
+    primary: custom
+  font:
+    text: 'Source Sans Pro'
+    code: 'Fira Mono'
+  custom_dir: overrides
+ 
+extra:
+  homepage: https://priorlabs.ai
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/PriorLabs
+    - icon: fontawesome/solid/briefcase
+      link: https://sugared-bookcase-9db.notion.site/Prior-Labs-Join-us-14b5be1f3b4980f68281c7eae947f91c?pvs=73
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/VJRuU3bSxt
+    - icon: fontawesome/solid/book
+      link: https://priorlabs.github.io
+    - icon: fontawesome/solid/envelope
+      link: mailto:hello@priorlabs.ai
+    - icon: fontawesome/solid/newspaper
+      link: https://mailchi.mp/e437267d4949/newsletter-signup
+   
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: ["src/tabpfn", "src/tabpfn-client"]
+          rendering:
+            merge_init_into_class: true
+            docstring_style: "google"
+          options:
+            filters: ["!^_"]
+            heading_level: 1
+            line_length: 60
+            inherited_members: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            signature_crossrefs: true
+            summary: true
+            show_signature: true
+            show_source: False
+            
+extra_css:
+  - stylesheets/extra.css
+    
+nav:
+  - Home: index.md # Includes link to 
+  - Installation: getting_started/install.md
+  - Tutorials:
+    - Classification: tutorials/classification.md
+    - Regression: tutorials/regression.md
+    # - Unsupervised: tutorials/unsupervised.md
+    # - Time Series: tutorials/timeseries.md
+    # - Usage Tips: tutorials/cheat_sheet.md
+    # - Experimental Reproduction: reproduction.md
+    # - Text Tabular
+  #- Use Cases:
+    # - Runtime Prediction
+    # - 
+  - Research:
+      - Papers: research/papers.md
+  #    - Benchmarks: benchmarks.md
+  #    - Agenda: agenda.md
+  #- Team:
+  # Demo
+  - API Reference:
+#    - TabPFN-Local:
+#      - TabPFNClassifier: api/tabpfn/tabpfn_classifier.md
+#      - TabPFNRegressor: api/tabpfn/tabpfn_regressor.md
+#      - AutoTabPFNClassifier: api/tabpfn/AutoTabPFNClassifier.md
+#      - AutoTabPFNRegressor: api/tabpfn/AutoTabPFNRegressor.md
+#      - TabPFNUnsupervisedModel: api/tabpfn/TabPFNUnsupervisedModel.md
+#      - ManyClassClassifier: api/tabpfn/ManyClassClassifier.md
+#      - ClassifierAsRegressor: api/tabpfn/ClassifierAsRegressor.md
+#      - PreprocessorConfig: api/tabpfn/PreprocessorConfig.md
+#      - Transformer: api/tabpfn/model.transformer.md
+#      - MLP: api/tabpfn/model.mlp.md
+#      - Encoders: api/tabpfn/model.encoders.md
+    - TabPFN-Client:
+      - TabPFNConfig: api/tabpfn-client/TabPFNConfig.md
+      - SensitiveDataFilter: api/tabpfn-client/SensitiveDataFilter.md
+      - DatasetUIDCacheManager: api/tabpfn-client/DatasetUIDCacheManager.md
+      - ServiceClient: api/tabpfn-client/ServiceClient.md
+      - PromptAgent: api/tabpfn-client/PromptAgent.md
+      - ServiceClientWrapper: api/tabpfn-client/ServiceClientWrapper.md
+      - UserAuthenticationClient: api/tabpfn-client/UserAuthenticationClient.md
+      - UserDataClient: api/tabpfn-client/UserDataClient.md
+      - InferenceClient: api/tabpfn-client/InferenceClient.md
+      - PreprocessorConfig: api/tabpfn-client/PreprocessorConfig.md
+      - TabPFNModelSelection: api/tabpfn-client/TabPFNModelSelection.md
+      - TabPFNClassifier: api/tabpfn-client/TabPFNClassifier.md
+      - TabPFNRegressor: api/tabpfn-client/TabPFNRegressor.md    
+# Extensions
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - md_in_html
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+copyright: Copyright &copy; 2024 PriorLabs GmbH
+  
+extra:
+  analytics:
+    provider: google
+    property: G-9VZ68NQKPM
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage 
+      - reject
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: true
