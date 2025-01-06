@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Analysis of TabPFN's generalization capabilities with Drift-Resilient modifications">
+      
       
       
       
@@ -16,7 +18,7 @@
     
     
       
-        <title>Cheat Sheet / Best practices - Prior Labs</title>
+        <title>TabPFN's Strong Out-of-Distribution Performance - Prior Labs</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cheat-sheet-best-practices" class="md-skip">
+        <a href="#tabpfns-out-of-distribution-excellence" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheat Sheet / Best practices
+              TabPFN's Strong Out-of-Distribution Performance
             
           </span>
         </div>
@@ -290,6 +292,52 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../getting_started/install/" class="md-nav__link">
         
@@ -300,6 +348,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Usage Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -536,8 +613,6 @@
       
         
       
-        
-      
     
     
       
@@ -694,99 +769,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_1_7" id="__nav_5_1_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Tabpfn common utils
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_7">
-            <span class="md-nav__icon md-icon"></span>
-            Tabpfn common utils
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/regression_pred_result/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Regression pred result
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/utils/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Utils
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -820,14 +802,86 @@
   
 
 
-<h1 id="cheat-sheet-best-practices">Cheat Sheet / Best practices<a class="headerlink" href="#cheat-sheet-best-practices" title="Permanent link">&para;</a></h1>
-<p>Look at Autogluon</p>
+<h1 id="tabpfns-out-of-distribution-excellence">TabPFN's Out-of-Distribution Excellence<a class="headerlink" href="#tabpfns-out-of-distribution-excellence" title="Permanent link">&para;</a></h1>
+<p>Recent research demonstrates TabPFN's exceptional out-of-distribution (OOD) performance on tabular data, with further improvements through Drift-Resilient modifications.</p>
+<h2 id="key-performance-metrics">Key Performance Metrics<a class="headerlink" href="#key-performance-metrics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>OOD Accuracy</th>
+<th>OOD ROC AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TabPFN Base</td>
+<td>0.688</td>
+<td>0.786</td>
+</tr>
+<tr>
+<td>TabPFN + Drift-Resilient</td>
+<td>0.744</td>
+<td>0.832</td>
+</tr>
+<tr>
+<td>XGBoost</td>
+<td>0.664</td>
+<td>0.754</td>
+</tr>
+<tr>
+<td>CatBoost</td>
+<td>0.677</td>
+<td>0.766</td>
+</tr>
+</tbody>
+</table>
+<h2 id="technical-improvements">Technical Improvements<a class="headerlink" href="#technical-improvements" title="Permanent link">&para;</a></h2>
+<p>The Drift-Resilient modifications introduce:</p>
+<ul>
+<li>2<sup>nd</sup>-order structural causal model for temporal adaptation</li>
+<li>Enhanced pattern recognition across distribution shifts </li>
+<li>Zero hyperparameter tuning requirement</li>
+<li>Inference in seconds on small/medium datasets</li>
+</ul>
+<h2 id="real-world-impact">Real-World Impact<a class="headerlink" href="#real-world-impact" title="Permanent link">&para;</a></h2>
+<p>The enhanced model shows robust generalization across:</p>
+<ul>
+<li>18 diverse datasets (synthetic + real-world)</li>
+<li>Various temporal shift patterns</li>
+<li>Multiple industry applications</li>
+</ul>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Installation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>tabpfn
+</span></code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Basic Usage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">tabpfn</span> <span class="kn">import</span> <span class="n">TabPFNClassifier</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TabPFNClassifier</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</span></code></pre></div>
+<p>For comprehensive documentation and implementation details, visit the <a href="https://github.com/automl/Drift-Resilient_TabPFN">GitHub repository</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Published in NeurIPS 2024, demonstrating significant advancements in tabular ML robustness.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

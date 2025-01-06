@@ -4,7 +4,7 @@ This Agreement outlines the terms governing your use of TabPFN and our associate
 
 ## About Us
 
-We are PriorLabs, a team from the Machine Learning Lab at the University of Freiburg, committed to democratizing data science.
+We are Prior Labs GmbH, a startup committed to advancing data science.
 
 ## Specific Terms for Certain Services
 

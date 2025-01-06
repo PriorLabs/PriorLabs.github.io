@@ -93,7 +93,9 @@ extra_css:
     
 nav:
   - Home: index.md # Includes link to 
-  - Installation: getting_started/install.md
+  - Getting Started:
+    - Installation: getting_started/install.md
+    - API Usage Guide: getting_started/api.md
   - Tutorials:
     - Classification: tutorials/classification.md
     - Regression: tutorials/regression.md

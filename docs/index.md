@@ -228,28 +228,6 @@ runtime on GPU is typically less than 10 seconds.
 
 </div>
 
-## Installation
-
-<!---
-To install our software, we use pip the python package installer in combination with Git for code-management. An installation typically takes 5 minutes in a setup python environment. 
-!!! tip
-	
-	The easiest way to install and run our code is via the Colab Notebooks shared in the link in our submission.
--->
-You can access our models through our API (https://github.com/automl/tabpfn-client) or via our user interface built on top of the API (https://ux.priorlabs.ai/).
-We will release open weights models soon, currently we are available via api and via our user interface built on top of the API.
-=== "Python API Client (No GPU, Online)"
-
-    ```bash
-    pip install tabpfn-client
-    ```
-
-=== "Python Local (GPU)"
-
-    !!! warning
-        Not released yet
-
-
 <!---
 #### Software Dependencies and Operating Systems
 Python: Version >= 3.9

@@ -16,7 +16,7 @@
     
     
       
-        <title>Cheat Sheet / Best practices - Prior Labs</title>
+        <title>Time Series Tutorial - Prior Labs</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cheat-sheet-best-practices" class="md-skip">
+        <a href="#time-series-tutorial" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cheat Sheet / Best practices
+              Time Series Tutorial
             
           </span>
         </div>
@@ -290,6 +290,52 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../getting_started/install/" class="md-nav__link">
         
@@ -300,6 +346,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Usage Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -536,8 +611,6 @@
       
         
       
-        
-      
     
     
       
@@ -694,99 +767,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_1_7" id="__nav_5_1_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Tabpfn common utils
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_7">
-            <span class="md-nav__icon md-icon"></span>
-            Tabpfn common utils
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/regression_pred_result/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Regression pred result
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/utils/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Utils
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -820,8 +800,38 @@
   
 
 
-<h1 id="cheat-sheet-best-practices">Cheat Sheet / Best practices<a class="headerlink" href="#cheat-sheet-best-practices" title="Permanent link">&para;</a></h1>
-<p>Look at Autogluon</p>
+<h1 id="time-series-tutorial">Time Series Tutorial<a class="headerlink" href="#time-series-tutorial" title="Permanent link">&para;</a></h1>
+<p>TabPFN can be used for time series forecasting by framing it as a tabular regression problem. This tutorial demonstrates how to use the <a href="https://github.com/liam-sbhoo/tabpfn-time-series">TabPFN Time Series package</a> for accurate zero-shot forecasting.
+It was developed by Shi Bin Hoo, Samuel Müller, David Salinas and Frank Hutter.</p>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<p><a href="https://colab.research.google.com/github/liam-sbhoo/tabpfn-time-series/blob/main/demo.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>First, install the package:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!git<span class="w"> </span>clone<span class="w"> </span>https://github.com/liam-sbhoo/tabpfn-time-series.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>!pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>tabpfn-time-series/requirements.txt
+</span></code></pre></div>
+<p>See the <a href="https://colab.research.google.com/github/liam-sbhoo/tabpfn-time-series/blob/main/demo.ipynb">demo notebook</a> for a complete example.</p>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>TabPFN performs time series forecasting by:</p>
+<ol>
+<li>Converting time series data into a tabular format</li>
+<li>Extracting temporal features (trends, seasonality, etc.)</li>
+<li>Using TabPFN's regression capabilities for prediction</li>
+<li>Converting predictions back to time series format</li>
+</ol>
+<p>This approach provides several benefits:</p>
+<ul>
+<li><strong>Zero-shot forecasting</strong>: No training required - just fit and predict</li>
+<li><strong>Both point and probabilistic forecasts</strong>: Get confidence intervals with your predictions</li>
+<li><strong>Support for exogenous variables</strong>: Easily incorporate external factors</li>
+<li><strong>Fast inference</strong>: Uses tabpfn-client for GPU-accelerated predictions</li>
+</ul>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/liam-sbhoo/tabpfn-time-series">GitHub Repository</a></li>
+<li><a href="https://openreview.net/forum?id=H02X7RO3OC#discussion">Research Paper</a></li>
+</ul>
+<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<p>Join our <a href="https://discord.com/channels/1285598202732482621/">Discord community</a> for support and discussions about TabPFN time series forecasting.</p>
 
 
 

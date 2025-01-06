@@ -6,28 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Complete guide for using the Prior Labs TabPFN API">
       
       
       
-        <link rel="prev" href="../../service_wrapper/">
+      
+        <link rel="prev" href="../install/">
       
       
-        <link rel="next" href="../utils/">
+        <link rel="next" href="../../tutorials/classification/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>Regression pred result - Prior Labs</title>
+        <title>API Usage Guide - Prior Labs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tabpfn_client.tabpfn_common_utils.regression_pred_result" class="md-skip">
+        <a href="#tabpfn-api-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Prior Labs" class="md-header__button md-logo" aria-label="Prior Labs" data-md-component="logo">
+    <a href="../.." title="Prior Labs" class="md-header__button md-logo" aria-label="Prior Labs" data-md-component="logo">
       
   <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFnhOwuGrh01g/company-logo_100_100/company-logo_100_100/0/1732718866755/prior_labs_logo?e=1741219200&v=beta&t=wV1YD88sRxvext6bF-Bpml-OBfbbvGBrO_V2zlMRtRA" alt="logo">
 
@@ -124,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Regression pred result
+              API Usage Guide
             
           </span>
         </div>
@@ -246,7 +248,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Prior Labs" class="md-nav__button md-logo" aria-label="Prior Labs" data-md-component="logo">
+    <a href="../.." title="Prior Labs" class="md-nav__button md-logo" aria-label="Prior Labs" data-md-component="logo">
       
   <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFnhOwuGrh01g/company-logo_100_100/company-logo_100_100/0/1732718866755/prior_labs_logo?e=1741219200&v=beta&t=wV1YD88sRxvext6bF-Bpml-OBfbbvGBrO_V2zlMRtRA" alt="logo">
 
@@ -275,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,10 +294,58 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../../getting_started/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -304,6 +354,192 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API Usage Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API Usage Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interactive-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-access-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Access Tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-cost-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Cost Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-privacy-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Privacy and Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Size Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-user-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing User Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -361,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/classification/" class="md-nav__link">
+      <a href="../../tutorials/classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/regression/" class="md-nav__link">
+      <a href="../../tutorials/regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../research/papers/" class="md-nav__link">
+      <a href="../../research/papers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,10 +715,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -496,11 +730,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -514,7 +748,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Code Reference
@@ -525,14 +759,10 @@
                 
   
   
-    
   
   
-  
     
     
-      
-        
       
         
       
@@ -551,11 +781,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -569,7 +799,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Tabpfn client
@@ -583,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../constants/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/constants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../estimator/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/estimator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompt_agent/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/prompt_agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../service_wrapper/" class="md-nav__link">
+      <a href="../../reference/tabpfn_client/service_wrapper/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,111 +927,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_7" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_1_7" id="__nav_5_1_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Tabpfn common utils
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_1_7">
-            <span class="md-nav__icon md-icon"></span>
-            Tabpfn common utils
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Regression pred result
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Utils
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -840,43 +965,127 @@
   
 
 
-<div class="doc doc-object doc-module">
+<h1 id="tabpfn-api-guide">TabPFN API Guide<a class="headerlink" href="#tabpfn-api-guide" title="Permanent link">&para;</a></h1>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<h3 id="interactive-login">Interactive Login<a class="headerlink" href="#interactive-login" title="Permanent link">&para;</a></h3>
+<p>The first time you use TabPFN, you'll be guided through an interactive login process:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tabpfn_client</span> <span class="kn">import</span> <span class="n">init</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">init</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="managing-access-tokens">Managing Access Tokens<a class="headerlink" href="#managing-access-tokens" title="Permanent link">&para;</a></h3>
+<p>You can save your token for use on other machines:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">tabpfn_client</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Get your token</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">token</span> <span class="o">=</span> <span class="n">tabpfn_client</span><span class="o">.</span><span class="n">get_access_token</span><span class="p">()</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Use token on another machine</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">tabpfn_client</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h2>
+<p>Our API implements a fair usage system that resets daily at 00:00:00 UTC.</p>
+<h3 id="usage-cost-calculation">Usage Cost Calculation<a class="headerlink" href="#usage-cost-calculation" title="Permanent link">&para;</a></h3>
+<p>The cost for each API request is calculated as:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">api_cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_train_rows</span> <span class="o">+</span> <span class="n">num_test_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_cols</span> <span class="o">*</span> <span class="n">n_estimators</span>
+</span></code></pre></div></p>
+<p>Where <code>n_estimators</code> is by default:
+- 4 for classification tasks
+- 8 for regression tasks</p>
+<h3 id="monitoring-usage">Monitoring Usage<a class="headerlink" href="#monitoring-usage" title="Permanent link">&para;</a></h3>
+<p>Track your API usage through response headers:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-RateLimit-Limit</code></td>
+<td>Your total allowed usage</td>
+</tr>
+<tr>
+<td><code>X-RateLimit-Remaining</code></td>
+<td>Remaining usage</td>
+</tr>
+<tr>
+<td><code>X-RateLimit-Reset</code></td>
+<td>Reset timestamp (UTC)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-limitations">Current Limitations<a class="headerlink" href="#current-limitations" title="Permanent link">&para;</a></h2>
+<h3 id="data-privacy-and-security">Data Privacy and Security<a class="headerlink" href="#data-privacy-and-security" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Important Data Guidelines</p>
+<ul>
+<li>Do NOT upload any Personally Identifiable Information (PII)</li>
+<li>Do NOT upload any sensitive or confidential data</li>
+<li>Do NOT upload any data you don't have permission to share</li>
+<li>Consider anonymizing or pseudonymizing your data</li>
+<li>Review your organization's data sharing policies</li>
+</ul>
+</div>
+<h3 id="size-limitations">Size Limitations<a class="headerlink" href="#size-limitations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Maximum total cells per request must be below 100,000:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">max_cells</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_train_rows</span> <span class="o">+</span> <span class="n">num_test_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_cols</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>For regression with full output (<code>return_full_output=True</code>), the number of test samples must be below 500:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span> <span class="n">task</span> <span class="o">==</span> <span class="s1">&#39;regression&#39;</span> <span class="ow">and</span> <span class="n">return_full_output</span> <span class="ow">and</span> <span class="n">num_test_samples</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot return full output for regression with &gt;500 test samples&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<p>These limits will be increased in future releases.</p>
+<h3 id="managing-user-data">Managing User Data<a class="headerlink" href="#managing-user-data" title="Permanent link">&para;</a></h3>
+<p>You can access and manage your personal information:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">tabpfn_client</span> <span class="kn">import</span> <span class="n">UserDataClient</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">UserDataClient</span><span class="o">.</span><span class="n">get_data_summary</span><span class="p">())</span>
+</span></code></pre></div>
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>The API uses standard HTTP status codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Invalid request</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Rate limit exceeded</td>
+</tr>
+</tbody>
+</table>
+<p>Example error response:
+<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_LIMIT_REACHED&quot;</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Usage limit exceeded&quot;</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;next_available_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-07 00:00:00&quot;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</span></code></pre></div></p>
 
 
 
-<h1 id="tabpfn_client.tabpfn_common_utils.regression_pred_result" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">regression_pred_result</span>
 
 
-<a href="#tabpfn_client.tabpfn_common_utils.regression_pred_result" class="headerlink" title="Permanent link">&para;</a></h1>
 
-  <div class="doc doc-contents first">
 
   
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
-
-
-
-
+  
 
 
 
@@ -908,7 +1117,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../service_wrapper/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Service wrapper">
+          <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -918,20 +1127,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Service wrapper
+                Installation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../utils/" class="md-footer__link md-footer__link--next" aria-label="Next: Utils">
+          <a href="../../tutorials/classification/" class="md-footer__link md-footer__link--next" aria-label="Next: Classification">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Utils
+                Classification
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1045,10 +1254,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

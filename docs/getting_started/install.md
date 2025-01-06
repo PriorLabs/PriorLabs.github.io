@@ -28,3 +28,7 @@ We will release open weights models soon, currently we are available via api and
 
     !!! warning
         Not released yet
+
+=== "Web Interface"
+
+    You can access our models through our Interface at [Prior Labs](https://www.ux.priorlabs.ai/).
