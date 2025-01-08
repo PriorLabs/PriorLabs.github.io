@@ -1,4 +1,4 @@
-You can access our models through our API (https://github.com/automl/tabpfn-client) or via our user interface built on top of the API (https://www.ux.priorlabs.ai/).
+You can access our models through our API (https://github.com/automl/tabpfn-client), via our user interface built on top of the API (https://www.ux.priorlabs.ai/) or locally.
 
 === "Python API Client (No GPU, Online)"
 

@@ -3,15 +3,17 @@
 !!! note
     For a simple example getting started with classification see [classification tutorial](../tutorials/classification.md).
 
-    We provide a comprehensive demo notebook that guides through installation and functionalities at [Interactive Colab Tutorial (with GPU usage)](https://tinyurl.com/tabpfn-colab-local) and [Interactive Colab Tutorial (without GPU usage)](https://tinyurl.com/tabpfn-colab-online).
+    We provide two comprehensive demo notebooks that guides through installation and functionalities. One [colab tutorial using the cloud](https://tinyurl.com/tabpfn-colab-online) and one [colab tutorial using the local GPU](https://tinyurl.com/tabpfn-colab-local).
 
 ### When to use TabPFN
 
-TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, approaches such as CatBoost, XGB, or AutoGluon are likely to outperform TabPFN.
+TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, methods such as CatBoost, XGBoost, or AutoGluon are likely to outperform TabPFN.
 
 ### Intended Use of TabPFN
 
-While TabPFN provides a powerful drop-in replacement for traditional tabular data models, achieving top performance on real-world problems often requires domain expertise and the ingenuity of data scientists. Data scientists should continue to apply their skills in feature engineering, data cleaning, and problem framing to get the most out of TabPFN.
+TabPFN is intended as a powerful drop-in replacement for traditional tabular data prediction tools, where top performance and fast training matter.
+It still requires data scientists to prepare the data using their domain knowledge.
+Data scientists will see benefits in performing feature engineering, data cleaning, and problem framing to get the most out of TabPFN.
 
 ### Limitations of TabPFN
 
@@ -21,7 +23,7 @@ While TabPFN provides a powerful drop-in replacement for traditional tabular dat
 
 ### Computational and Time Requirements
 
-TabPFN is computationally efficient and can run on consumer hardware for most datasets. Training on a new dataset is recommended to run on a GPU as this speeds it up significantly. However, TabPFN is not optimized for real-time inference tasks.
+TabPFN is computationally efficient and can run inference on consumer hardware for most datasets. Training on a new dataset is recommended to run on a GPU as this speeds it up significantly. TabPFN is not optimized for real-time inference tasks, but V2 can perform much faster predictions than V1 of TabPFN.
 
 ### Data Preparation
 
@@ -33,5 +35,4 @@ TabPFN's predictions come with uncertainty estimates, allowing you to assess the
 
 ### Hyperparameter Tuning
 
-TabPFN provides strong performance out-of-the-box without extensive hyperparameter tuning. If you have additional computational resources, you can further optimize TabPFN's performance using random hyperparameter tuning or the Post-Hoc Ensembling (PHE) technique.
-
+TabPFN provides strong performance out-of-the-box without extensive hyperparameter tuning. If you have additional computational resources, you can automatically tune its hyperparameters using [post-hoc ensembling](https://github.com/PriorLabs/tabpfn-extensions/tree/main/src/tabpfn_extensions/post_hoc_ensembles) or [random tuning](https://github.com/PriorLabs/tabpfn-extensions/tree/main/src/tabpfn_extensions/hpo).

@@ -40,9 +40,7 @@ The cost for each API request is calculated as:
 api_cost = (num_train_rows + num_test_rows) * num_cols * n_estimators
 ```
 
-Where `n_estimators` is by default:
-- 4 for classification tasks
-- 8 for regression tasks
+Where `n_estimators` is by default 4 for classification tasks and 8 for regression tasks.
 
 ### Monitoring Usage
 
@@ -56,8 +54,6 @@ Track your API usage through response headers:
 
 ## Current Limitations
 
-### Data Privacy and Security
-
 !!! warning "Important Data Guidelines"
     - Do NOT upload any Personally Identifiable Information (PII)
     - Do NOT upload any sensitive or confidential data
@@ -68,17 +64,13 @@ Track your API usage through response headers:
 ### Size Limitations
 
 1. Maximum total cells per request must be below 100,000:
-```python
-max_cells = (num_train_rows + num_test_rows) * num_cols
+```
+(num_train_rows + num_test_rows) * num_cols < 100,000
 ```
 
-2. For regression with full output (`return_full_output=True`), the number of test samples must be below 500:
-```python
-if task == 'regression' and return_full_output and num_test_samples > 500:
-    raise ValueError("Cannot return full output for regression with >500 test samples")
-```
+2. For regression with full output turned on (`return_full_output=True`), the number of test samples must be below 500.
 
-These limits will be increased in future releases.
+These limits will be relaxed in future releases.
 
 ### Managing User Data
 
@@ -99,7 +91,7 @@ The API uses standard HTTP status codes:
 | 400 | Invalid request |
 | 429 | Rate limit exceeded |
 
-Example error response:
+Example response, when limit reached:
 ```json
 {
     "error": "API_LIMIT_REACHED",
