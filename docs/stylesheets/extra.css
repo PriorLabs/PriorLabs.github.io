@@ -14,6 +14,13 @@
   --md-primary-fg-color--light: #4ECDC4;
   --md-accent-fg-color: #9c27b0;
   --md-accent-fg-color--transparent: #9c27b010;
+
+    --md-typeset-a-color: #2196f3;         /* Brighter blue for normal links */
+    --md-typeset-a-color--hover: #64b5f6;  /* Even brighter blue for hover state */
+}
+
+.md-typeset a {
+    color: #2196f3;
 }
 
 .md-typeset h1 {

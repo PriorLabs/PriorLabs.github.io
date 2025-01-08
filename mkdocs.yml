@@ -95,6 +95,7 @@ nav:
   - Home: index.md # Includes link to 
   - Getting Started:
     - Installation: getting_started/install.md
+    - Intended Use: getting_started/intended_use.md
     - API Usage Guide: getting_started/api.md
   - Tutorials:
     - Classification: tutorials/classification.md

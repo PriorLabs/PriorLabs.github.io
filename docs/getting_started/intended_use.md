@@ -1,5 +1,10 @@
 # Usage tips
 
+!!! note
+    For a simple example getting started with classification see [classification tutorial](../tutorials/classification.md).
+
+    We provide a comprehensive demo notebook that guides through installation and functionalities at [Interactive Colab Tutorial (with GPU usage)](https://tinyurl.com/tabpfn-colab-local) and [Interactive Colab Tutorial (without GPU usage)](https://tinyurl.com/tabpfn-colab-online).
+
 ### When to use TabPFN
 
 TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, approaches such as CatBoost, XGB, or AutoGluon are likely to outperform TabPFN.
