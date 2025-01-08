@@ -4,11 +4,18 @@ You can access our models through our API (https://github.com/automl/tabpfn-clie
 
     ```bash
     pip install tabpfn-client
+
+    # TabPFN Extensions installs optional functionalities around the TabPFN model
+    # These include post-hoc ensembles, interpretability tools, and more
+    git clone https://github.com/PriorLabs/tabpfn-extensions
+    pip install -e tabpfn-extensions
     ```
 
 === "Python Local (GPU)"
 
     ```bash
+    # TabPFN Extensions installs optional functionalities around the TabPFN model
+    # These include post-hoc ensembles, interpretability tools, and more
     pip install tabpfn
     ```
 

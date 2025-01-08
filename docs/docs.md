@@ -202,6 +202,8 @@ runtime on GPU is typically less than 10 seconds.
 
     The fastest way to get started with TabPFN. Access our models through the cloud without requiring local GPU resources.
 
+    [:octicons-arrow-right-24: TabPFN Client](https://github.com/PriorLabs/tabpfn-client)
+
 -   :material-application:{ .lg .middle } **User Interface**
 
     ---
@@ -214,17 +216,15 @@ runtime on GPU is typically less than 10 seconds.
 
     ---
 
-    Coming soon! Local installation with GPU support and scikit-learn compatible interface.
+    Local installation for research and privacy sesitive use cases with GPU support and scikit-learn compatible interface.
 
-    [comment]: <> ([:octicons-arrow-right-24: Documentation](#))
+    [:octicons-arrow-right-24: TabPFN Local](https://github.com/PriorLabs/tabpfn)
 
 -   :material-language-r:{ .lg .middle } **R Integration**
 
     ---
 
-    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers.
-
-    [comment]: <> ([:octicons-arrow-right-24: Learn More](#))
+    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers. Contact us for more information, or to get involved!
 
 </div>
 

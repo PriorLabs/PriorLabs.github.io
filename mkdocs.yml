@@ -100,7 +100,7 @@ nav:
   - Tutorials:
     - Classification: tutorials/classification.md
     - Regression: tutorials/regression.md
-    # - Unsupervised: tutorials/unsupervised.md
+    - Unsupervised: tutorials/unsupervised.md
     - Time Series: tutorials/timeseries.md
     # - Usage Tips: tutorials/cheat_sheet.md
     # - Experimental Reproduction: reproduction.md
