@@ -1,5 +1,5 @@
 # TabPFN License
-
+```
                               Prior Labs License
                            Version 1.0, January 2025
                        http://priorlabs.ai/tabpfn-license
@@ -200,3 +200,4 @@
 
 
    END OF TERMS AND CONDITIONS
+```
