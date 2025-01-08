@@ -1,26 +1,17 @@
-# TabPFN Enterprise
+# TabPFN Business
 
-Transform your organization's data analytics capabilities with TabPFN Enterprise, offering state-of-the-art performance and dedicated support for your mission-critical applications.
+Unlock the hidden value in your company's databases and spreadsheets using TabPFN. Our state-of-the-art tabular foundation model is faster and more accurate in 96% of the use-cases and requires 50% less data as previous methods.
 
-## Why TabPFN Enterprise?
+Save your data science team hours & days of work and enable them to focus on mission-critical business problems, even when data availability is limited.
 
-### Superior Model Performance
-- **Industry-Leading Accuracy**: Outperforms traditional methods on 96% of use cases
-- **Unprecedented Speed**: Get results up to 3,400x faster than traditional approaches
-- **Data Efficiency**: Achieve the same accuracy with 50% less training data
-- **Robust Handling**: Native support for missing values, categorical data, and outliers
+## Why TabPFN Business?
 
-### Enterprise-Grade Features
-- **Priority Access**: Get early access to new features and model improvements
-- **Custom Development**: Request feature development tailored to your specific needs
-- **Flexible Deployment**: On-premise deployment options and cloud integration support
-- **Enhanced Security**: Enterprise-grade security features and compliance support
+### Access to Enterprise-Grade Features
 
-### Comprehensive Support
-- **Dedicated Support Team**: Direct access to our technical experts
-- **Implementation Assistance**: Guidance for optimal integration into your workflow
-- **Custom Training**: Specialized training sessions for your team
-- **Priority Issue Resolution**: Guaranteed response times for critical issues
+* **Priority Access**: Get early access to new features and model improvements with support for larger datasets
+* **Custom Features**: Direct access to features designed specifically for business users such as fine-tuning, tech stack integrations and data sharing across your organization
+* **Dedicated Support**: Premium SLA support from our scientists and engineers on implemenation, training and critical issues
+* **Compliance**: Enterprise-level GDPR compliance including audit logs and role based access control
 
 <style>
 .grid-container {
