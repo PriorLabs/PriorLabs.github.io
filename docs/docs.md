@@ -147,6 +147,42 @@ samples and 4 features, the runtime on GPU is typically less than 1 second. For 
 runtime on GPU is typically less than 10 seconds.
 -->
 
+## TabPFN Integrations
+
+<div class="grid cards" markdown>
+
+-   :material-cloud-check:{ .lg .middle } **API Client**
+
+    ---
+
+    The fastest way to get started with TabPFN. Access our models through the cloud without requiring local GPU resources.
+
+    [:octicons-arrow-right-24: TabPFN Client](https://github.com/PriorLabs/tabpfn-client)
+
+-   :material-application:{ .lg .middle } **User Interface**
+
+    ---
+
+    Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
+
+    [:octicons-arrow-right-24: Access GUI](https://ux.priorlabs.ai/)
+
+-   :material-language-python:{ .lg .middle } **Python Package**
+
+    ---
+
+    Local installation for research and privacy sesitive use cases with GPU support and scikit-learn compatible interface.
+
+    [:octicons-arrow-right-24: TabPFN Local](https://github.com/PriorLabs/tabpfn)
+
+-   :material-language-r:{ .lg .middle } **R Integration**
+
+    ---
+
+    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers. Contact us for more information, or to get involved!
+
+</div>
+
 
 ## Why TabPFN
 
@@ -191,160 +227,3 @@ runtime on GPU is typically less than 10 seconds.
     The model handles various types of raw data, including missing values and categorical variables, with minimal preprocessing. This reduces the burden on users to perform extensive data preparation.
 
 </div>
-
-## TabPFN Integrations
-
-<div class="grid cards" markdown>
-
--   :material-cloud-check:{ .lg .middle } **API Client**
-
-    ---
-
-    The fastest way to get started with TabPFN. Access our models through the cloud without requiring local GPU resources.
-
-    [:octicons-arrow-right-24: TabPFN Client](https://github.com/PriorLabs/tabpfn-client)
-
--   :material-application:{ .lg .middle } **User Interface**
-
-    ---
-
-    Visual interface for no-code interaction with TabPFN. Perfect for quick experimentation and visualization.
-
-    [:octicons-arrow-right-24: Access GUI](https://ux.priorlabs.ai/)
-
--   :material-language-python:{ .lg .middle } **Python Package**
-
-    ---
-
-    Local installation for research and privacy sesitive use cases with GPU support and scikit-learn compatible interface.
-
-    [:octicons-arrow-right-24: TabPFN Local](https://github.com/PriorLabs/tabpfn)
-
--   :material-language-r:{ .lg .middle } **R Integration**
-
-    ---
-
-    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers. Contact us for more information, or to get involved!
-
-</div>
-
-<!---
-#### Software Dependencies and Operating Systems
-Python: Version >= 3.9
-
-Operating Systems: The software has been tested on major operating systems including:
-
-- Ubuntu 20.04, 22.04
-
-- Windows 10, 11
-
-- macOS 11.0 (Big Sur) and later
-
-Git Version 2 or later ([https://git-scm.com/](https://git-scm.com/))
-
-#### Software Dependencies (as specified in `requirements.txt`):
-
-=== "TabPFN"
-
-    ```
-    torch>=2.1 (Includes CUDA support in version 2.1 and later)
-    scikit-learn>=1.4.2
-    tqdm>=4.66.
-    numpy>=1.21.2
-    hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
-    pre-commit>=3.3.3
-    einops>=0.6.0
-    scipy>=1.8.0
-    torchmetrics==1.2.0
-    pytest>=7.1.3
-    pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
-    pyyaml>=6.0.1
-    kditransform>=0.2.0
-    ```
-
-=== "TabPFN and Baselines"
-
-    ```
-    torch>=2.1 (Includes CUDA support in version 2.1 and later)
-    scikit-learn>=1.4.2
-    tqdm>=4.66.
-    numpy>=1.21.2
-    hyperopt==0.2.7 (Note: Earlier versions fail with numpy number generator change)
-    pre-commit>=3.3.3
-    einops>=0.6.0
-    scipy>=1.8.0
-    torchmetrics==1.2.0
-    pytest>=7.1.3
-    pandas[plot,output_formatting]>=2.0.3,<2.2 (Note: Version 2.2 has a bug with multi-index tables (https://github.com/pandas-dev/pandas/issues/57663), recheck when fixed)
-    pyyaml>=6.0.1
-    kditransform>=0.2.0
-    seaborn==0.12.2
-    openml==0.14.1
-    numba>=0.58.1
-    shap>=0.44.1
-    
-    # Baselines
-    lightgbm==3.3.5
-    xgboost>=2.0.0
-    catboost>=1.1.1
-    #auto-sklearn==0.14.5
-    #autogluon==0.4.0
-    
-    # -- Quantile Baseline
-    quantile-forest==1.2.4
-    ```
-
-For GPU usage CUDA 12.1 has been tested.
-
-#### Non-Standard Hardware
-GPU: A CUDA-enabled GPU is recommended for optimal performance, though the software can also run on a CPU.
-
-
-## Example usage
-
-=== "Classification"
-
-    ```python
-    import numpy as np
-    import sklearn
-    from sklearn.datasets import load_iris
-    from sklearn.model_selection import train_test_split
-    
-    from tabpfn import TabPFNClassifier
-    
-    # Create a classifier
-    clf = TabPFNClassifier(fit_at_predict_time=True)
-    
-    X, y = load_iris(return_X_y=True)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-    
-    clf.fit(X_train, y_train)
-    preds = clf.predict_proba(X_test)
-    y_eval = np.argmax(preds, axis=1)
-    
-    print('ROC AUC: ', sklearn.metrics.roc_auc_score(y_test, preds, multi_class='ovr'), 'Accuracy', sklearn.metrics.accuracy_score(y_test, y_eval))
-    ```
-
-=== "Regression"
-
-    ```python
-    from tabpfn import TabPFNRegressor
-    from sklearn.datasets import load_diabetes
-    from sklearn.model_selection import train_test_split
-    import numpy as np
-    import sklearn
-    
-    reg = TabPFNRegressor(device='auto')
-    X, y = load_diabetes(return_X_y=True)
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-    reg.fit(X_train, y_train)
-    preds = reg.predict(X_test)
-    
-    print('Mean Squared Error (MSE): ', sklearn.metrics.mean_squared_error(y_test, preds))
-    print('Mean Absolute Error (MAE): ', sklearn.metrics.mean_absolute_error(y_test, preds))
-    print('R-squared (R^2): ', sklearn.metrics.r2_score(y_test, preds))
-    ```
--->
-<br>
-<br>
