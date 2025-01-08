@@ -121,53 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+
 This page contains links to download, install, and set up TabPFN, as well as tutorials and resources to help you get started.
-
-## Why TabPFN
-
-<div class="grid cards" markdown>
-
--   :material-speedometer:{ .lg .middle } **Rapid Training**
-
-    ---
-
-    TabPFN significantly reduces training time, outperforming traditional models tuned for hours in just a few seconds. For instance, it surpasses an ensemble of the strongest baselines in 2.8 seconds compared to 4 hours of tuning.
-
-    [comment]: <> ([:octicons-arrow-right-24: Learn More](#))
-
--   :material-chart-line:{ .lg .middle } **Superior Accuracy**
-
-    ---
-
-    TabPFN consistently outperforms state-of-the-art methods like gradient-boosted decision trees (GBDTs) on datasets with up to 10,000 samples. It achieves higher accuracy and better performance metrics across a range of classification and regression tasks.
-
--   :material-shield-check:{ .lg .middle } **Robustness**
-
-    ---
-
-    The model demonstrates robustness to various dataset characteristics, including uninformative features, outliers, and missing values, maintaining high performance where other methods struggle.
-
--   :material-creation-outline:{ .lg .middle } **Generative Capabilities**
-
-    ---
-
-    As a generative transformer-based model, TabPFN can be fine-tuned for specific tasks, generate synthetic data, estimate densities, and learn reusable embeddings. This makes it versatile for various applications beyond standard prediction tasks.
-
--   :material-code-tags-check:{ .lg .middle } **Sklearn Interface**
-
-    ---
-
-    TabPFN follows the interfaces provided by scikit-learn, making it easy to integrate into existing workflows and utilize familiar functions for fitting, predicting, and evaluating models.
-
--   :material-file-excel-box:{ .lg .middle } **Minimal Preprocessing**
-
-    ---
-
-    The model handles various types of raw data, including missing values and categorical variables, with minimal preprocessing. This reduces the burden on users to perform extensive data preparation.
-
-</div>
-
-## TabPFN Integrations
 
 <div class="grid cards" markdown>
 
