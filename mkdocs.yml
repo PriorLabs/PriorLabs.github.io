@@ -100,15 +100,15 @@ nav:
     - Classification: tutorials/classification.md
     - Regression: tutorials/regression.md
     # - Unsupervised: tutorials/unsupervised.md
-    # - Time Series: tutorials/timeseries.md
+    - Time Series: tutorials/timeseries.md
     # - Usage Tips: tutorials/cheat_sheet.md
     # - Experimental Reproduction: reproduction.md
     # - Text Tabular
   #- Use Cases:
     # - Runtime Prediction
     # - 
-  - Research:
-      - Papers: research/papers.md
+  #- Research:
+  #    - Papers: research/papers.md
   #    - Benchmarks: benchmarks.md
   #    - Agenda: agenda.md
   #- Team:

@@ -52,14 +52,21 @@ This example demonstrates how to train and evaluate a regression model. For more
 
 ## Example with AutoTabPFNRegressor
 
+
+!!! abstract
+	
+	AutoTabPFNRegressor yields the most accurate predictions for TabPFN and is recommended for most use cases.
+    The AutoTabPFNClassifier and AutoTabPFNRegressor automatically run a hyperparameter search and build an ensemble of strong hyperparameters.
+    You can control the runtime using ´max_time´ and need to make no further adjustments to get best results.
+
 ```python
-from tabpfn.scripts.estimator.post_hoc_ensembles import AutoTabPFNRegressor
+from tabpfn_extensions.post_hoc_ensembles.sklearn_interface import AutoTabPFNRegressor
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 import numpy as np
 import sklearn
 
-reg = AutoTabPFNRegressor(device='auto’, max_time=30)
+reg = AutoTabPFNRegressor(max_time=30) # runs for 30 seconds
 X, y = load_diabetes(return_X_y=True)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)

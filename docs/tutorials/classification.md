@@ -56,10 +56,13 @@ Below is an example of how to use `TabPFNClassifier` for a multi-class classific
 
 !!! abstract
 	
-	The AutoTabPFNClassifier and AutoTabPFNRegressor automatically run a hyperparameter search and build an ensemble of strong hyperparameters. You can control the runtime using ´max_time´ and need to make no further adjustments to get best results.
+	AutoTabPFNClassifier yields the most accurate predictions for TabPFN and is recommended for most use cases.
+    The AutoTabPFNClassifier and AutoTabPFNRegressor automatically run a hyperparameter search and build an ensemble of strong hyperparameters.
+    You can control the runtime using ´max_time´ and need to make no further adjustments to get best results.
 
 ```python
-from tabpfn.scripts.estimator.post_hoc_ensembles import AutoTabPFNClassifier, AutoTabPFNRegressor
+from tabpfn_extensions.post_hoc_ensembles.sklearn_interface import AutoTabPFNClassifier
+
 # we refer to the PHE variant of TabPFN as AutoTabPFN in the code
 clf = AutoTabPFNClassifier(device='auto', max_time=30)
 X, y = load_breast_cancer(return_X_y=True)
