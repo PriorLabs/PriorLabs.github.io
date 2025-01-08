@@ -162,7 +162,7 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
 
-copyright: Copyright &copy; 2025 PriorLabs GmbH
+copyright: Copyright &copy; 2025 PriorLabs GmbH | <a href="https://priorlabs.ai/privacy_policy/">Privacy Policy</a>
   
 extra:
   analytics:
