@@ -5,7 +5,7 @@ description: Analysis of TabPFN's generalization capabilities with Drift-Resilie
 
 # TabPFN's Out-of-Distribution Excellence
 
-Recent research demonstrates TabPFN's exceptional out-of-distribution (OOD) performance on tabular data, with further improvements through Drift-Resilient modifications.
+Recent research demonstrates TabPFN's out-of-distribution (OOD) performance on tabular data, with further improvements through Drift-Resilient modifications.
 
 ## Key Performance Metrics
 
