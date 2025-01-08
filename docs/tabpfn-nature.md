@@ -122,8 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-This page contains links to download, install, and set up TabPFN, as well as tutorials and resources to help you get started.
-
 <div class="grid cards" markdown>
 
 -   :material-cloud-check:{ .lg .middle } **API Client**
