@@ -1,5 +1,5 @@
 site_name: Prior Labs
-repo_url: https://github.com/automl/TabPFN
+repo_url: https://github.com/PriorLabs/TabPFN
 
 theme:
   name: material
@@ -162,7 +162,7 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
 
-copyright: Copyright &copy; 2024 PriorLabs GmbH
+copyright: Copyright &copy; 2025 PriorLabs GmbH
   
 extra:
   analytics:

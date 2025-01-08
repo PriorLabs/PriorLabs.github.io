@@ -531,11 +531,11 @@ exclude_patterns = {
 
 root = Path(__file__).parent.parent
 
-#src = root / "src/tabpfn/src"
-#process_directory(root, src, verbose=True, exclude_patterns=exclude_patterns)
+src = root / "src/tabpfn/src"
+process_directory(root, src, verbose=True, exclude_patterns=exclude_patterns)
 
-#src = root / "src/tabpfn-extensions/src"
-#process_directory(root, src, verbose=True, exclude_patterns=exclude_patterns)
+src = root / "src/tabpfn-extensions/src"
+process_directory(root, src, verbose=True, exclude_patterns=exclude_patterns)
 
 src = root / "src/tabpfn-client/"
 process_directory(root, src, verbose=True, exclude_patterns=exclude_patterns)
