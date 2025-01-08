@@ -2631,12 +2631,14 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For a simple example getting started with classification see <a href="../../tutorials/classification/">classification tutorial</a>.</p>
-<p>We provide a comprehensive demo notebook that guides through installation and functionalities at <a href="https://tinyurl.com/tabpfn-colab-local">Interactive Colab Tutorial (with GPU usage)</a> and <a href="https://tinyurl.com/tabpfn-colab-online">Interactive Colab Tutorial (without GPU usage)</a>.</p>
+<p>We provide two comprehensive demo notebooks that guides through installation and functionalities. One <a href="https://tinyurl.com/tabpfn-colab-online">colab tutorial using the cloud</a> and one <a href="https://tinyurl.com/tabpfn-colab-local">colab tutorial using the local GPU</a>.</p>
 </div>
 <h3 id="when-to-use-tabpfn">When to use TabPFN<a class="headerlink" href="#when-to-use-tabpfn" title="Permanent link">&para;</a></h3>
-<p>TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, approaches such as CatBoost, XGB, or AutoGluon are likely to outperform TabPFN.</p>
+<p>TabPFN excels in handling small to medium-sized datasets with up to 10,000 samples and 500 features. For larger datasets, methods such as CatBoost, XGBoost, or AutoGluon are likely to outperform TabPFN.</p>
 <h3 id="intended-use-of-tabpfn">Intended Use of TabPFN<a class="headerlink" href="#intended-use-of-tabpfn" title="Permanent link">&para;</a></h3>
-<p>While TabPFN provides a powerful drop-in replacement for traditional tabular data models, achieving top performance on real-world problems often requires domain expertise and the ingenuity of data scientists. Data scientists should continue to apply their skills in feature engineering, data cleaning, and problem framing to get the most out of TabPFN.</p>
+<p>TabPFN is intended as a powerful drop-in replacement for traditional tabular data prediction tools, where top performance and fast training matter.
+It still requires data scientists to prepare the data using their domain knowledge.
+Data scientists will see benefits in performing feature engineering, data cleaning, and problem framing to get the most out of TabPFN.</p>
 <h3 id="limitations-of-tabpfn">Limitations of TabPFN<a class="headerlink" href="#limitations-of-tabpfn" title="Permanent link">&para;</a></h3>
 <ol>
 <li>TabPFN's inference speed may be slower than highly optimized approaches like CatBoost.</li>
@@ -2644,13 +2646,13 @@
 <li>Our evaluation focused on datasets with up to 10,000 samples and 500 features; scalability to larger datasets requires further study.</li>
 </ol>
 <h3 id="computational-and-time-requirements">Computational and Time Requirements<a class="headerlink" href="#computational-and-time-requirements" title="Permanent link">&para;</a></h3>
-<p>TabPFN is computationally efficient and can run on consumer hardware for most datasets. Training on a new dataset is recommended to run on a GPU as this speeds it up significantly. However, TabPFN is not optimized for real-time inference tasks.</p>
+<p>TabPFN is computationally efficient and can run inference on consumer hardware for most datasets. Training on a new dataset is recommended to run on a GPU as this speeds it up significantly. TabPFN is not optimized for real-time inference tasks, but V2 can perform much faster predictions than V1 of TabPFN.</p>
 <h3 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h3>
 <p>TabPFN can handle raw data with minimal preprocessing. Provide the data in a tabular format, and TabPFN will automatically handle missing values, encode categorical variables, and normalize features. While TabPFN works well out-of-the-box, performance can further be improved using dataset-specific preprocessings.</p>
 <h3 id="interpreting-results">Interpreting Results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h3>
 <p>TabPFN's predictions come with uncertainty estimates, allowing you to assess the reliability of the results. You can use SHAP to interpret TabPFN's predictions and identify the most important features driving the model's decisions.</p>
 <h3 id="hyperparameter-tuning">Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permanent link">&para;</a></h3>
-<p>TabPFN provides strong performance out-of-the-box without extensive hyperparameter tuning. If you have additional computational resources, you can further optimize TabPFN's performance using random hyperparameter tuning or the Post-Hoc Ensembling (PHE) technique.</p>
+<p>TabPFN provides strong performance out-of-the-box without extensive hyperparameter tuning. If you have additional computational resources, you can automatically tune its hyperparameters using <a href="https://github.com/PriorLabs/tabpfn-extensions/tree/main/src/tabpfn_extensions/post_hoc_ensembles">post-hoc ensembling</a> or <a href="https://github.com/PriorLabs/tabpfn-extensions/tree/main/src/tabpfn_extensions/hpo">random tuning</a>.</p>
 
 
 

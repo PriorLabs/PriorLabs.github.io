@@ -511,15 +511,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-privacy-and-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Privacy and Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#size-limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Size Limitations
@@ -2705,9 +2696,7 @@
 <p>The cost for each API request is calculated as:
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">api_cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_train_rows</span> <span class="o">+</span> <span class="n">num_test_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_cols</span> <span class="o">*</span> <span class="n">n_estimators</span>
 </span></code></pre></div></p>
-<p>Where <code>n_estimators</code> is by default:
-- 4 for classification tasks
-- 8 for regression tasks</p>
+<p>Where <code>n_estimators</code> is by default 4 for classification tasks and 8 for regression tasks.</p>
 <h3 id="monitoring-usage">Monitoring Usage<a class="headerlink" href="#monitoring-usage" title="Permanent link">&para;</a></h3>
 <p>Track your API usage through response headers:</p>
 <table>
@@ -2733,7 +2722,6 @@
 </tbody>
 </table>
 <h2 id="current-limitations">Current Limitations<a class="headerlink" href="#current-limitations" title="Permanent link">&para;</a></h2>
-<h3 id="data-privacy-and-security">Data Privacy and Security<a class="headerlink" href="#data-privacy-and-security" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Important Data Guidelines</p>
 <ul>
@@ -2748,21 +2736,18 @@
 <ol>
 <li>
 <p>Maximum total cells per request must be below 100,000:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">max_cells</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_train_rows</span> <span class="o">+</span> <span class="n">num_test_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_cols</span>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>(num_train_rows + num_test_rows) * num_cols &lt; 100,000
 </span></code></pre></div></p>
 </li>
 <li>
-<p>For regression with full output (<code>return_full_output=True</code>), the number of test samples must be below 500:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span> <span class="n">task</span> <span class="o">==</span> <span class="s1">&#39;regression&#39;</span> <span class="ow">and</span> <span class="n">return_full_output</span> <span class="ow">and</span> <span class="n">num_test_samples</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot return full output for regression with &gt;500 test samples&quot;</span><span class="p">)</span>
-</span></code></pre></div></p>
+<p>For regression with full output turned on (<code>return_full_output=True</code>), the number of test samples must be below 500.</p>
 </li>
 </ol>
-<p>These limits will be increased in future releases.</p>
+<p>These limits will be relaxed in future releases.</p>
 <h3 id="managing-user-data">Managing User Data<a class="headerlink" href="#managing-user-data" title="Permanent link">&para;</a></h3>
 <p>You can access and manage your personal information:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">tabpfn_client</span> <span class="kn">import</span> <span class="n">UserDataClient</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">UserDataClient</span><span class="o">.</span><span class="n">get_data_summary</span><span class="p">())</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">tabpfn_client</span> <span class="kn">import</span> <span class="n">UserDataClient</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">UserDataClient</span><span class="o">.</span><span class="n">get_data_summary</span><span class="p">())</span>
 </span></code></pre></div>
 <h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
 <p>The API uses standard HTTP status codes:</p>
@@ -2788,12 +2773,12 @@
 </tr>
 </tbody>
 </table>
-<p>Example error response:
-<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_LIMIT_REACHED&quot;</span><span class="p">,</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Usage limit exceeded&quot;</span><span class="p">,</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;next_available_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-07 00:00:00&quot;</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+<p>Example response, when limit reached:
+<div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API_LIMIT_REACHED&quot;</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Usage limit exceeded&quot;</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">&quot;next_available_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-07 00:00:00&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </span></code></pre></div></p>
 
 
