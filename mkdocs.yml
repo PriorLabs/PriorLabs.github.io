@@ -3,7 +3,8 @@ repo_url: https://github.com/PriorLabs/TabPFN
 
 theme:
   name: material
-  logo: https://media.licdn.com/dms/image/v2/D4E0BAQHev7AyMsgYEQ/company-logo_100_100/company-logo_100_100/0/1736270278418/prior_labs_logo?e=1744243200&v=beta&t=vIMQDdZiVBKuBIsdZVUhnWS_S7XGXzELlN1LeNfSRSM
+  #logo: assets/logo.png
+  favicon: assets/logo.png
   
   features:
     - announce.dismiss
