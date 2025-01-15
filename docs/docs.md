@@ -179,7 +179,7 @@ runtime on GPU is typically less than 10 seconds.
 
     ---
 
-    Currently in development. Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers. Contact us for more information, or to get involved!
+    Bringing TabPFN's capabilities to the R ecosystem for data scientists and researchers. We have an [experimental R package](https://github.com/PriorLabs/R-tabpfn) and an [alternative tutorial on usage in R](https://github.com/mthulin/TabPFN_in_R). Contributions welcome!
 
 </div>
 
