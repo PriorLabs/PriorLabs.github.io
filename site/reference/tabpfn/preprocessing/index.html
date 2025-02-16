@@ -620,6 +620,8 @@
       
         
       
+        
+      
     
     
       
@@ -683,6 +685,27 @@
   
   <span class="md-ellipsis">
     Classifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config
   </span>
   
 
@@ -877,6 +900,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="PreprocessorConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn.preprocessing.PreprocessorConfig.from_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_dict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn.preprocessing.PreprocessorConfig.to_dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_dict
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1064,10 +1111,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_9" >
         
           
-          <label class="md-nav__link" for="__nav_4_1_8" id="__nav_4_1_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_1_9" id="__nav_4_1_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1078,8 +1125,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_9">
             <span class="md-nav__icon md-icon"></span>
             Model
           </label>
@@ -1967,6 +2014,8 @@
       
         
       
+        
+      
     
     
       
@@ -2051,6 +2100,27 @@
   
   <span class="md-ellipsis">
     Shap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tabpfn_extensions/interpretability/shapiq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shapiq
   </span>
   
 
@@ -3928,6 +3998,130 @@ Options: "none", "numeric", "onehot", "ordinal", "ordinal_shuffled", "none".</p>
 
 
 
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn.preprocessing.PreprocessorConfig.from_dict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">from_dict</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+<a href="#tabpfn.preprocessing.PreprocessorConfig.from_dict" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">from_dict</span><span class="p">(</span><span class="n">config_dict</span><span class="p">:</span> <span class="n">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn.preprocessing.PreprocessorConfig" href="#tabpfn.preprocessing.PreprocessorConfig">PreprocessorConfig</a></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a config from a dictionary.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>config_dict</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary containing the config parameters.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn.preprocessing.PreprocessorConfig" href="#tabpfn.preprocessing.PreprocessorConfig">PreprocessorConfig</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>PreprocessorConfig instance.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn.preprocessing.PreprocessorConfig.to_dict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">to_dict</span>
+
+
+<a href="#tabpfn.preprocessing.PreprocessorConfig.to_dict" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">to_dict</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">dict</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Convert the config to a dictionary.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Dictionary representation of the config.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 
 

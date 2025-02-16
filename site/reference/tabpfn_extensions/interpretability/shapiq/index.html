@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../unsupervised/">
+        <link rel="prev" href="../shap/">
       
       
-        <link rel="next" href="../../reference/tabpfn/base/">
+        <link rel="next" href="../../many_class/many_class_classifier/">
       
       
-      <link rel="icon" href="../../assets/logo.png">
+      <link rel="icon" href="../../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>Time Series - Prior Labs</title>
+        <title>Shapiq - Prior Labs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#time-series-tutorial" class="md-skip">
+        <a href="#tabpfn_extensions.interpretability.shapiq" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Time Series
+              Shapiq
             
           </span>
         </div>
@@ -241,7 +241,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Prior Labs" class="md-nav__button md-logo" aria-label="Prior Labs" data-md-component="logo">
+    <a href="../../../.." title="Prior Labs" class="md-nav__button md-logo" aria-label="Prior Labs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -271,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/install/" class="md-nav__link">
+      <a href="../../../../getting_started/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/intended_use/" class="md-nav__link">
+      <a href="../../../../getting_started/intended_use/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -381,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/api/" class="md-nav__link">
+      <a href="../../../../getting_started/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,10 +406,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -429,11 +427,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -447,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -461,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classification/" class="md-nav__link">
+      <a href="../../../../tutorials/classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regression/" class="md-nav__link">
+      <a href="../../../../tutorials/regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unsupervised/" class="md-nav__link">
+      <a href="../../../../tutorials/unsupervised/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,30 +519,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Time Series
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../tutorials/timeseries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,62 +531,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Start
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      How It Works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Help
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -625,8 +547,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -644,11 +568,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -662,7 +586,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Code Reference
@@ -733,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/base/" class="md-nav__link">
+      <a href="../../../tabpfn/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/classifier/" class="md-nav__link">
+      <a href="../../../tabpfn/classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/config/" class="md-nav__link">
+      <a href="../../../tabpfn/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/constants/" class="md-nav__link">
+      <a href="../../../tabpfn/constants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/inference/" class="md-nav__link">
+      <a href="../../../tabpfn/inference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/preprocessing/" class="md-nav__link">
+      <a href="../../../tabpfn/preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/regressor/" class="md-nav__link">
+      <a href="../../../tabpfn/regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/utils/" class="md-nav__link">
+      <a href="../../../tabpfn/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/bar_distribution/" class="md-nav__link">
+      <a href="../../../tabpfn/model/bar_distribution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/config/" class="md-nav__link">
+      <a href="../../../tabpfn/model/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/encoders/" class="md-nav__link">
+      <a href="../../../tabpfn/model/encoders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/layer/" class="md-nav__link">
+      <a href="../../../tabpfn/model/layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/loading/" class="md-nav__link">
+      <a href="../../../tabpfn/model/loading/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/memory/" class="md-nav__link">
+      <a href="../../../tabpfn/model/memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1086,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/mlp/" class="md-nav__link">
+      <a href="../../../tabpfn/model/mlp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/multi_head_attention/" class="md-nav__link">
+      <a href="../../../tabpfn/model/multi_head_attention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/preprocessing/" class="md-nav__link">
+      <a href="../../../tabpfn/model/preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn/model/transformer/" class="md-nav__link">
+      <a href="../../../tabpfn/model/transformer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1241,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/browser_auth/" class="md-nav__link">
+      <a href="../../../tabpfn_client/browser_auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1262,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/client/" class="md-nav__link">
+      <a href="../../../tabpfn_client/client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1283,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/config/" class="md-nav__link">
+      <a href="../../../tabpfn_client/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/constants/" class="md-nav__link">
+      <a href="../../../tabpfn_client/constants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1325,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/estimator/" class="md-nav__link">
+      <a href="../../../tabpfn_client/estimator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/prompt_agent/" class="md-nav__link">
+      <a href="../../../tabpfn_client/prompt_agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/service_wrapper/" class="md-nav__link">
+      <a href="../../../tabpfn_client/service_wrapper/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/regression_pred_result/" class="md-nav__link">
+      <a href="../../../tabpfn_client/tabpfn_common_utils/regression_pred_result/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1452,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_client/tabpfn_common_utils/utils/" class="md-nav__link">
+      <a href="../../../tabpfn_client/tabpfn_common_utils/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,8 +1410,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1520,11 +1446,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -1538,7 +1464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Tabpfn extensions
@@ -1552,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/utils/" class="md-nav__link">
+      <a href="../../utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/utils_todo/" class="md-nav__link">
+      <a href="../../utils_todo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1635,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/benchmarking/experiment/" class="md-nav__link">
+      <a href="../../benchmarking/experiment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/classifier_as_regressor/classifier_as_regressor/" class="md-nav__link">
+      <a href="../../classifier_as_regressor/classifier_as_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1777,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/hpo/search_space/" class="md-nav__link">
+      <a href="../../hpo/search_space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1798,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/hpo/tuned_tabpfn/" class="md-nav__link">
+      <a href="../../hpo/tuned_tabpfn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1824,8 +1750,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1842,11 +1770,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_6" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3_6" id="__nav_4_3_6_label" tabindex="0">
@@ -1860,7 +1788,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3_6">
             <span class="md-nav__icon md-icon"></span>
             Interpretability
@@ -1874,7 +1802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/interpretability/experiments/" class="md-nav__link">
+      <a href="../experiments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1895,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/interpretability/feature_selection/" class="md-nav__link">
+      <a href="../feature_selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/interpretability/shap/" class="md-nav__link">
+      <a href="../shap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1934,10 +1862,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/interpretability/shapiq/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Shapiq
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1946,6 +1894,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabpfn_extensions.interpretability.shapiq.get_tabpfn_explainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tabpfn_explainer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabpfn_extensions.interpretability.shapiq.get_tabpfn_imputation_explainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tabpfn_imputation_explainer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2007,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/many_class/many_class_classifier/" class="md-nav__link">
+      <a href="../../many_class/many_class_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2085,7 +2071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/post_hoc_ensembles/abstract_validation_utils/" class="md-nav__link">
+      <a href="../../post_hoc_ensembles/abstract_validation_utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2106,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/post_hoc_ensembles/greedy_weighted_ensemble/" class="md-nav__link">
+      <a href="../../post_hoc_ensembles/greedy_weighted_ensemble/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/post_hoc_ensembles/pfn_phe/" class="md-nav__link">
+      <a href="../../post_hoc_ensembles/pfn_phe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2148,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/post_hoc_ensembles/save_splitting/" class="md-nav__link">
+      <a href="../../post_hoc_ensembles/save_splitting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2169,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/post_hoc_ensembles/sklearn_interface/" class="md-nav__link">
+      <a href="../../post_hoc_ensembles/sklearn_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/rf_pfn/SklearnBasedDecisionTreeTabPFN/" class="md-nav__link">
+      <a href="../../rf_pfn/SklearnBasedDecisionTreeTabPFN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/rf_pfn/SklearnBasedRandomForestTabPFN/" class="md-nav__link">
+      <a href="../../rf_pfn/SklearnBasedRandomForestTabPFN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/rf_pfn/configs/" class="md-nav__link">
+      <a href="../../rf_pfn/configs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/rf_pfn/utils/" class="md-nav__link">
+      <a href="../../rf_pfn/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2378,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/scoring/scoring_utils/" class="md-nav__link">
+      <a href="../../scoring/scoring_utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2452,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/sklearn_ensembles/configs/" class="md-nav__link">
+      <a href="../../sklearn_ensembles/configs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2473,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/sklearn_ensembles/meta_models/" class="md-nav__link">
+      <a href="../../sklearn_ensembles/meta_models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2494,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/sklearn_ensembles/weighted_ensemble/" class="md-nav__link">
+      <a href="../../sklearn_ensembles/weighted_ensemble/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2566,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/unsupervised/experiments/" class="md-nav__link">
+      <a href="../../unsupervised/experiments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tabpfn_extensions/unsupervised/unsupervised/" class="md-nav__link">
+      <a href="../../unsupervised/unsupervised/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2642,38 +2628,395 @@
   
 
 
-<h1 id="time-series-tutorial">Time Series Tutorial<a class="headerlink" href="#time-series-tutorial" title="Permanent link">&para;</a></h1>
-<p>TabPFN can be used for time series forecasting by framing it as a tabular regression problem. This tutorial demonstrates how to use the <a href="https://github.com/liam-sbhoo/tabpfn-time-series">TabPFN Time Series package</a> for accurate zero-shot forecasting.
-It was developed by Shi Bin Hoo, Samuel Müller, David Salinas and Frank Hutter.</p>
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<p><a href="https://colab.research.google.com/github/liam-sbhoo/tabpfn-time-series/blob/main/demo.ipynb"><img alt="colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<p>First, install the package:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!git<span class="w"> </span>clone<span class="w"> </span>https://github.com/liam-sbhoo/tabpfn-time-series.git
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>!pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>tabpfn-time-series/requirements.txt
+<div class="doc doc-object doc-module">
+
+
+
+<h1 id="tabpfn_extensions.interpretability.shapiq" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">shapiq</span>
+
+
+<a href="#tabpfn_extensions.interpretability.shapiq" class="headerlink" title="Permanent link">&para;</a></h1>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="tabpfn_extensions.interpretability.shapiq.get_tabpfn_explainer" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_tabpfn_explainer</span>
+
+
+<a href="#tabpfn_extensions.interpretability.shapiq.get_tabpfn_explainer" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_tabpfn_explainer</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="tabpfn.TabPFNRegressor" href="../../../tabpfn/regressor/#tabpfn.regressor.TabPFNRegressor">TabPFNRegressor</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn.TabPFNClassifier" href="../../../tabpfn/classifier/#tabpfn.classifier.TabPFNClassifier">TabPFNClassifier</a></span><span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">data</span><span class="p">:</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">,</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">labels</span><span class="p">:</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">,</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">],</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">index</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;k-SII&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">max_order</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">class_index</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="o">**</span><span class="n">kwargs</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
 </span></code></pre></div>
-<p>See the <a href="https://colab.research.google.com/github/liam-sbhoo/tabpfn-time-series/blob/main/demo.ipynb">demo notebook</a> for a complete example.</p>
-<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>TabPFN performs time series forecasting by:</p>
-<ol>
-<li>Converting time series data into a tabular format</li>
-<li>Extracting temporal features (trends, seasonality, etc.)</li>
-<li>Using TabPFN's regression capabilities for prediction</li>
-<li>Converting predictions back to time series format</li>
-</ol>
-<p>This approach provides several benefits:</p>
-<ul>
-<li><strong>Zero-shot forecasting</strong>: No training required - just fit and predict</li>
-<li><strong>Both point and probabilistic forecasts</strong>: Get confidence intervals with your predictions</li>
-<li><strong>Support for exogenous variables</strong>: Easily incorporate external factors</li>
-<li><strong>Fast inference</strong>: Uses tabpfn-client for GPU-accelerated predictions</li>
-</ul>
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/liam-sbhoo/tabpfn-time-series">GitHub Repository</a></li>
-<li><a href="https://openreview.net/forum?id=H02X7RO3OC#discussion">Research Paper</a></li>
-</ul>
-<h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>Join our <a href="https://discord.com/channels/1285598202732482621/">Discord community</a> for support and discussions about TabPFN time series forecasting.</p>
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a TabPFNExplainer from shapiq.</p>
+<p>This function returns the TabPFN explainer from the shapiq[1]_ library. The explainer uses
+a remove-and-recontextualize paradigm of model explanation[2]<em>[3]</em> to explain the predictions
+of a TabPFN model. See <code>shapiq.TabPFNExplainer</code> documentation for more information regarding
+the explainer object.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn.TabPFNRegressor" href="../../../tabpfn/regressor/#tabpfn.regressor.TabPFNRegressor">TabPFNRegressor</a> or <a class="autorefs autorefs-internal" title="tabpfn.TabPFNClassifier" href="../../../tabpfn/classifier/#tabpfn.classifier.TabPFNClassifier">TabPFNClassifier</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The TabPFN model to explain.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code><span title="pandas.DataFrame">DataFrame</span> or <span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The background data to use for the explainer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>labels</code></td>
+          <td>
+                <code><span title="pandas.DataFrame">DataFrame</span> or <span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The labels for the background data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>index</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index to use for the explanation. See shapiq documentation for more information
+and an up-to-date list of available indices. Defaults to "k-SII" and "SV" (Shapley
+Values like SHAP) with <code>max_order=1</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;k-SII&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_order</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The maximum order of interactions to consider. Defaults to 2.</p>
+            </div>
+          </td>
+          <td>
+                <code>2</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>class_index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The class index of the model to explain. If not provided, the
+class index will be set to 1 per default for classification models. This argument is
+ignored for regression models. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments to pass to the explainer.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>shapiq.TabPFNExplainer: The TabPFN explainer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="references" open>
+  <summary>References</summary>
+  <p>.. [1] shapiq repository: <a href="https://github.com/mmschlk/shapiq">https://github.com/mmschlk/shapiq</a>
+.. [2] Muschalik, M., Baniecki, H., Fumagalli, F., Kolpaczki, P., Hammer, B., Hüllermeier, E. (2024). shapiq: Shapley Interactions for Machine Learning. In: The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track. url: <a href="https://openreview.net/forum?id=knxGmi6SJi">https://openreview.net/forum?id=knxGmi6SJi</a>
+.. [3] Rundel, D., Kobialka, J., von Crailsheim, C., Feurer, M., Nagler, T., Rügamer, D. (2024). Interpretable Machine Learning for TabPFN. In: Longo, L., Lapuschkin, S., Seifert, C. (eds) Explainable Artificial Intelligence. xAI 2024. Communications in Computer and Information Science, vol 2154. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-63797-1_23">https://doi.org/10.1007/978-3-031-63797-1_23</a></p>
+</details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="tabpfn_extensions.interpretability.shapiq.get_tabpfn_imputation_explainer" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_tabpfn_imputation_explainer</span>
+
+
+<a href="#tabpfn_extensions.interpretability.shapiq.get_tabpfn_imputation_explainer" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_tabpfn_imputation_explainer</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">model</span><span class="p">:</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="tabpfn.TabPFNRegressor" href="../../../tabpfn/regressor/#tabpfn.regressor.TabPFNRegressor">TabPFNRegressor</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn.TabPFNClassifier" href="../../../tabpfn/classifier/#tabpfn.classifier.TabPFNClassifier">TabPFNClassifier</a></span><span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">data</span><span class="p">:</span> <span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">,</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">index</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;k-SII&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">max_order</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">imputer</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;marginal&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">class_index</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="o">**</span><span class="n">kwargs</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Gets a TabularExplainer from shapiq with using imputation.</p>
+<p>This function returns the TabularExplainer from the shapiq[1]<em>[2]</em> library. The explainer uses an
+imputation-based paradigm of feature removal for the explanations similar to SHAP[3]_. See
+<code>shapiq.TabularExplainer</code> documentation for more information regarding the explainer object.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>model</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn.TabPFNRegressor" href="../../../tabpfn/regressor/#tabpfn.regressor.TabPFNRegressor">TabPFNRegressor</a> or <a class="autorefs autorefs-internal" title="tabpfn.TabPFNClassifier" href="../../../tabpfn/classifier/#tabpfn.classifier.TabPFNClassifier">TabPFNClassifier</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The TabPFN model to explain.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code><span title="pandas.DataFrame">DataFrame</span> or <span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The background data to use for the explainer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>index</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index to use for the explanation. See shapiq documentation for more information
+and an up-to-date list of available indices. Defaults to "k-SII" and "SV" (Shapley
+Values like SHAP) with <code>max_order=1</code>.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;k-SII&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max_order</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The maximum order of interactions to consider. Defaults to 2.</p>
+            </div>
+          </td>
+          <td>
+                <code>2</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>imputer</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The imputation method to use. See <code>shapiq.TabularExplainer</code> documentation for
+more information and an up-to-date list of available imputation methods.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;marginal&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>class_index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The class index of the model to explain. If not provided, the
+class index will be set to 1 per default for classification models. This argument is
+ignored for regression models. Defaults to None.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>**kwargs</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Additional keyword arguments to pass to the explainer.</p>
+            </div>
+          </td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>shapiq.TabularExplainer: The TabularExplainer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="references" open>
+  <summary>References</summary>
+  <p>.. [1] shapiq repository: <a href="https://github.com/mmschlk/shapiq">https://github.com/mmschlk/shapiq</a>
+.. [2] Muschalik, M., Baniecki, H., Fumagalli, F., Kolpaczki, P., Hammer, B., Hüllermeier, E. (2024). shapiq: Shapley Interactions for Machine Learning. In: The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track. url: <a href="https://openreview.net/forum?id=knxGmi6SJi">https://openreview.net/forum?id=knxGmi6SJi</a>
+.. [3] Lundberg, S. M., &amp; Lee, S. I. (2017). A Unified Approach to Interpreting Model Predictions. Advances in Neural Information Processing Systems 30 (pp. 4765--4774).</p>
+</details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
@@ -2711,7 +3054,7 @@ It was developed by Shi Bin Hoo, Samuel Müller, David Salinas and Frank Hutter.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../unsupervised/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unsupervised">
+          <a href="../shap/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shap">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2721,20 +3064,20 @@ It was developed by Shi Bin Hoo, Samuel Müller, David Salinas and Frank Hutter.
                 Previous
               </span>
               <div class="md-ellipsis">
-                Unsupervised
+                Shap
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../reference/tabpfn/base/" class="md-footer__link md-footer__link--next" aria-label="Next: Base">
+          <a href="../../many_class/many_class_classifier/" class="md-footer__link md-footer__link--next" aria-label="Next: Many class classifier">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Base
+                Many class classifier
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2848,10 +3191,10 @@ It was developed by Shi Bin Hoo, Samuel Müller, David Salinas and Frank Hutter.
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

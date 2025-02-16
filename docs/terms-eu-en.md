@@ -1,7 +1,7 @@
 ```
 GENERAL TERMS AND CONDITIONS
 1.	Scope of Application
-1.1.	These general terms and conditions ("GTC") govern the provision of access to the TabPFN foundation models as available at https://www.priorlabs.ai (“Services”) provided by Prior Labs GmbH, Elisabeth-Emter-Weg 18, 79110 Freiburg im Breisgau (“PriorLabs").
+1.1.	These general terms and conditions ("GTC") govern the provision of access to the TabPFN foundation models as available at https://www.priorlabs.ai (“Services”) provided by Prior Labs GmbH, Georges-Köhler-Allee 302, 79110 Freiburg im Breisgau (“PriorLabs").
 1.2.	The Services of PriorLabs are directed exclusively at business customers (Unternehmer) within the meaning of Sec. 14 German Civil Code (Bürgerliches Gesetzbuch, BGB) (“Customer”). PriorLabs may require the Customer to provide sufficient proof of its status as business customer prior to the conclusion of the contract. 
 1.3.	Conflicting or additional contractual conditions of the Customer shall only apply if PriorLabs expressly confirms them in writing. 
 2.	Conclusion of Contract

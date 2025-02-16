@@ -2,7 +2,7 @@
 PRIVACY POLICY
 Last updated: January 8th, 2025
 1.	General information
-Prior Labs GmbH, Elisabeth-Emter-Weg 18, 79110 Freiburg im Breisgau (hereinafter “PriorLabs”, “we” or “us”) takes the protection of personal data very seriously. 
+Prior Labs GmbH, Georges-Köhler-Allee 302, 79110 Freiburg im Breisgau (hereinafter “PriorLabs”, “we” or “us”) takes the protection of personal data very seriously. 
 We treat personal data confidentially and always in accordance with the applicable data protection laws, in particular Regulation (EU) 2016/679 (hereinafter “General Data Protection Regulation” or “GDPR”), the German Federal Data Protection Act (hereinafter “BDSG”), and in accordance with the provisions of this privacy policy.
 The aim of this privacy policy is to inform you (hereinafter “data subject” or “you”) in accordance with Art. 12 et seq. GDPR about how we process your personal data and for what purposes we process your personal data when using our website https://priorlabs.ai/ (hereinafter “Website”), our services or contacting us.
 Unless otherwise stated in this privacy policy, the terms used here have the meaning as defined in the GDPR.
