@@ -25,7 +25,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Initialize TabPFN models
 clf = TabPFNClassifier(n_estimators=3)
-reg = TabPFNClassifier(n_estimators=3)
+reg = TabPFNRegressor(n_estimators=3)
 
 # Initialize unsupervised model
 model_unsupervised = unsupervised.TabPFNUnsupervisedModel(
