@@ -292,6 +292,7 @@ def process_directory(
             'migrations', 'alembic',  # Database migrations
             'node_modules', 'static', 'media',  # Web assets
             'tmp', 'temp', 'cache',  # Temporary files
+            'misc',
             '.*'  # Hidden directories
         }
 
@@ -526,7 +527,8 @@ exclude_patterns = {
     '.pytest_cache',
     'build',
     'dist',
-    'egg-info'
+    'egg-info',
+    'misc'
 }
 
 root = Path(__file__).parent.parent

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../rf_pfn/utils/">
+        <link rel="prev" href="../configs/">
       
       
-        <link rel="next" href="../../sklearn_ensembles/configs/">
+        <link rel="next" href="../sklearn_based_random_forest_tabpfn/">
       
       
       <link rel="icon" href="../../../../assets/logo.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Scoring utils - Prior Labs</title>
+        <title>Sklearn based decision tree tabpfn - Prior Labs</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tabpfn_extensions.scoring.scoring_utils" class="md-skip">
+        <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scoring utils
+              Sklearn based decision tree tabpfn
             
           </span>
         </div>
@@ -2144,8 +2144,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2162,11 +2164,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3_8" id="__nav_4_3_8_label" tabindex="0">
@@ -2180,7 +2182,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3_8">
             <span class="md-nav__icon md-icon"></span>
             Rf pfn
@@ -2194,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rf_pfn/configs/" class="md-nav__link">
+      <a href="../configs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2212,10 +2214,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../rf_pfn/sklearn_based_decision_tree_tabpfn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sklearn based decision tree tabpfn
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2224,6 +2246,380 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      DecisionTreeTabPFNBase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DecisionTreeTabPFNBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--subclasses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subclasses:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree_
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tree_">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit_leaves
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fit_leaves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.get_tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      DecisionTreeTabPFNClassifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DecisionTreeTabPFNClassifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree_
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tree_">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit_leaves
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fit_leaves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.get_tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict_proba" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_proba
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      DecisionTreeTabPFNRegressor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DecisionTreeTabPFNRegressor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_" class="md-nav__link">
+    <span class="md-ellipsis">
+      tree_
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tree_">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      fit_leaves
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fit_leaves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.get_tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="predict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full" class="md-nav__link">
+    <span class="md-ellipsis">
+      predict_full
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="predict_full">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2236,7 +2632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rf_pfn/sklearn_based_random_forest_tabpfn/" class="md-nav__link">
+      <a href="../sklearn_based_random_forest_tabpfn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2257,7 +2653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rf_pfn/utils/" class="md-nav__link">
+      <a href="../utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,8 +2679,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2297,11 +2691,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_9" >
         
           
           <label class="md-nav__link" for="__nav_4_3_9" id="__nav_4_3_9_label" tabindex="0">
@@ -2315,7 +2709,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_9">
             <span class="md-nav__icon md-icon"></span>
             Scoring
@@ -2326,30 +2720,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Scoring utils
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../scoring/scoring_utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2358,62 +2732,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfn_extensions.scoring.scoring_utils.safe_roc_auc_score" class="md-nav__link">
-    <span class="md-ellipsis">
-      safe_roc_auc_score
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfn_extensions.scoring.scoring_utils.score_classification" class="md-nav__link">
-    <span class="md-ellipsis">
-      score_classification
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfn_extensions.scoring.scoring_utils.score_regression" class="md-nav__link">
-    <span class="md-ellipsis">
-      score_regression
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabpfn_extensions.scoring.scoring_utils.score_survival" class="md-nav__link">
-    <span class="md-ellipsis">
-      score_survival
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2665,19 +2983,16 @@
                 
                   
 
-  
-  
-
 
 <div class="doc doc-object doc-module">
 
 
 
-<h1 id="tabpfn_extensions.scoring.scoring_utils" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">scoring_utils</span>
+<h1 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">sklearn_based_decision_tree_tabpfn</span>
 
 
-<a href="#tabpfn_extensions.scoring.scoring_utils" class="headerlink" title="Permanent link">&para;</a></h1>
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn" class="headerlink" title="Permanent link">&para;</a></h1>
 
   <div class="doc doc-contents first">
 
@@ -2692,161 +3007,155 @@
 
 
 
-
-
-<div class="doc doc-object doc-function">
+<div class="doc doc-object doc-class">
 
 
 
-<h2 id="tabpfn_extensions.scoring.scoring_utils.safe_roc_auc_score" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">safe_roc_auc_score</span>
+<h2 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">DecisionTreeTabPFNBase</span>
 
 
-<a href="#tabpfn_extensions.scoring.scoring_utils.safe_roc_auc_score" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">safe_roc_auc_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_score</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></code>, <code><span title="sklearn.base.BaseEstimator">BaseEstimator</span></code></p>
+
+  
+      <p>Abstract base class combining a scikit-learn Decision Tree with TabPFN at the leaves.</p>
+<p>This class provides a hybrid approach by combining the standard decision tree
+splitting algorithm from scikit-learn with TabPFN models at the leaves or
+internal nodes. This allows for both interpretable tree-based partitioning
+and high-performance TabPFN prediction.</p>
+<h4 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--key-features">Key features:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--key-features" title="Permanent link">&para;</a></h4>
+<p>• Inherits from sklearn's BaseDecisionTree to leverage standard tree splitting algorithms
+• Uses TabPFN (Classifier or Regressor) to fit leaf nodes (or all internal nodes)
+• Provides adaptive pruning logic (optional) that dynamically determines optimal tree depth
+• Supports both classification and regression through specialized subclasses</p>
+<h4 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--subclasses">Subclasses:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--subclasses" title="Permanent link">&para;</a></h4>
+<p>• DecisionTreeTabPFNClassifier - for classification tasks
+• DecisionTreeTabPFNRegressor - for regression tasks</p>
+<h4 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase--parameters" title="Permanent link">&para;</a></h4>
+<p>tabpfn : Any
+    A TabPFN instance (TabPFNClassifier or TabPFNRegressor) that will be used at tree nodes.
+criterion : str
+    The function to measure the quality of a split (from sklearn).
+splitter : str
+    The strategy used to choose the split at each node (e.g. "best" or "random").
+max_depth : int, optional
+    The maximum depth of the tree (None means unlimited).
+min_samples_split : int
+    The minimum number of samples required to split an internal node.
+min_samples_leaf : int
+    The minimum number of samples required to be at a leaf node.
+min_weight_fraction_leaf : float
+    The minimum weighted fraction of the sum total of weights required to be at a leaf node.
+max_features : Union[int, float, str, None]
+    The number of features to consider when looking for the best split.
+random_state : Union[int, np.random.RandomState, None]
+    Controls the randomness of the estimator.
+max_leaf_nodes : Optional[int]
+    If not None, grow a tree with max_leaf_nodes in best-first fashion.
+min_impurity_decrease : float
+    A node will be split if this split induces a decrease of the impurity &gt;= this value.
+class_weight : Optional[Union[Dict[int, float], str]]
+    Only used in classification. Dict of class -&gt; weight or “balanced”.
+ccp_alpha : float
+    Complexity parameter used for Minimal Cost-Complexity Pruning (non-negative).
+monotonic_cst : Any
+    Optional monotonicity constraints (depending on sklearn version).
+categorical_features : Optional[List[int]]
+    Indices of categorical features for TabPFN usage (if any).
+verbose : Union[bool, int]
+    Verbosity level; higher values produce more output.
+show_progress : bool
+    Whether to show progress bars for leaf/node fitting using TabPFN.
+fit_nodes : bool
+    Whether to fit TabPFN at internal nodes (True) or only final leaves (False).
+tree_seed : int
+    Used to set seeds for TabPFN fitting in each node.
+adaptive_tree : bool
+    Whether to do adaptive node-by-node pruning using a hold-out strategy.
+adaptive_tree_min_train_samples : int
+    Minimum number of training samples required to fit a TabPFN in a node.
+adaptive_tree_max_train_samples : int
+    Maximum number of training samples above which a node might be pruned if not a final leaf.
+adaptive_tree_min_valid_samples_fraction_of_train : float
+    Fraction controlling the minimum valid/test points to consider a node for re-fitting.
+adaptive_tree_overwrite_metric : Optional[str]
+    If set, overrides the default metric for pruning. E.g., "roc" or "rmse".
+adaptive_tree_test_size : float
+    Fraction of data to hold out for adaptive pruning if no separate valid set is provided.
+average_logits : bool
+    Whether to average logits (True) or probabilities (False) when combining predictions.
+adaptive_tree_skip_class_missing : bool
+    If True, skip re-fitting if the nodes training set does not contain all classes (classification only).</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">tree_</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tree_</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Compute the Area Under the Receiver Operating Characteristic Curve (ROC AUC) score.</p>
-<p>This function is a safe wrapper around <code>sklearn.metrics.roc_auc_score</code> that handles
-cases where the input data may have missing classes or binary classification problems.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>y_true</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-True binary labels or binary label indicators.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_score</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,) or (n_samples, n_classes)
-Target scores, can either be probability estimates of the positive class,
-confidence values, or non-thresholded measure of decisions.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>dict
-Additional keyword arguments to pass to <code>sklearn.metrics.roc_auc_score</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>float</code></td>          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The ROC AUC score.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If there are missing classes in <code>y_true</code> that cannot be handled.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      <p>Expose the fitted tree for sklearn compatibility.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_--returns">Returns:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.tree_--returns" title="Permanent link">&para;</a></h5>
+<p>sklearn.tree._tree.Tree
+    Underlying scikit-learn tree object.</p>
   </div>
 
 </div>
 
 
+
+
 <div class="doc doc-object doc-function">
 
 
 
-<h2 id="tabpfn_extensions.scoring.scoring_utils.score_classification" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">score_classification</span>
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
 
 
-<a href="#tabpfn_extensions.scoring.scoring_utils.score_classification" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">score_classification</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">optimize_metric</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="s2">&quot;roc&quot;</span><span class="p">,</span> <span class="s2">&quot;auroc&quot;</span><span class="p">,</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="s2">&quot;f1&quot;</span><span class="p">,</span> <span class="s2">&quot;log_loss&quot;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">],</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">y_true</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">y_pred</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="o">*</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">y_pred_is_labels</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span>
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">y</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="typing.Any">Any</span></span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sample_weight</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>General function to score classification predictions.</p>
+      <p>Fit the DecisionTree + TabPFN model.</p>
+<p>This method trains the hybrid model by:
+1. Building a decision tree structure
+2. Fitting TabPFN models at the leaves (or at all nodes if fit_nodes=True)
+3. Optionally performing adaptive pruning if adaptive_tree=True</p>
 
 
 
@@ -2862,13 +3171,13 @@ Additional keyword arguments to pass to <code>sklearn.metrics.roc_auc_score</cod
     </thead>
     <tbody>
         <tr>
-          <td><code>optimize_metric</code></td>
+          <td><code>X</code></td>
           <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>{"roc", "auroc", "accuracy", "f1", "log_loss"}
-The metric to use for scoring the predictions.</p>
+              <p>The training input samples, shape (n_samples, n_features).</p>
             </div>
           </td>
           <td>
@@ -2876,27 +3185,14 @@ The metric to use for scoring the predictions.</p>
           </td>
         </tr>
         <tr>
-          <td><code>y_true</code></td>
+          <td><code>y</code></td>
           <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="typing.Any">Any</span>]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-True labels or binary label indicators.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_pred</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,) or (n_samples, n_classes)
-Predicted labels, probabilities, or confidence values.</p>
+              <p>The target values (class labels for classification, real values for regression),
+shape (n_samples,) or (n_samples, n_outputs).</p>
             </div>
           </td>
           <td>
@@ -2906,15 +3202,29 @@ Predicted labels, probabilities, or confidence values.</p>
         <tr>
           <td><code>sample_weight</code></td>
           <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>array-like of shape (n_samples,), default=None
-Sample weights.</p>
+              <p>Sample weights. If None, then samples are equally weighted.</p>
             </div>
           </td>
           <td>
                 <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>check_input</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to validate the input data arrays. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
           </td>
         </tr>
     </tbody>
@@ -2932,35 +3242,12 @@ Sample weights.</p>
     </thead>
     <tbody>
         <tr>
-<td><code>float</code></td>          <td>
+<td><code>self</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The score for the specified metric.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If an unknown metric is specified.</p>
+              <p>Fitted estimator.</p>
             </div>
           </td>
         </tr>
@@ -2976,94 +3263,45 @@ Sample weights.</p>
 
 
 
-<h2 id="tabpfn_extensions.scoring.scoring_utils.score_regression" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">score_regression</span>
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit_leaves</span>
 
 
-<a href="#tabpfn_extensions.scoring.scoring_utils.score_regression" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">score_regression</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">optimize_metric</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s2">&quot;rmse&quot;</span><span class="p">,</span> <span class="s2">&quot;mse&quot;</span><span class="p">,</span> <span class="s2">&quot;mae&quot;</span><span class="p">],</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">y_true</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">y_pred</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit_leaves</span><span class="p">(</span><span class="n">train_X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">train_y</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>General function to score regression predictions.</p>
+      <p>Fit a TabPFN model in each leaf node (or each node, if self.fit_nodes=True).</p>
+<p>This populates an internal dictionary of training data for each leaf
+so that TabPFN can make predictions at these leaves.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.fit_leaves--parameters" title="Permanent link">&para;</a></h5>
+<p>train_X : np.ndarray
+    Training features for all samples.
+train_y : np.ndarray
+    Training labels/targets for all samples.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
 
 
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>optimize_metric</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>{"rmse", "mse", "mae"}
-The metric to use for scoring the predictions.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_true</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-True target values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_pred</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-Predicted target values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>sample_weight</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,), default=None
-Sample weights.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.get_tree" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_tree</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase.get_tree" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_tree</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the underlying fitted sklearn decision tree.</p>
 
 
 
@@ -3071,17 +3309,18 @@ Sample weights.</p>
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>float</code></td>          <td>
+          <td>
+                <code><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The score for the specified metric.</p>
+              <p>DecisionTreeClassifier or DecisionTreeRegressor: The fitted decision tree.</p>
             </div>
           </td>
         </tr>
@@ -3101,11 +3340,204 @@ Sample weights.</p>
     <tbody>
         <tr>
           <td>
-                <code>ValueError</code>
+                <code><span title="sklearn.exceptions.NotFittedError">NotFittedError</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>If an unknown metric is specified.</p>
+              <p>If the model has not been fitted yet.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">DecisionTreeTabPFNClassifier</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></code>, <code><span title="sklearn.base.ClassifierMixin">ClassifierMixin</span></code></p>
+
+  
+      <p>Decision tree that uses TabPFNClassifier at the leaves.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">tree_</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tree_</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Expose the fitted tree for sklearn compatibility.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_--returns">Returns:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.tree_--returns" title="Permanent link">&para;</a></h5>
+<p>sklearn.tree._tree.Tree
+    Underlying scikit-learn tree object.</p>
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">y</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="typing.Any">Any</span></span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sample_weight</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fit the DecisionTree + TabPFN model.</p>
+<p>This method trains the hybrid model by:
+1. Building a decision tree structure
+2. Fitting TabPFN models at the leaves (or at all nodes if fit_nodes=True)
+3. Optionally performing adaptive pruning if adaptive_tree=True</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The training input samples, shape (n_samples, n_features).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The target values (class labels for classification, real values for regression),
+shape (n_samples,) or (n_samples, n_outputs).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sample_weight</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>] | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Sample weights. If None, then samples are equally weighted.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>check_input</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to validate the input data arrays. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>self</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fitted estimator.</p>
             </div>
           </td>
         </tr>
@@ -3121,95 +3553,45 @@ Sample weights.</p>
 
 
 
-<h2 id="tabpfn_extensions.scoring.scoring_utils.score_survival" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">score_survival</span>
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit_leaves</span>
 
 
-<a href="#tabpfn_extensions.scoring.scoring_utils.score_survival" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">score_survival</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">optimize_metric</span><span class="p">:</span> <span class="n"><span title="typing.Literal">Literal</span></span><span class="p">[</span><span class="s2">&quot;cindex&quot;</span><span class="p">],</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">y_true</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">y_pred</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">event_observed</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit_leaves</span><span class="p">(</span><span class="n">train_X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">train_y</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>General function to score regression predictions.</p>
+      <p>Fit a TabPFN model in each leaf node (or each node, if self.fit_nodes=True).</p>
+<p>This populates an internal dictionary of training data for each leaf
+so that TabPFN can make predictions at these leaves.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.fit_leaves--parameters" title="Permanent link">&para;</a></h5>
+<p>train_X : np.ndarray
+    Training features for all samples.
+train_y : np.ndarray
+    Training labels/targets for all samples.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
 
 
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>optimize_metric</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>{"rmse", "mse", "mae"}
-The metric to use for scoring the predictions.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_true</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-True target values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y_pred</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,)
-Predicted target values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>sample_weight</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>array-like of shape (n_samples,), default=None
-Sample weights.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.get_tree" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_tree</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.get_tree" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_tree</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the underlying fitted sklearn decision tree.</p>
 
 
 
@@ -3217,17 +3599,18 @@ Sample weights.</p>
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>float</code></td>          <td>
+          <td>
+                <code><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The score for the specified metric.</p>
+              <p>DecisionTreeClassifier or DecisionTreeRegressor: The fitted decision tree.</p>
             </div>
           </td>
         </tr>
@@ -3247,11 +3630,11 @@ Sample weights.</p>
     <tbody>
         <tr>
           <td>
-                <code>ValueError</code>
+                <code><span title="sklearn.exceptions.NotFittedError">NotFittedError</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>If an unknown metric is specified.</p>
+              <p>If the model has not been fitted yet.</p>
             </div>
           </td>
         </tr>
@@ -3261,6 +3644,542 @@ Sample weights.</p>
   </div>
 
 </div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict class labels for X.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Input features.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>check_input</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to validate input arrays. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: Predicted class labels.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict_proba" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_proba</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNClassifier.predict_proba" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict_proba</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict class probabilities for X using the TabPFN leaves.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Input features.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>check_input</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to validate input arrays. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>np.ndarray: Predicted probabilities of shape (n_samples, n_classes).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">DecisionTreeTabPFNRegressor</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></code>, <code><span title="sklearn.base.RegressorMixin">RegressorMixin</span></code></p>
+
+  
+      <p>Decision tree that uses TabPFNRegressor at the leaves.</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">tree_</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">tree_</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Expose the fitted tree for sklearn compatibility.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_--returns">Returns:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.tree_--returns" title="Permanent link">&para;</a></h5>
+<p>sklearn.tree._tree.Tree
+    Underlying scikit-learn tree object.</p>
+  </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">y</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="typing.Any">Any</span></span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sample_weight</span><span class="p">:</span> <span class="n"><span title="numpy.typing.NDArray">NDArray</span></span><span class="p">[</span><span class="n"><span title="numpy.float64">float64</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fit the DecisionTree + TabPFN model.</p>
+<p>This method trains the hybrid model by:
+1. Building a decision tree structure
+2. Fitting TabPFN models at the leaves (or at all nodes if fit_nodes=True)
+3. Optionally performing adaptive pruning if adaptive_tree=True</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>X</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The training input samples, shape (n_samples, n_features).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="typing.Any">Any</span>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The target values (class labels for classification, real values for regression),
+shape (n_samples,) or (n_samples, n_outputs).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sample_weight</code></td>
+          <td>
+                <code><span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float64">float64</span>] | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Sample weights. If None, then samples are equally weighted.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>check_input</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Whether to validate the input data arrays. Default is True.</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>self</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNBase">DecisionTreeTabPFNBase</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Fitted estimator.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">fit_leaves</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit_leaves</span><span class="p">(</span><span class="n">train_X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">train_y</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Fit a TabPFN model in each leaf node (or each node, if self.fit_nodes=True).</p>
+<p>This populates an internal dictionary of training data for each leaf
+so that TabPFN can make predictions at these leaves.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.fit_leaves--parameters" title="Permanent link">&para;</a></h5>
+<p>train_X : np.ndarray
+    Training features for all samples.
+train_y : np.ndarray
+    Training labels/targets for all samples.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.get_tree" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">get_tree</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.get_tree" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_tree</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the underlying fitted sklearn decision tree.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="sklearn.tree.BaseDecisionTree">BaseDecisionTree</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>DecisionTreeClassifier or DecisionTreeRegressor: The fitted decision tree.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="sklearn.exceptions.NotFittedError">NotFittedError</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the model has not been fitted yet.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">check_input</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Predict regression values using the TabPFN leaves.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--parameters" title="Permanent link">&para;</a></h5>
+<p>X : np.ndarray
+    Input features.
+check_input : bool, default=True
+    Whether to validate the input arrays.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--returns">Returns:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict--returns" title="Permanent link">&para;</a></h5>
+<p>np.ndarray
+    Continuous predictions of shape (n_samples,).</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">predict_full</span>
+
+
+<a href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict_full</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Convenience method to predict with no input checks (optional).</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--parameters">Parameters<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--parameters" title="Permanent link">&para;</a></h5>
+<p>X : np.ndarray
+    Input features.</p>
+<h5 id="tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--returns">Returns:<a class="headerlink" href="#tabpfn_extensions.rf_pfn.sklearn_based_decision_tree_tabpfn.DecisionTreeTabPFNRegressor.predict_full--returns" title="Permanent link">&para;</a></h5>
+<p>np.ndarray
+    Continuous predictions of shape (n_samples,).</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
 
 
 
@@ -3306,7 +4225,7 @@ Sample weights.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../rf_pfn/utils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utils">
+          <a href="../configs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configs">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3316,20 +4235,20 @@ Sample weights.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Utils
+                Configs
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../sklearn_ensembles/configs/" class="md-footer__link md-footer__link--next" aria-label="Next: Configs">
+          <a href="../sklearn_based_random_forest_tabpfn/" class="md-footer__link md-footer__link--next" aria-label="Next: Sklearn based random forest tabpfn">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Configs
+                Sklearn based random forest tabpfn
               </div>
             </div>
             <div class="md-footer__button md-icon">

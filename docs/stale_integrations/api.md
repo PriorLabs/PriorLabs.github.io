@@ -1,1 +1,0 @@
-WARNING: Do not upload personally identifiable data over API
