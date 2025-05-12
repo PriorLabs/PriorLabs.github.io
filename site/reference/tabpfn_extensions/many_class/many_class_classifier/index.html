@@ -2014,27 +2014,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.codebook_statistics_" class="md-nav__link">
+    <span class="md-ellipsis">
+      codebook_statistics_
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.fit" class="md-nav__link">
     <span class="md-ellipsis">
       fit
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_alphabet_size" class="md-nav__link">
-    <span class="md-ellipsis">
-      get_alphabet_size
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_n_estimators" class="md-nav__link">
-    <span class="md-ellipsis">
-      get_n_estimators
     </span>
   </a>
   
@@ -2711,33 +2702,66 @@
 
   <div class="doc doc-contents first">
   
-      <p>This module provides a classifier that overcomes TabPFN's limitation on the number of
-classes (typically 10) by using a meta-classifier approach. It works by breaking down
-multi-class problems into multiple sub-problems, each within TabPFN's class limit.</p>
-<p>Key features:
-- Handles any number of classes beyond TabPFN's native limits
-- Uses an efficient codebook approach to minimize the number of base models
-- Compatible with both TabPFN and TabPFN-client backends
-- Maintains high accuracy through redundant coding
-- Follows scikit-learn's Estimator interface</p>
+      <p>Development Notebook: <a href="https://colab.research.google.com/drive/1HWF5IF0IN21G8FZdLVwBbLBkCMu94yBA?usp=sharing">https://colab.research.google.com/drive/1HWF5IF0IN21G8FZdLVwBbLBkCMu94yBA?usp=sharing</a></p>
+<p>This module provides a classifier that overcomes TabPFN's limitation on the number of
+classes (typically 10) by using a meta-classifier approach based on output coding.
+It works by breaking down multi-class problems into multiple sub-problems, each
+within TabPFN's class limit.</p>
+<p>This version aims to be very close to an original structural design, with key
+improvements in codebook generation and using a custom <code>validate_data</code> function
+for scikit-learn compatibility.</p>
+<p>Key features (compared to a very basic output coder):
+- Improved codebook generation: Uses a strategy that attempts to balance the
+  number of times each class is explicitly represented and guarantees coverage.
+- Codebook statistics: Optionally prints statistics about the generated codebook.
+- Uses a custom <code>validate_data</code> for potentially better cross-sklearn-version
+  compatibility for data validation.
+- Robustness: Minor changes for better scikit-learn compatibility (e.g.,
+  ensuring the wrapper is properly "fitted", setting n_features_in_).</p>
+<p>Original structural aspects retained:
+- Fitting of base estimators for sub-problems largely occurs during predict_proba calls.</p>
 
 <details class="example-usage" open>
   <summary>Example usage</summary>
-  <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">tabpfn</span> <span class="kn">import</span> <span class="n">TabPFNClassifier</span>  <span class="c1"># or from tabpfn_client</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">tabpfn_extensions.many_class</span> <span class="kn">import</span> <span class="n">ManyClassClassifier</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Create a base TabPFN classifier</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">base_clf</span> <span class="o">=</span> <span class="n">TabPFNClassifier</span><span class="p">()</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Wrap it with ManyClassClassifier to handle more classes</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">many_class_clf</span> <span class="o">=</span> <span class="n">ManyClassClassifier</span><span class="p">(</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">estimator</span><span class="o">=</span><span class="n">base_clf</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">alphabet_size</span><span class="o">=</span><span class="mi">10</span>  <span class="c1"># Use TabPFN&#39;s maximum class limit</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Use like any scikit-learn classifier, even with more than 10 classes</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">many_class_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">many_class_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">tabpfn</span> <span class="kn">import</span> <span class="n">TabPFNClassifier</span> <span class="c1"># Assuming TabPFN is installed</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Create synthetic data with many classes</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">n_classes_total</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># TabPFN might struggle with &gt;10 if not configured</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n_informative</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                           <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_classes</span><span class="o">=</span><span class="n">n_classes_total</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                           <span class="n">n_clusters_per_class</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                                                    <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># Create a TabPFN base classifier</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Adjust N_ensemble_configurations and device as needed/available</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># TabPFN&#39;s default class limit is often 10 for the public model.</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">base_clf</span> <span class="o">=</span> <span class="n">TabPFNClassifier</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">,</span> <span class="n">N_ensemble_configurations</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Wrap it with ManyClassClassifier</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">many_class_clf</span> <span class="o">=</span> <span class="n">ManyClassClassifier</span><span class="p">(</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">estimator</span><span class="o">=</span><span class="n">base_clf</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">alphabet_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># Max classes the base_clf sub-problems will handle</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                      <span class="c1"># This should align with TabPFN&#39;s actual capability.</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">n_estimators_redundancy</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="n">log_proba_aggregation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span> <span class="c1"># Print codebook stats</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1"># Use like any scikit-learn classifier</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">many_class_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">many_class_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">y_proba</span> <span class="o">=</span> <span class="n">many_class_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prediction shape: </span><span class="si">{</span><span class="n">y_pred</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probability shape: </span><span class="si">{</span><span class="n">y_proba</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">many_class_clf</span><span class="p">,</span> <span class="s1">&#39;codebook_stats_&#39;</span><span class="p">):</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Codebook Stats: </span><span class="si">{</span><span class="n">many_class_clf</span><span class="o">.</span><span class="n">codebook_stats_</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
   
@@ -2767,11 +2791,11 @@ multi-class problems into multiple sub-problems, each within TabPFN's class limi
             Bases: <code><span title="sklearn.base.BaseEstimator">BaseEstimator</span></code>, <code><span title="sklearn.base.ClassifierMixin">ClassifierMixin</span></code></p>
 
   
-      <p>Output-Code multiclass strategy to extend TabPFN beyond its class limit.</p>
-<p>This class enables TabPFN to handle classification problems with any number of
-classes by using a meta-classifier approach. It creates an efficient coding
-system that maps the original classes to multiple sub-problems, each within
-TabPFN's class limit.</p>
+      <p>Output-Code multiclass strategy to extend classifiers beyond their class limit.</p>
+<p>This version adheres closely to an original structural design, with key
+improvements in codebook generation and using a custom <code>validate_data</code> function
+for scikit-learn compatibility. Fitting for sub-problems primarily occurs
+during prediction.</p>
 
 
 
@@ -2789,12 +2813,11 @@ TabPFN's class limit.</p>
         <tr>
           <td><code>estimator</code></td>
           <td>
+                <code><span title="sklearn.base.BaseEstimator">BaseEstimator</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A classifier implementing fit() and predict_proba() methods.
-Typically a TabPFNClassifier instance. The base classifier
-should be able to handle up to <code>alphabet_size</code> classes.</p>
+              <p>A classifier implementing fit() and predict_proba() methods.</p>
             </div>
           </td>
           <td>
@@ -2804,11 +2827,13 @@ should be able to handle up to <code>alphabet_size</code> classes.</p>
         <tr>
           <td><code>alphabet_size</code></td>
           <td>
+                <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Maximum number of classes the base estimator can handle.
-If None, it will try to get this from estimator.max_num_classes_</p>
+              <p>Maximum number of classes the base
+estimator can handle. If None, attempts to infer from
+<code>estimator.max_num_classes_</code>.</p>
             </div>
           </td>
           <td>
@@ -2818,11 +2843,12 @@ If None, it will try to get this from estimator.max_num_classes_</p>
         <tr>
           <td><code>n_estimators</code></td>
           <td>
+                <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Number of base estimators to train. If None, an optimal number
-is calculated based on the number of classes and alphabet_size.</p>
+              <p>Number of base estimators (sub-problems).
+If None, calculated based on other parameters.</p>
             </div>
           </td>
           <td>
@@ -2832,11 +2858,12 @@ is calculated based on the number of classes and alphabet_size.</p>
         <tr>
           <td><code>n_estimators_redundancy</code></td>
           <td>
+                <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Redundancy factor for the auto-calculated number of estimators.
-Higher values increase reliability but also computational cost.</p>
+              <p>Redundancy factor for auto-calculated
+<code>n_estimators</code>. Defaults to 4.</p>
             </div>
           </td>
           <td>
@@ -2846,15 +2873,31 @@ Higher values increase reliability but also computational cost.</p>
         <tr>
           <td><code>random_state</code></td>
           <td>
+                <code>int, RandomState instance or None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Controls randomization used to initialize the codebook.
-Pass an int for reproducible results.</p>
+              <p>Controls randomization
+for codebook generation.</p>
             </div>
           </td>
           <td>
                 <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>verbose</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Controls verbosity. If &gt; 0, prints codebook stats.
+Defaults to 0.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
           </td>
         </tr>
     </tbody>
@@ -2875,62 +2918,112 @@ Pass an int for reproducible results.</p>
         <tr>
           <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.classes_">classes_</span></code></td>
           <td>
+                <code><span title="numpy.ndarray">ndarray</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Array containing unique target labels.</p>
+              <p>Unique target labels.</p>
             </div>
           </td>
         </tr>
         <tr>
           <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.code_book_">code_book_</span></code></td>
           <td>
+                <code><span title="numpy.ndarray">ndarray</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>N-ary array containing the coding scheme that maps original
-classes to base classifier problems.</p>
+              <p>Generated codebook if mapping is needed.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.codebook_stats_">codebook_stats_</span></code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Statistics about the generated codebook.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.estimators_">estimators_</span></code></td>
+          <td>
+                <code>list | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Stores the single fitted base estimator <em>only</em>
+if <code>no_mapping_needed_</code> is True.</p>
             </div>
           </td>
         </tr>
         <tr>
           <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.no_mapping_needed_">no_mapping_needed_</span></code></td>
           <td>
+                <code>bool</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>True if the number of classes is within the alphabet_size limit,
-allowing direct use of the base estimator without any mapping.</p>
+              <p>True if n_classes &lt;= alphabet_size.</p>
             </div>
           </td>
         </tr>
         <tr>
           <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.classes_index_">classes_index_</span></code></td>
           <td>
+                <code>dict | None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Maps class labels to their indices in classes_.</p>
+              <p>Maps class labels to indices.</p>
             </div>
           </td>
         </tr>
         <tr>
           <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.X_train">X_train</span></code></td>
           <td>
+                <code><span title="numpy.ndarray">ndarray</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Training data stored for reuse during prediction.</p>
+              <p>Stored training features if mapping needed.</p>
             </div>
           </td>
         </tr>
         <tr>
-          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.Y_train">Y_train</span></code></td>
+          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.Y_train_per_estimator">Y_train_per_estimator</span></code></td>
           <td>
+                <code><span title="numpy.ndarray">ndarray</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Encoded training labels for each base estimator.</p>
+              <p>Encoded training labels for each sub-problem.
+                            Shape (n_estimators, n_samples).</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.n_features_in_">n_features_in_</span></code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of features seen during <code>fit</code>.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code><span title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.feature_names_in_">feature_names_in_</span></code></td>
+          <td>
+                <code><span title="numpy.ndarray">ndarray</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Names of features seen during <code>fit</code>.</p>
             </div>
           </td>
         </tr>
@@ -2963,6 +3056,29 @@ allowing direct use of the base estimator without any mapping.</p>
 
 
 
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.codebook_statistics_" class="doc doc-heading">
+          <span class="doc doc-object-name doc-attribute-name">codebook_statistics_</span>
+
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.codebook_statistics_" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">codebook_statistics_</span>
+</span></code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns statistics about the generated codebook.</p>
+  </div>
+
+</div>
+
 
 
 
@@ -2975,216 +3091,13 @@ allowing direct use of the base estimator without any mapping.</p>
 
 
 <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.fit" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier" href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier">ManyClassClassifier</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier" href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier">ManyClassClassifier</a></span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Fit underlying estimators.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Data matrix of shape (n_samples, n_features).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Multi-class target labels of shape (n_samples,).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**fit_params</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Parameters passed to the <code>estimator.fit</code> method of each
-sub-estimator.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>self</code></td>          <td>
-                <code><a class="autorefs autorefs-internal" title="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier" href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier">ManyClassClassifier</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Returns a fitted instance of self.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_alphabet_size" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_alphabet_size</span>
-
-
-<a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_alphabet_size" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_alphabet_size</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">int</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Get the alphabet size to use for the codebook.</p>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>int</code></td>          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The alphabet size to use</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_n_estimators" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_n_estimators</span>
-
-
-<a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.get_n_estimators" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_n_estimators</span><span class="p">(</span><span class="n">n_classes</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">int</span>
-</span></code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Calculate the number of estimators to use based on the number of classes.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>n_classes</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of classes in the classification problem</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>int</code></td>          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of estimators to use</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Prepare classifier using custom validate_data.
+Actual fitting of sub-estimators happens in predict_proba if mapping is needed.</p>
 
   </div>
 
@@ -3200,66 +3113,12 @@ sub-estimator.</p>
 
 
 <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.predict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Predict multi-class targets using underlying estimators.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Data matrix of shape (n_samples, n_features).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>np.ndarray: Predicted multi-class targets of shape (n_samples,).</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Predict multi-class targets for X.</p>
 
   </div>
 
@@ -3275,68 +3134,12 @@ sub-estimator.</p>
 
 
 <a href="#tabpfn_extensions.many_class.many_class_classifier.ManyClassClassifier.predict_proba" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">predict_proba</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="numpy.ndarray">ndarray</span></span>
 </span></code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Predict probabilities using the underlying estimators.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Data matrix of shape (n_samples, n_features).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>np.ndarray: The probability of the samples for each class in the model,
-of shape (n_samples, n_classes), where classes are ordered as
-they are in <code>self.classes_</code>.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Predict class probabilities for X. Sub-estimators are fitted here if mapping is used.</p>
 
   </div>
 
@@ -3359,37 +3162,7 @@ they are in <code>self.classes_</code>.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Set categorical features for the base estimator if it supports it.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>categorical_features</code></td>
-          <td>
-                <code>list[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List of categorical feature indices.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Attempts to set categorical features on the base estimator.</p>
 
   </div>
 
