@@ -1,9 +1,10 @@
 # Usage tips
 
-!!! note
-    For a simple example getting started with classification see [classification tutorial](../tutorials/classification.md).
-
-    We provide two comprehensive demo notebooks that guides through installation and functionalities. One [colab tutorial using the cloud](https://tinyurl.com/tabpfn-colab-online) and one [colab tutorial using the local GPU](https://tinyurl.com/tabpfn-colab-local).
+> [!TIP]
+>
+> Dive right in with our interactive Colab notebook! It's the best way to get a hands-on feel for TabPFN, walking you through installation, classification, and regression examples.
+>
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PriorLabs/TabPFN/blob/main/examples/notebooks/TabPFN_Demo_Local.ipynb)
 
 ### When to use TabPFN
 

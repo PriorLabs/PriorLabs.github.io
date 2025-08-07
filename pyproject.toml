@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PriorLabs.GitHub.MkDocs"
+version = "2.1.1"
+dependencies = [
+  "mkdocs>=1.5.3,<2",
+  # mkdocs-material is a popular theme for MkDocs
+    "mkdocs-material>=9.0.0",
+  # auto refs
+  "mkdocs-autorefs>=0.3.0",
+  # gen-files
+    "mkdocs-gen-files>=0.4.0",
+  # literate navs
+    "mkdocs-literate-nav>=0.2.0",
+  # mkdoc strings [python]
+    "mkdocstrings[python]>=0.20.0",
+]
+requires-python = ">=3.9"
