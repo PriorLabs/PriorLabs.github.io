@@ -65,6 +65,9 @@ plugins:
 #  - gen-files:
 #      scripts:
 #        - scripts/gen_ref_pages.py
+  - redirects:
+      redirect_maps:
+        'tabpfn-nature.md': 'docs.md'
   - literate-nav:
       nav_file: SUMMARY.md
 #  - mkdocstrings:

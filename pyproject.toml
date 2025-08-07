@@ -17,5 +17,7 @@ dependencies = [
     "mkdocs-literate-nav>=0.2.0",
   # mkdoc strings [python]
     "mkdocstrings[python]>=0.20.0",
+  # mkdocs-redirects
+    "mkdocs-redirects>=1.0.0",
 ]
 requires-python = ">=3.9"
