@@ -169,6 +169,7 @@ We may share personal data with:
 | Mailchimp      | Newsletter signup |
 | Google Analytics | Usage analytics |
 | Google Cloud   | Cloud infrastructure, model processing/inference |
+| Post Hog Europe   | Usage analytics |
 
 ---
 
