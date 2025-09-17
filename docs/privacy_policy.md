@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: May 12th, 2025**
+**Last updated: 17 Sep 2025**
 
 ## 1. General information
 
@@ -163,13 +163,14 @@ We may share personal data with:
 
 **Current Data Processors:**
 
-| Data Processor | Purpose |
-|----------------|---------|
-| OpenAI         | Processing text inputs to our model API |
-| Mailchimp      | Newsletter signup |
-| Google Analytics | Usage analytics |
-| Google Cloud   | Cloud infrastructure, model processing/inference |
-| Post Hog Europe   | Usage analytics |
+| Data Processor   | Purpose                                            | Data Processing Region |
+|------------------|----------------------------------------------------|------------------------|
+| Google Cloud     | Cloud infrastructure; model processing/inference   | European Union        |
+| PostHog Cloud EU | Product/usage analytics                            | European Union        |
+| Sentry (EU org)  | Error & performance monitoring                     | European Union        |
+| Mailchimp        | Email delivery & subscriber management             | United States         |
+| Google Analytics | Website/product analytics                          | EU collection; further processing may occur in the US |
+| OpenAI           | LLM inference on text inputs/outputs               | United States         |
 
 ---
 
