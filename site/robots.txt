@@ -1,5 +1,10 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-# Optional: Add sitemap location if you have one
-# Sitemap: https://yourdomain.com/sitemap.xml
+# Disallow crawling of any private or build directories
+Disallow: /_next/
+Disallow: /out/
+
+# Sitemap location
+Sitemap: https://priorlabs.ai/sitemap.xml
