@@ -3,7 +3,6 @@ User-agent: *
 Allow: /
 
 # Disallow crawling of any private or build directories
-Disallow: /_next/
 Disallow: /out/
 
 # Sitemap location
