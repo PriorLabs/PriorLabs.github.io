@@ -1,6 +1,3 @@
-**Client** [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KKKOVJk-5N972ZRUeGmRXh8EibRIRGxA#scrollTo=o03aOVAw0Etg)
-**Local** [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SHa43VuHASLjevzO7y3-wPCxHY18-2H6#scrollTo=o03aOVAw0Etg&line=3&uniqifier=1)
-
 You can access our models through our API (https://github.com/automl/tabpfn-client), via our user interface built on top of the API (https://ux.priorlabs.ai/) or locally.
 
 === "Python API Client (No GPU, Online)"
